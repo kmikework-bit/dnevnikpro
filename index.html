@@ -874,7 +874,7 @@
             background: #f5f5f0;
             min-height: 100vh;
             padding: 10px;
-            background-image: 
+            background-image:
                 radial-gradient(#e0e0d0 1px, transparent 1px),
                 radial-gradient(#e0e0d0 1px, transparent 1px);
             background-size: 20px 20px;
@@ -1315,7 +1315,7 @@
             .habits-title-block h2 {
                 font-size: 1.5em;
             }
-            
+
             .habits-header {
                 flex-direction: column;
                 align-items: stretch;
@@ -1689,6 +1689,14 @@
             </svg>
             Игры
         </button>
+        <button class="nav-btn" onclick="showSection('development', event)">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+            </svg>
+            Развитие
+        </button>
         <button class="nav-btn" onclick="showSection('habits', event)">
             <svg class="nav-icon" viewBox="0 0 24 24">
                 <path d="M9 11l3 3L22 4"></path>
@@ -2043,7 +2051,293 @@
             </div>
         </section>
 
-        <!-- Habits Section -->
+
+
+        <!-- Development Section -->
+        <section id="development" class="section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="devChannelCount">9</div>
+                    <div class="stat-label">Каналов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Рост</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Развитие</div>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <div class="quote-text">«Талант -- это лишь начало. Постоянное развитие делает мастера»</div>
+                <div class="quote-author">@Трудись.Развивайся.Побеждай.</div>
+            </div>
+
+            <!-- Техника -->
+            <div class="card">
+                <h3 class="card-title green">⚽ Техника</h3>
+                <p style="color: #94a3b8; font-size: 13px; margin-bottom: 12px;">Работа с мячом, контроль, первое касание, ведение</p>
+
+                <div class="form-group">
+                    <label class="form-label">Канал в Max</label>
+                    <a href="https://max.ru/join/wcHndrpUainYsSaQmUUwjZLuBbmFOCe0xm8LrhKorB0" target="_blank" class="max-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="url(#max-gradient1)"/>
+                            <path d="M7 12C7 8.5 9.5 6 13 6C16.5 6 19 8.5 19 12C19 15.5 16.5 18 13 18C11.5 18 10.2 17.5 9.2 16.7L7 18V14.5C7.3 13.7 7 12.9 7 12Z" fill="white"/>
+                            <circle cx="10" cy="11" r="1" fill="#7C3AED"/>
+                            <circle cx="16" cy="11" r="1" fill="#7C3AED"/>
+                            <defs>
+                                <linearGradient id="max-gradient1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#3B82F6"/>
+                                    <stop offset="1" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        @football_technique -- Техника футбола
+                    </a>
+                </div>
+            </div>
+
+            <!-- Финты -->
+            <div class="card">
+                <h3 class="card-title orange">🎯 Финты</h3>
+                <p style="color: #94a3b8; font-size: 13px; margin-bottom: 12px;">Обманные движения, дриблинг, обводки, роналдиньо-стайл</p>
+
+                <div class="form-group">
+                    <label class="form-label">Канал в Max</label>
+                    <a href="https://max.ru/join/m17R8p5nwDjkQTQxBjcpxk-HpVJKnStLcapICuJ1Pjk" target="_blank" class="max-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="url(#max-gradient2)"/>
+                            <path d="M7 12C7 8.5 9.5 6 13 6C16.5 6 19 8.5 19 12C19 15.5 16.5 18 13 18C11.5 18 10.2 17.5 9.2 16.7L7 18V14.5C7.3 13.7 7 12.9 7 12Z" fill="white"/>
+                            <circle cx="10" cy="11" r="1" fill="#7C3AED"/>
+                            <circle cx="16" cy="11" r="1" fill="#7C3AED"/>
+                            <defs>
+                                <linearGradient id="max-gradient2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#3B82F6"/>
+                                    <stop offset="1" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        @football_skills -- Финты и навыки
+                    </a>
+                </div>
+            </div>
+
+            <!-- Мышление -->
+            <div class="card">
+                <h3 class="card-title blue">🧠 Мышление</h3>
+                <p style="color: #94a3b8; font-size: 13px; margin-bottom: 12px;">Тактика, чтение игры, принятие решений, футбольный IQ</p>
+
+                <div class="form-group">
+                    <label class="form-label">Канал в Max</label>
+                    <a href="https://max.ru/join/Xd0HJPI4BGjh6FCMGdHN5H_lhOD2YfJF-nxksNFQHD8" target="_blank" class="max-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="url(#max-gradient3)"/>
+                            <path d="M7 12C7 8.5 9.5 6 13 6C16.5 6 19 8.5 19 12C19 15.5 16.5 18 13 18C11.5 18 10.2 17.5 9.2 16.7L7 18V14.5C7.3 13.7 7 12.9 7 12Z" fill="white"/>
+                            <circle cx="10" cy="11" r="1" fill="#7C3AED"/>
+                            <circle cx="16" cy="11" r="1" fill="#7C3AED"/>
+                            <defs>
+                                <linearGradient id="max-gradient3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#3B82F6"/>
+                                    <stop offset="1" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        @football_tactics -- Тактика и мышление
+                    </a>
+                </div>
+            </div>
+
+            <!-- Удары -->
+            <div class="card">
+                <h3 class="card-title red">💥 Удары</h3>
+                <p style="color: #94a3b8; font-size: 13px; margin-bottom: 12px;">Удары по воротам, пенальти, штрафные, дальние удары, техника удара</p>
+
+                <div class="form-group">
+                    <label class="form-label">Канал в Max</label>
+                    <a href="https://max.ru/join/kxdwZBBe1sO3ogoosvO3_OR3gR0lfV2V0n1DJefGIt8" target="_blank" class="max-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="url(#max-gradient4)"/>
+                            <path d="M7 12C7 8.5 9.5 6 13 6C16.5 6 19 8.5 19 12C19 15.5 16.5 18 13 18C11.5 18 10.2 17.5 9.2 16.7L7 18V14.5C7.3 13.7 7 12.9 7 12Z" fill="white"/>
+                            <circle cx="10" cy="11" r="1" fill="#7C3AED"/>
+                            <circle cx="16" cy="11" r="1" fill="#7C3AED"/>
+                            <defs>
+                                <linearGradient id="max-gradient4" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#3B82F6"/>
+                                    <stop offset="1" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        @football_shooting -- Удары и голы
+                    </a>
+                </div>
+            </div>
+
+            <!-- Психология -->
+            <div class="card">
+                <h3 class="card-title purple">🧘 Психология</h3>
+                <p style="color: #94a3b8; font-size: 13px; margin-bottom: 12px;">Ментальная подготовка, концентрация, уверенность, работа с давлением</p>
+
+                <div class="form-group">
+                    <label class="form-label">Канал в Max</label>
+                    <a href="https://max.ru/join/l4A5czQxadDfOT_Glf6rKK0n5F_T30woJe2ymIt96tA" target="_blank" class="max-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="url(#max-gradient5)"/>
+                            <path d="M7 12C7 8.5 9.5 6 13 6C16.5 6 19 8.5 19 12C19 15.5 16.5 18 13 18C11.5 18 10.2 17.5 9.2 16.7L7 18V14.5C7.3 13.7 7 12.9 7 12Z" fill="white"/>
+                            <circle cx="10" cy="11" r="1" fill="#7C3AED"/>
+                            <circle cx="16" cy="11" r="1" fill="#7C3AED"/>
+                            <defs>
+                                <linearGradient id="max-gradient5" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#3B82F6"/>
+                                    <stop offset="1" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        @football_psychology -- Психология футболиста
+                    </a>
+                </div>
+            </div>
+
+            <!-- Питание -->
+            <div class="card">
+                <h3 class="card-title green">🥗 Питание</h3>
+                <p style="color: #94a3b8; font-size: 13px; margin-bottom: 12px;">Диета спортсмена, гидратация, добавки, восстановление</p>
+
+                <div class="form-group">
+                    <label class="form-label">Канал в Max</label>
+                    <a href="https://max.ru/join/rswofq5LnSMzBobfPT66jTgQX2a6k9gmxrQ2coxvtxQ" target="_blank" class="max-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="url(#max-gradient6)"/>
+                            <path d="M7 12C7 8.5 9.5 6 13 6C16.5 6 19 8.5 19 12C19 15.5 16.5 18 13 18C11.5 18 10.2 17.5 9.2 16.7L7 18V14.5C7.3 13.7 7 12.9 7 12Z" fill="white"/>
+                            <circle cx="10" cy="11" r="1" fill="#7C3AED"/>
+                            <circle cx="16" cy="11" r="1" fill="#7C3AED"/>
+                            <defs>
+                                <linearGradient id="max-gradient6" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#3B82F6"/>
+                                    <stop offset="1" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        @football_nutrition -- Питание футболиста
+                    </a>
+                </div>
+            </div>
+
+            <!-- Литература -->
+            <div class="card">
+                <h3 class="card-title yellow">📚 Литература</h3>
+                <p style="color: #94a3b8; font-size: 13px; margin-bottom: 12px;">Книги, статьи, аналитика, обучающие материалы</p>
+
+                <div class="form-group">
+                    <label class="form-label">Канал в Max</label>
+                    <a href="https://max.ru/join/fGBX-7ftxp-V4vJ_qzCgQLfJ-g5zEwl4rTcmq6rSW0I" target="_blank" class="max-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="url(#max-gradient7)"/>
+                            <path d="M7 12C7 8.5 9.5 6 13 6C16.5 6 19 8.5 19 12C19 15.5 16.5 18 13 18C11.5 18 10.2 17.5 9.2 16.7L7 18V14.5C7.3 13.7 7 12.9 7 12Z" fill="white"/>
+                            <circle cx="10" cy="11" r="1" fill="#7C3AED"/>
+                            <circle cx="16" cy="11" r="1" fill="#7C3AED"/>
+                            <defs>
+                                <linearGradient id="max-gradient7" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#3B82F6"/>
+                                    <stop offset="1" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        @football_books -- Футбольная литература
+                    </a>
+                </div>
+            </div>
+
+            <!-- Здоровье -->
+            <div class="card">
+                <h3 class="card-title red">🏥 Здоровье</h3>
+                <p style="color: #94a3b8; font-size: 13px; margin-bottom: 12px;">Травмы, профилактика, восстановление, растяжка, уход за телом</p>
+
+                <div class="form-group">
+                    <label class="form-label">Канал в Max</label>
+                    <a href="https://max.ru/join/YVmesXSogQCxIwlOx-dkWms0k109HtOzQDfeFMqQCEM" target="_blank" class="max-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="url(#max-gradient8)"/>
+                            <path d="M7 12C7 8.5 9.5 6 13 6C16.5 6 19 8.5 19 12C19 15.5 16.5 18 13 18C11.5 18 10.2 17.5 9.2 16.7L7 18V14.5C7.3 13.7 7 12.9 7 12Z" fill="white"/>
+                            <circle cx="10" cy="11" r="1" fill="#7C3AED"/>
+                            <circle cx="16" cy="11" r="1" fill="#7C3AED"/>
+                            <defs>
+                                <linearGradient id="max-gradient8" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#3B82F6"/>
+                                    <stop offset="1" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        @football_health -- Здоровье и травмы
+                    </a>
+                </div>
+            </div>
+
+            <!-- Общение -->
+            <div class="card">
+                <h3 class="card-title blue">💬 Общение</h3>
+                <p style="color: #94a3b8; font-size: 13px; margin-bottom: 12px;">Общение с единомышленниками, нетворкинг, поиск команды, обсуждение тактики</p>
+
+                <div class="form-group">
+                    <label class="form-label">Канал в Max</label>
+                    <a href="https://max.ru/join/51klegVN-KriNqY_sSsMY7rVhpJqj3I9iw4rKO5DTx8" target="_blank" class="max-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="url(#max-gradient9)"/>
+                            <path d="M7 12C7 8.5 9.5 6 13 6C16.5 6 19 8.5 19 12C19 15.5 16.5 18 13 18C11.5 18 10.2 17.5 9.2 16.7L7 18V14.5C7.3 13.7 7 12.9 7 12Z" fill="white"/>
+                            <circle cx="10" cy="11" r="1" fill="#7C3AED"/>
+                            <circle cx="16" cy="11" r="1" fill="#7C3AED"/>
+                            <defs>
+                                <linearGradient id="max-gradient9" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#3B82F6"/>
+                                    <stop offset="1" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        @football_community -- Футбольное сообщество
+                    </a>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Чат для игроков</label>
+                    <a href="https://max.ru/join/KGHA1gCe3FcqYmQGWs1I1aEJkDBDHFWBeUfPKTZBk-8" target="_blank" class="max-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="url(#max-gradient10)"/>
+                            <path d="M7 12C7 8.5 9.5 6 13 6C16.5 6 19 8.5 19 12C19 15.5 16.5 18 13 18C11.5 18 10.2 17.5 9.2 16.7L7 18V14.5C7.3 13.7 7 12.9 7 12Z" fill="white"/>
+                            <circle cx="10" cy="11" r="1" fill="#7C3AED"/>
+                            <circle cx="16" cy="11" r="1" fill="#7C3AED"/>
+                            <defs>
+                                <linearGradient id="max-gradient10" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#3B82F6"/>
+                                    <stop offset="1" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        @football_players -- Игроки и команды
+                    </a>
+                </div>
+            </div>
+
+            <!-- Донат -->
+            <div class="card">
+                <h3 class="card-title yellow">💳 Поддержать проект</h3>
+                <p style="color: #94a3b8; font-size: 13px; margin-bottom: 12px;">Поддержите развитие приложения и помогите добавлять новые функции</p>
+
+                <a href="https://pay.mironline.ru/pay/football-diary" target="_blank" class="donate-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="6" width="20" height="12" rx="2" fill="white" fill-opacity="0.2"/>
+                        <rect x="4" y="8" width="16" height="8" rx="1" fill="white"/>
+                        <circle cx="8" cy="12" r="2" fill="#22c55e"/>
+                        <path d="M14 10H18M14 12H17M14 14H16" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    Донат через МИР
+                </a>
+                <p style="color: #64748b; font-size: 11px; margin-top: 10px; text-align: center;">
+                    Безопасная оплата через систему МИР. Все средства идут на развитие приложения.
+                </p>
+            </div>
+        </section><!-- Habits Section -->
         <section id="habits" class="section">
             <div class="habits-container">
                 <div class="habits-inner">
@@ -2051,7 +2345,7 @@
                         <div class="habits-title-block">
                             <h2>ТРЕКЕР ПРИВЫЧЕК</h2>
                         </div>
-                        
+
                         <div class="habits-date-controls">
                             <div class="habits-date-group">
                                 <label>Месяц</label>
@@ -2070,13 +2364,13 @@
                                     <option value="11">Декабрь</option>
                                 </select>
                             </div>
-                            
+
                             <div class="habits-date-group">
                                 <label>Год</label>
                                 <input type="number" id="habitYearInput" value="2024" min="2000" max="2100" onchange="changeHabitYear()">
                             </div>
                         </div>
-                        
+
                         <div class="habits-info-text">
                             ПРИВЫЧКА<br>
                             ФОРМИРУЕТСЯ<br>
@@ -2169,7 +2463,7 @@
             <div class="card">
                 <h3 class="card-title blue">💾 Управление данными</h3>
                 <p style="color: #94a3b8; font-size: 13px; margin-bottom: 15px; line-height: 1.5;">
-                    Экспортируйте данные для резервного копирования или переноса на другое устройство. 
+                    Экспортируйте данные для резервного копирования или переноса на другое устройство.
                     Импортируйте ранее сохранённые данные.
                 </p>
                 <div class="data-actions">
@@ -2386,7 +2680,7 @@
         let longPressTimer = null;
         let isLongPress = false;
 
-        const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 
+        const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
                        'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 
         // Awards definitions
@@ -2398,14 +2692,14 @@
             { id: 'train_25', icon: '🏅', name: 'Профессионал', desc: '25 тренировок', type: 'training', threshold: 25 },
             { id: 'train_50', icon: '💎', name: 'Мастер', desc: '50 тренировок', type: 'training', threshold: 50 },
             { id: 'train_100', icon: '👑', name: 'Легенда', desc: '100 тренировок', type: 'training', threshold: 100 },
-            
+
             // Games awards
             { id: 'game_1', icon: '🥉', name: 'Дебют', desc: 'Первая сохранённая игра', type: 'game', threshold: 1 },
             { id: 'game_5', icon: '🥈', name: 'Игрок', desc: '5 игр', type: 'game', threshold: 5 },
             { id: 'game_10', icon: '🥇', name: 'Боец', desc: '10 игр', type: 'game', threshold: 10 },
             { id: 'game_25', icon: '🏅', name: 'Звезда', desc: '25 игр', type: 'game', threshold: 25 },
             { id: 'game_50', icon: '💎', name: 'Чемпион', desc: '50 игр', type: 'game', threshold: 50 },
-            
+
             // Habits awards
             { id: 'habit_1', icon: '🌱', name: 'Первый росток', desc: 'Первая созданная привычка', type: 'habit', threshold: 1 },
             { id: 'habit_3', icon: '📝', name: 'Планировщик', desc: '3 привычки одновременно', type: 'habit', threshold: 3 },
@@ -2420,7 +2714,7 @@
             { id: 'habit_total_365', icon: '🎆', name: 'Год перемен', desc: '365 отметок по всем привычкам', type: 'habit_total', threshold: 365 },
             { id: 'habit_perfect_week', icon: '✨', name: 'Идеальная неделя', desc: 'Все привычки выполнены 7 дней подряд', type: 'habit_perfect', threshold: 1 },
             { id: 'habit_note_10', icon: '📌', name: 'Аналитик', desc: '10 примечаний к привычкам', type: 'habit_note', threshold: 10 },
-            
+
             // Special awards
             { id: 'combo_10', icon: '🔥', name: 'Серия', desc: '10 тренировок и игр всего', type: 'special', threshold: 10 },
             { id: 'combo_50', icon: '⚡', name: 'Энергия', desc: '50 тренировок и игр всего', type: 'special', threshold: 50 },
@@ -2467,12 +2761,12 @@
 
         // Navigation
         function showSection(sectionId, event) {
-            document.querySelectorAll('.section').forEach(function(s) { 
-                s.classList.remove('active'); 
+            document.querySelectorAll('.section').forEach(function(s) {
+                s.classList.remove('active');
             });
 
-            document.querySelectorAll('.nav-btn').forEach(function(b) { 
-                b.classList.remove('active'); 
+            document.querySelectorAll('.nav-btn').forEach(function(b) {
+                b.classList.remove('active');
             });
 
             var targetSection = document.getElementById(sectionId);
@@ -2506,7 +2800,7 @@
         function showProgressTab(tab) {
             document.querySelectorAll('.progress-tab').forEach(t => t.classList.remove('active'));
             event.target.classList.add('active');
-            
+
             if (tab === 'stats') {
                 document.getElementById('statsSubsection').style.display = 'block';
                 document.getElementById('awardsSubsection').classList.remove('active');
@@ -2522,13 +2816,13 @@
             const trainCount = trainings.length;
             const gameCount = games.length;
             const totalCount = trainCount + gameCount;
-            
+
             const perfectRatings = [...trainings, ...games].filter(item => item.totalRate === 10).length;
-            
+
             const habitCount = habits.length;
             const totalHabitChecks = habits.reduce((sum, h) => sum + h.days.filter(d => d).length, 0);
             const totalHabitNotes = habits.reduce((sum, h) => sum + Object.keys(h.notes || {}).length, 0);
-            
+
             let bestStreak = 0;
             let currentStreak = 0;
             habits.forEach(habit => {
@@ -2543,7 +2837,7 @@
                     }
                 });
                 bestStreak = Math.max(bestStreak, maxStreak);
-                
+
                 let curr = 0;
                 for (let i = habit.days.length - 1; i >= 0; i--) {
                     if (habit.days[i]) curr++;
@@ -2551,7 +2845,7 @@
                 }
                 currentStreak = Math.max(currentStreak, curr);
             });
-            
+
             let perfectWeeks = 0;
             if (habits.length > 0) {
                 const daysInMonth = habits[0].days.length;
@@ -2567,7 +2861,7 @@
                     if (allDone) perfectWeeks++;
                 }
             }
-            
+
             const allDates = [...trainings.map(t => t.date), ...games.map(g => g.date)].sort();
             let maxConsistent = 0;
             let currentConsistent = 1;
@@ -2582,16 +2876,16 @@
                     currentConsistent = 1;
                 }
             }
-            
+
             const hasAllTypes = trainCount > 0 && gameCount > 0 && habitCount > 0;
-            
+
             let newAwards = [];
-            
+
             awards.forEach(award => {
                 if (unlockedAwards.includes(award.id)) return;
-                
+
                 let shouldUnlock = false;
-                
+
                 if (award.type === 'training' && trainCount >= award.threshold) {
                     shouldUnlock = true;
                 } else if (award.type === 'game' && gameCount >= award.threshold) {
@@ -2616,13 +2910,13 @@
                     if (award.id === 'consistent_30' && maxConsistent >= 30) shouldUnlock = true;
                     if (award.id === 'all_round' && hasAllTypes) shouldUnlock = true;
                 }
-                
+
                 if (shouldUnlock) {
                     unlockedAwards.push(award.id);
                     newAwards.push(award);
                 }
             });
-            
+
             if (newAwards.length > 0) {
                 localStorage.setItem('unlockedAwards', JSON.stringify(unlockedAwards));
                 newAwards.forEach((award, index) => {
@@ -2645,11 +2939,11 @@
             const gameCount = games.length;
             const totalCount = trainCount + gameCount;
             const perfectRatings = [...trainings, ...games].filter(item => item.totalRate === 10).length;
-            
+
             const habitCount = habits.length;
             const totalHabitChecks = habits.reduce((sum, h) => sum + h.days.filter(d => d).length, 0);
             const totalHabitNotes = habits.reduce((sum, h) => sum + Object.keys(h.notes || {}).length, 0);
-            
+
             let bestStreak = 0;
             habits.forEach(habit => {
                 let maxStreak = 0;
@@ -2664,26 +2958,26 @@
                 });
                 bestStreak = Math.max(bestStreak, maxStreak);
             });
-            
+
             const trainingAwards = document.getElementById('trainingAwards');
             const gamesAwards = document.getElementById('gamesAwards');
             const habitsAwards = document.getElementById('habitsAwards');
             const specialAwards = document.getElementById('specialAwards');
-            
+
             trainingAwards.innerHTML = '';
             gamesAwards.innerHTML = '';
             habitsAwards.innerHTML = '';
             specialAwards.innerHTML = '';
-            
+
             let unlockedCount = 0;
-            
+
             awards.forEach(award => {
                 const isUnlocked = unlockedAwards.includes(award.id);
                 if (isUnlocked) unlockedCount++;
-                
+
                 let progress = 0;
                 let currentValue = 0;
-                
+
                 if (award.type === 'training') {
                     progress = Math.min(trainCount, award.threshold);
                     currentValue = trainCount;
@@ -2714,7 +3008,7 @@
                         currentValue = isUnlocked ? award.threshold : 0;
                     }
                 }
-                
+
                 const awardEl = document.createElement('div');
                 awardEl.className = 'award-item ' + (isUnlocked ? 'unlocked' : '');
                 awardEl.innerHTML = `
@@ -2724,13 +3018,13 @@
                     <div class="award-desc">${award.desc}</div>
                     <div class="award-progress">${currentValue}/${award.threshold}</div>
                 `;
-                
+
                 if (award.type === 'training') trainingAwards.appendChild(awardEl);
                 else if (award.type === 'game') gamesAwards.appendChild(awardEl);
                 else if (award.type.startsWith('habit')) habitsAwards.appendChild(awardEl);
                 else specialAwards.appendChild(awardEl);
             });
-            
+
             document.getElementById('awardsCount').textContent = unlockedCount;
             document.getElementById('awardsTotal').textContent = awards.length;
             document.getElementById('awardsPercent').textContent = Math.round((unlockedCount / awards.length) * 100) + '%';
@@ -2813,7 +3107,7 @@
         // Validation
         function validateTraining() {
             var date = document.getElementById('trainDate').value;
-            var hasTask = document.getElementById('task1').value.trim() !== '' || 
+            var hasTask = document.getElementById('task1').value.trim() !== '' ||
                          document.getElementById('task2').value.trim() !== '' ||
                          document.getElementById('task3').value.trim() !== '' ||
                          document.getElementById('task4').value.trim() !== '' ||
@@ -2836,7 +3130,7 @@
 
         function validateGame() {
             var date = document.getElementById('gameDate').value;
-            var hasTask = document.getElementById('gameTask1').value.trim() !== '' || 
+            var hasTask = document.getElementById('gameTask1').value.trim() !== '' ||
                          document.getElementById('gameTask2').value.trim() !== '' ||
                          document.getElementById('gameTask3').value.trim() !== '' ||
                          document.getElementById('gameTask4').value.trim() !== '' ||
@@ -3036,7 +3330,7 @@
             var searchTerm = document.getElementById('trainSearch').value.toLowerCase();
 
             var filtered = trainings.filter(function(t) {
-                return t.date.includes(searchTerm) || 
+                return t.date.includes(searchTerm) ||
                        t.tasks.some(function(task) { return task.toLowerCase().includes(searchTerm); }) ||
                        t.strengths.toLowerCase().includes(searchTerm) ||
                        t.weaknesses.toLowerCase().includes(searchTerm);
@@ -3089,7 +3383,7 @@
             var searchTerm = document.getElementById('gameSearch').value.toLowerCase();
 
             var filtered = games.filter(function(g) {
-                return g.date.includes(searchTerm) || 
+                return g.date.includes(searchTerm) ||
                        (g.position && g.position.toLowerCase().includes(searchTerm)) ||
                        g.tasks.some(function(task) { return task.toLowerCase().includes(searchTerm); });
             });
@@ -3860,14 +4154,14 @@
 
         function initHabits() {
             loadHabitsFromStorage();
-            
+
             if (habits.length === 0) {
                 for (let i = 0; i < 5; i++) {
                     addHabitInternal();
                 }
                 saveHabitsToStorage();
             }
-            
+
             updateHabitDaysInMonth();
         }
 
@@ -3879,26 +4173,26 @@
             const year = parseInt(document.getElementById('habitYearInput').value);
             const month = parseInt(document.getElementById('habitMonthSelect').value);
             const daysInMonth = getDaysInMonth(year, month);
-            
+
             generateHabitDaysHeader(daysInMonth);
-            
+
             habits.forEach(habit => {
                 const oldDays = habit.days;
                 const oldNotes = habit.notes || {};
                 const newDays = new Array(daysInMonth).fill(false);
                 const newNotes = {};
-                
+
                 for (let i = 0; i < Math.min(oldDays.length, daysInMonth); i++) {
                     newDays[i] = oldDays[i];
                     if (oldNotes[i]) {
                         newNotes[i] = oldNotes[i];
                     }
                 }
-                
+
                 habit.days = newDays;
                 habit.notes = newNotes;
             });
-            
+
             renderHabits();
         }
 
@@ -3919,7 +4213,7 @@
             while (headerRow.children.length > 1) {
                 headerRow.removeChild(headerRow.lastChild);
             }
-            
+
             for (let i = 1; i <= daysInMonth; i++) {
                 const th = document.createElement('th');
                 th.textContent = i;
@@ -3938,7 +4232,7 @@
             const year = parseInt(document.getElementById('habitYearInput').value);
             const month = parseInt(document.getElementById('habitMonthSelect').value);
             const daysInMonth = getDaysInMonth(year, month);
-            
+
             const habit = {
                 id: Date.now() + Math.random(),
                 name: '',
@@ -3970,12 +4264,12 @@
         function handleHabitTouchStart(habitId, dayIndex, element) {
             isLongPress = false;
             element.classList.add('long-pressing');
-            
+
             longPressTimer = setTimeout(() => {
                 isLongPress = true;
                 element.classList.remove('long-pressing');
                 openHabitNoteModal(habitId, dayIndex);
-                
+
                 if (navigator.vibrate) {
                     navigator.vibrate(50);
                 }
@@ -4004,17 +4298,17 @@
         function openHabitNoteModal(habitId, dayIndex) {
             const habit = habits.find(h => h.id === habitId);
             if (!habit) return;
-            
+
             currentHabitId = habitId;
             currentEditingCell = dayIndex;
-            
+
             const year = document.getElementById('habitYearInput').value;
             const month = months[document.getElementById('habitMonthSelect').value];
-            
+
             document.getElementById('habitsNoteHabitName').textContent = habit.name || 'Без названия';
             document.getElementById('habitsNoteDate').textContent = `${dayIndex + 1} ${month} ${year}`;
             document.getElementById('habitsNoteInput').value = habit.notes[dayIndex] || '';
-            
+
             document.getElementById('habitsNoteModal').classList.add('active');
             setTimeout(() => {
                 document.getElementById('habitsNoteInput').focus();
@@ -4060,13 +4354,13 @@
                 document.getElementById('habitStreaks').style.display = 'none';
                 return;
             }
-            
+
             document.getElementById('habitStreaks').style.display = 'flex';
-            
+
             let bestStreak = 0;
             let currentStreak = 0;
             let totalChecks = 0;
-            
+
             habits.forEach(habit => {
                 let streak = 0;
                 let maxStreak = 0;
@@ -4080,7 +4374,7 @@
                     }
                 });
                 bestStreak = Math.max(bestStreak, maxStreak);
-                
+
                 let curr = 0;
                 for (let i = habit.days.length - 1; i >= 0; i--) {
                     if (habit.days[i]) curr++;
@@ -4088,7 +4382,7 @@
                 }
                 currentStreak = Math.max(currentStreak, curr);
             });
-            
+
             document.getElementById('currentStreakValue').textContent = currentStreak;
             document.getElementById('bestStreakValue').textContent = bestStreak;
             document.getElementById('totalChecksValue').textContent = totalChecks;
@@ -4097,14 +4391,14 @@
         function renderHabits() {
             const tbody = document.getElementById('habitsBody');
             tbody.innerHTML = '';
-            
+
             const year = parseInt(document.getElementById('habitYearInput').value);
             const month = parseInt(document.getElementById('habitMonthSelect').value);
             const daysInMonth = getDaysInMonth(year, month);
 
             habits.forEach(habit => {
                 const tr = document.createElement('tr');
-                
+
                 const nameCell = document.createElement('td');
                 const nameInput = document.createElement('input');
                 nameInput.type = 'text';
@@ -4112,25 +4406,25 @@
                 nameInput.placeholder = 'Введите привычку...';
                 nameInput.value = habit.name;
                 nameInput.onchange = (e) => updateHabitName(habit.id, e.target.value);
-                
+
                 const actions = document.createElement('div');
                 actions.className = 'habit-actions';
-                
+
                 const chartBtn = document.createElement('button');
                 chartBtn.className = 'habits-btn chart-btn';
                 chartBtn.textContent = '📊';
                 chartBtn.title = 'Отчёт';
                 chartBtn.onclick = () => showHabitChart(habit.id);
-                
+
                 const deleteBtn = document.createElement('button');
                 deleteBtn.className = 'habits-btn delete-btn';
                 deleteBtn.textContent = '🗑';
                 deleteBtn.title = 'Удалить';
                 deleteBtn.onclick = () => deleteHabit(habit.id);
-                
+
                 actions.appendChild(chartBtn);
                 actions.appendChild(deleteBtn);
-                
+
                 nameCell.appendChild(nameInput);
                 nameCell.appendChild(actions);
                 tr.appendChild(nameCell);
@@ -4138,30 +4432,30 @@
                 habit.days.forEach((checked, index) => {
                     const td = document.createElement('td');
                     td.className = 'habit-checkbox-cell' + (checked ? ' checked' : '');
-                    
+
                     const checkmark = document.createElement('div');
                     checkmark.className = 'habit-checkmark';
-                    
+
                     const indicator = document.createElement('span');
                     indicator.className = 'long-press-indicator';
                     checkmark.appendChild(indicator);
-                    
+
                     const noteIndicator = document.createElement('span');
                     noteIndicator.className = 'habit-note-indicator';
                     checkmark.appendChild(noteIndicator);
-                    
+
                     td.appendChild(checkmark);
-                    
+
                     if (habit.notes && habit.notes[index]) {
                         td.classList.add('has-note');
                         td.title = habit.notes[index];
-                        
+
                         const noteText = document.createElement('div');
                         noteText.className = 'habit-note-text-below';
                         noteText.textContent = habit.notes[index];
                         td.appendChild(noteText);
                     }
-                    
+
                     td.onmousedown = (e) => {
                         if (e.button === 2) {
                             e.preventDefault();
@@ -4174,7 +4468,7 @@
                     td.onmouseleave = () => handleHabitTouchEnd(td);
                     td.onclick = (e) => handleHabitCellClick(habit.id, index, e);
                     td.oncontextmenu = (e) => e.preventDefault();
-                    
+
                     td.ontouchstart = (e) => {
                         handleHabitTouchStart(habit.id, index, td);
                     };
@@ -4185,7 +4479,7 @@
                         }
                     };
                     td.ontouchmove = () => handleHabitTouchEnd(td);
-                    
+
                     tr.appendChild(td);
                 });
 
@@ -4195,7 +4489,7 @@
             if (habits.length > 0) {
                 const statsRow = document.createElement('tr');
                 statsRow.className = 'habit-stats-row';
-                
+
                 const statsCell = document.createElement('td');
                 statsCell.innerHTML = '<strong>Выполнено:</strong>';
                 statsRow.appendChild(statsCell);
@@ -4207,10 +4501,10 @@
                     td.innerHTML = `${count}<br><small>${percent}%</small>`;
                     statsRow.appendChild(td);
                 }
-                
+
                 tbody.appendChild(statsRow);
             }
-            
+
             updateHabitStreaksDisplay();
         }
 
@@ -4289,10 +4583,10 @@
                 <div style="text-align: center; margin: 25px 0;">
                     <div style="display: inline-block; position: relative; width: 150px; height: 150px;">
                         <svg viewBox="0 0 36 36" style="width: 150px; height: 150px; transform: rotate(-90deg);">
-                            <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" 
+                            <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                                   fill="none" stroke="#e0e0e0" stroke-width="3"/>
-                            <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" 
-                                  fill="none" stroke="#4caf50" stroke-width="3" 
+                            <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  fill="none" stroke="#4caf50" stroke-width="3"
                                   stroke-dasharray="${percent}, 100"/>
                         </svg>
                         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
@@ -4349,7 +4643,7 @@
                             <span style="font-size: 0.9em; color: #555;">${week.completed}/${week.total} (${week.percent}%)</span>
                         </div>
                         <div style="background: #e0e0e0; border-radius: 10px; height: 20px; overflow: hidden;">
-                            <div style="background: linear-gradient(90deg, #81c784, #4caf50); height: 100%; 
+                            <div style="background: linear-gradient(90deg, #81c784, #4caf50); height: 100%;
                                         width: ${week.percent}%; border-radius: 10px; transition: width 0.3s;
                                         display: flex; align-items: center; justify-content: center;">
                                 ${week.percent > 30 ? `<span style="color: white; font-size: 0.75em; font-weight: bold;">${week.percent}%</span>` : ''}
@@ -4363,11 +4657,11 @@
                 </div>
 
                 <!-- Motivation message -->
-                <div style="margin-top: 25px; padding: 15px; background: ${percent >= 80 ? '#e8f5e9' : percent >= 50 ? '#fff3e0' : '#ffebee'}; 
+                <div style="margin-top: 25px; padding: 15px; background: ${percent >= 80 ? '#e8f5e9' : percent >= 50 ? '#fff3e0' : '#ffebee'};
                             border-radius: 8px; border-left: 4px solid ${percent >= 80 ? '#4caf50' : percent >= 50 ? '#ff9800' : '#f44336'};">
                     <p style="margin: 0; color: #555; font-size: 0.95em; text-align: center;">
-                        ${percent >= 80 ? '🌟 Отличный результат! Привычка успешно формируется!' : 
-                          percent >= 50 ? '⚡ Хороший прогресс! Продолжайте в том же духе!' : 
+                        ${percent >= 80 ? '🌟 Отличный результат! Привычка успешно формируется!' :
+                          percent >= 50 ? '⚡ Хороший прогресс! Продолжайте в том же духе!' :
                           '💪 Не сдавайтесь! Каждый день — это шаг к цели!'}
                     </p>
                 </div>
@@ -4387,7 +4681,7 @@
             }
         }
 
-        
+
 
         function updateHabitChart() {
             const habit = habits.find(h => h.id === currentHabitId);
@@ -4405,13 +4699,13 @@
                 console.warn('Не удалось получить 2D контекст для habitsProgressChart');
                 return;
             }
-            
+
             if (currentHabitChart) {
                 currentHabitChart.destroy();
             }
 
             const data = generateHabitChartData(habit, currentHabitChartType);
-            
+
             currentHabitChart = new Chart(ctx, {
                 type: 'line',
                 data: {
@@ -4464,7 +4758,7 @@
             const labels = [];
             const values = [];
             const notes = [];
-            
+
             const year = parseInt(document.getElementById('habitYearInput').value);
             const month = parseInt(document.getElementById('habitMonthSelect').value);
             const today = new Date();
@@ -4474,9 +4768,9 @@
                     const date = new Date(today);
                     date.setDate(date.getDate() - i);
                     labels.push(date.toLocaleDateString('ru-RU', { weekday: 'short', day: 'numeric' }));
-                    
+
                     const dayIndex = date.getDate() - 1;
-                    if (date.getMonth() === month && date.getFullYear() === year && 
+                    if (date.getMonth() === month && date.getFullYear() === year &&
                         dayIndex >= 0 && dayIndex < habit.days.length) {
                         values.push(habit.days[dayIndex] ? 100 : 0);
                         notes.push(habit.notes[dayIndex] || '');
@@ -4492,7 +4786,7 @@
                     const chunk = habit.days.slice(i, i + 3);
                     const completed = chunk.filter(d => d).length;
                     values.push(Math.round((completed / chunk.length) * 100));
-                    
+
                     const periodNotes = [];
                     for (let j = i; j < Math.min(i + 3, daysInMonth); j++) {
                         if (habit.notes[j]) periodNotes.push(`${j+1}: ${habit.notes[j]}`);
@@ -4517,7 +4811,7 @@
                     notes.push('');
                 }
             }
-            
+
             return { labels, values, notes };
         }
 
@@ -4527,7 +4821,7 @@
             const currentStreak = calculateHabitStreak(habit.days);
             const bestStreak = calculateHabitBestStreak(habit.days);
             const notesCount = Object.keys(habit.notes || {}).length;
-            
+
             document.getElementById('habitsChartStats').innerHTML = `
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px;">
                     <div style="background: #e8f5e9; padding: 12px; border-radius: 8px;">
@@ -4626,8 +4920,8 @@
         }
 
         function exportHabitsData() {
-            const dataStr = JSON.stringify({ 
-                habits, 
+            const dataStr = JSON.stringify({
+                habits,
                 year: document.getElementById('habitYearInput').value,
                 month: document.getElementById('habitMonthSelect').value
             }, null, 2);
@@ -4663,5 +4957,3 @@
     </script>
 </body>
 </html>
-
-
