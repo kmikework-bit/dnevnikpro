@@ -2043,6 +2043,22 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
 #sec-plan .pl-link{display:block;width:100%;margin:12px 0 0;padding:10px;background:none;border:none;color:var(--accent);font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
 #sec-plan .pl-copy{background:var(--bg-elevated);border-radius:14px;padding:12px;margin-top:6px}
 #sec-plan .pl-save{display:grid;grid-template-columns:1fr;gap:8px;margin-top:18px}
+
+#timerSteps{line-height:1.4!important}
+.step-row{border-radius:12px;background:var(--bg-elevated);margin-bottom:6px;color:var(--text-secondary);overflow:hidden}
+.step-row.active{color:var(--accent);font-weight:700;box-shadow:inset 0 0 0 1.5px var(--accent)}
+.step-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 12px;cursor:pointer;font-size:14px}
+.step-head small{font-weight:500;opacity:.8}
+.step-chev{flex:none;width:8px;height:8px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg);transition:transform .2s;margin-right:4px}
+.step-row.open .step-chev{transform:rotate(45deg)}
+.step-info{padding:2px 12px 12px;color:var(--text);font-weight:400;font-size:13px;line-height:1.5}
+.si-block{margin-top:8px}.si-block b{display:block;font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.4px;margin-bottom:2px}
+.si-dose div{font-size:15px;font-weight:700}
+.si-block small{display:block;color:var(--text-secondary);margin-top:2px}
+.si-ages{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+.si-ages div{background:var(--bg-card);border-radius:10px;padding:8px 6px;font-size:12px;text-align:center;line-height:1.35}
+.si-ages div.on{box-shadow:inset 0 0 0 1.5px var(--accent)}
+.si-ages span{display:block;font-size:10px;color:var(--text-secondary);margin-bottom:3px}
 .lf-hide{display:none!important}.lib-q{width:100%;background:var(--bg-elevated);border:1px solid rgba(0,230,118,.15);border-radius:var(--radius-sm);padding:12px;color:var(--text);font-size:16px}
 .lvl{display:flex;align-items:center;gap:14px}.lvl .ava{font-size:40px;width:64px;height:64px;border-radius:50%;background:var(--bg-elevated);display:flex;align-items:center;justify-content:center}
 .lvl .info{flex:1}.lvl .nm{font-weight:800;font-size:17px}.lvl .xpbar{height:10px;background:rgba(255,255,255,.1);border-radius:5px;overflow:hidden;margin:6px 0 4px}.lvl .xpbar i{display:block;height:100%;background:var(--warning);border-radius:5px}
@@ -3744,8 +3760,9 @@ const programs = {
 let tProg='charge', tRunning=false, tInterval=null, tTotal=0, tCurrent=0, tStepIdx=0, tRest=false;
 function selectProgram(p) {
   tProg=p; tRunning=false; tStepIdx=0; tRest=false; clearInterval(tInterval);
-  document.querySelectorAll('.prog-chip').forEach(c=>c.classList.remove('active'));
-  document.querySelectorAll('.prog-chip')[p==='ofp'?1:0].classList.add('active');
+  const chips=document.querySelectorAll('#timerPrograms .prog-chip');
+  chips.forEach(c=>c.classList.remove('active'));
+  chips[p==='ofp'?1:0].classList.add('active');
   updateTimerUI(); renderSteps();
 }
 function timerToggle() {
@@ -3783,12 +3800,59 @@ function updateTimerUI() {
   const deg = pct * 360;
   document.getElementById('timerCircle').style.transform='rotate('+deg+'deg)';
 }
+const stepOpen={};
+const STEP_ALIAS={'Разминка: суставная':'Суставная гимнастика','charge|Заминка':'Растяжка и дыхательные упражнения','ofp|Подъёмы на носки':'Подъёмы на носках','ofp|Растяжка бедра':'Растяжка задней поверхности бедра'};
+const AGE_LBL={'7-9':'7–9 лет','10-12':'10–12 лет','13-15':'13–15 лет'};
+const AGE_F={'7-9':.5,'10-12':.75,'13-15':1};
+function exNorm(s){return String(s).toLowerCase().replace(/[«»"()]/g,' ').replace(/\s+/g,' ').trim();}
+function findExInfo(prog,name){
+  const sec=document.getElementById(prog==='ofp'?'sec-ofp':'sec-charge'); if(!sec) return null;
+  const key=exNorm(STEP_ALIAS[prog+'|'+name]||STEP_ALIAS[name]||name);
+  const el=[...sec.querySelectorAll('.exercise')].find(e=>exNorm(e.querySelector('.ex-name').textContent.replace(/^\d+/,'')).includes(key));
+  if(!el) return null;
+  const g=s=>{const x=el.querySelector(s);return x?x.innerHTML.trim():'';};
+  return {desc:g('.ex-desc'),dose:g('.ex-dose'),tech:g('.ex-tech')};
+}
+function scaleDose(text,age){
+  const f=AGE_F[age]; if(!f||f===1||!text) return text;
+  const unit=/(\d+)(?:\s*[-–]\s*(\d+))?(\s*(?:раз[а]?|прыжк[а-я]*|сек(?:унд[а-я]*)?|повторени[яй]|шаг[а-я]*))/g;
+  let out=text.replace(unit,(m,a,b,u,off)=>{
+    if(/отдых[^.,/]*$/i.test(text.slice(Math.max(0,off-12),off))) return m;
+    const sec=/сек/i.test(u), sc=n=>sec?Math.max(5,Math.round(n*f/5)*5):Math.max(1,Math.round(n*f));
+    const x=sc(+a), y=b?sc(+b):null, last=y&&y!==x?y:x;
+    const pl=(n,o,t,f)=>n%10===1&&n%100!==11?o:(n%10>=2&&n%10<=4&&(n%100<10||n%100>=20))?t:f;
+    let uu=u;
+    if(/прыжк/.test(u)) uu=u.replace(/прыжк[а-я]*/,pl(last,'прыжок','прыжка','прыжков'));
+    else if(/повторени/.test(u)) uu=u.replace(/повторени[яй]/,pl(last,'повторение','повторения','повторений'));
+    return (y&&y!==x?x+'-'+y:x)+uu;
+  });
+  if(age==='7-9') out=out.replace(/(\d+)(?:\s*[-–]\s*(\d+))?(\s*подход[а-я]*)/g,(m,a,b)=>{const n=Math.min(2,+(b||a));return n+(n===1?' подход':' подхода');});
+  return out;
+}
+function toggleStepInfo(i){stepOpen[tProg+i]=!stepOpen[tProg+i];renderSteps();}
 function renderSteps() {
+  const age=(JSON.parse(localStorage.getItem('fp_profile')||'{}').age)||'';
   let html='';
   programs[tProg].forEach((s,i)=>{
-    const active = i===tStepIdx ? 'color:var(--accent);font-weight:700;' : 'color:var(--text-secondary);';
+    const act=i===tStepIdx, open=!!stepOpen[tProg+i];
     const restText = s.rest ? ' + отдых '+s.rest+'сек' : '';
-    html += '<div style="'+active+'">'+(i+1)+'. '+s.name+' ('+s.sec+'сек'+restText+')'+(i===tStepIdx?' ←':'')+'</div>';
+    html += '<div class="step-row'+(act?' active':'')+(open?' open':'')+'"><div class="step-head" onclick="toggleStepInfo('+i+')"><span>'+(i+1)+'. '+s.name+' <small>('+s.sec+'сек'+restText+')</small>'+(act?' ←':'')+'</span><i class="step-chev"></i></div>';
+    if(open){
+      const info=findExInfo(tProg,s.name);
+      html+='<div class="step-info">';
+      if(info){
+        if(info.desc) html+='<div class="si-block"><b>Как делать</b><div>'+info.desc+'</div></div>';
+        if(info.tech) html+='<div class="si-block"><b>Техника</b><div>'+info.tech+'</div></div>';
+        if(info.dose){
+          if(AGE_F[age]) html+='<div class="si-block si-dose"><b>Сколько делать · '+AGE_LBL[age]+'</b><div>'+scaleDose(info.dose,age)+'</div></div>';
+          else html+='<div class="si-block si-dose"><b>Сколько делать</b><div>'+info.dose+'</div><small>Выбери возраст в профиле — подберём количество для тебя.</small></div>';
+          html+='<div class="si-ages">'+['7-9','10-12','13-15'].map(a=>'<div class="'+(a===age?'on':'')+'"><span>'+AGE_LBL[a]+'</span>'+scaleDose(info.dose,a)+'</div>').join('')+'</div>';
+        }
+        if(!info.desc&&!info.tech&&!info.dose) html+='<div class="si-block">Выполняй по таймеру, следи за техникой.</div>';
+      } else html+='<div class="si-block">Выполняй по таймеру, следи за техникой. Если что-то болит — сразу остановись.</div>';
+      html+='</div>';
+    }
+    html+='</div>';
   });
   document.getElementById('timerSteps').innerHTML=html;
 }
