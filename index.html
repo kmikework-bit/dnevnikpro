@@ -1954,6 +1954,95 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
 @keyframes anRoll{to{transform:rotate(360deg)}}
 @keyframes anBounce{0%,100%{transform:translateY(0) scaleY(.9)}50%{transform:translateY(-9px) scaleY(1)}}
 @keyframes anShine{from{transform:scale(1) rotate(-4deg);filter:drop-shadow(0 0 2px rgba(255,215,64,.4))}to{transform:scale(1.12) rotate(4deg);filter:drop-shadow(0 0 8px rgba(255,215,64,.95))}}
+
+#sec-progress{display:none!important}
+.dia-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.dia-tabs button{min-height:52px;border-radius:14px;border:1px solid rgba(0,230,118,.25);background:var(--bg-card);color:var(--text);font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}
+.dia-tabs button.on{background:var(--accent);color:#06210f;border-color:var(--accent)}
+.record-item .rec-edit{color:var(--text);font-size:15px}
+#nf-app .hb-prog{margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08)}
+#nf-app .hb-prog-title{font-size:15px;font-weight:800;margin-bottom:10px}
+#nf-app .hb-seg{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;background:#12301c;border-radius:12px;padding:4px;margin-bottom:12px}
+#nf-app .hb-seg button{min-height:40px;border:none;border-radius:9px;background:transparent;color:#a5d6a7;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+#nf-app .hb-seg button.on{background:#00e676;color:#06210f}
+#nf-app .hb-pr,#nf-app .hb-pd{background:#12301c;border-radius:12px;padding:10px 12px;margin-bottom:8px}
+#nf-app .hb-pr-h,#nf-app .hb-pd-h{display:flex;align-items:center;justify-content:space-between;font-size:14px;font-weight:600}
+#nf-app .hb-pr-h small{color:#00e676;font-weight:700;margin-left:4px}
+#nf-app .hb-pr .hb-bar{margin-top:8px}
+#nf-app .hb-pd-h i{font-style:normal;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);color:#81c784;font-size:14px}
+#nf-app .hb-pd-h i.on{background:#00e676;color:#06210f;font-weight:800}
+#nf-app .hb-pnotes{margin-top:8px;display:flex;flex-direction:column;gap:4px}
+#nf-app .hb-pnote{font-size:12px;line-height:1.4;color:#ffe082;background:rgba(255,235,59,.08);border-left:3px solid #ffeb3b;border-radius:6px;padding:5px 8px;overflow-wrap:anywhere}
+#nf-app .hb-pnote b{color:#fff59d;margin-right:4px}
+
+#nf-app .pg-explain{font-size:12px;color:#81c784;line-height:1.5;margin:-4px 0 12px}
+#nf-app .pg-chips{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:12px}
+#nf-app .pg-chip{min-height:42px;border-radius:12px;border:1px solid rgba(0,230,118,.25);background:#12301c;color:#a5d6a7;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
+#nf-app .pg-chip.on{background:#00e676;color:#06210f;border-color:#00e676}
+#nf-app .pg-tip-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+#nf-app .pg-tip{border-radius:12px;padding:10px;background:#12301c}
+#nf-app .pg-tip small{display:block;font-size:11px;color:#81c784;margin-bottom:3px}
+#nf-app .pg-tip b{font-size:14px;line-height:1.3}
+#nf-app .pg-tip.good{border-left:3px solid #00e676}#nf-app .pg-tip.warn{border-left:3px solid #ffb300}
+#nf-app .pg-hint{font-size:12px;color:#81c784;line-height:1.5;margin:6px 2px 10px}
+#nf-app .pg-hint b{color:#e8f5e9}
+#nf-app .pg-empty{font-size:13px;color:#81c784;text-align:center;padding:16px 8px;line-height:1.5}
+#nf-app .pg-sk{background:#12301c;border-radius:12px;padding:10px 12px;margin-bottom:8px}
+#nf-app .pg-sk-h{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:600}
+#nf-app .pg-sk-h b{font-size:13px}
+#nf-app .up{color:#00e676}#nf-app .down{color:#ff8a80}#nf-app .eq{color:#a5d6a7}
+#nf-app .pg-bar{position:relative;height:8px;border-radius:4px;background:rgba(255,255,255,.1);margin-top:8px;overflow:visible}
+#nf-app .pg-bar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,#00c853,#76ff03)}
+#nf-app .pg-bar u{position:absolute;top:-3px;width:3px;height:14px;margin-left:-1px;background:#fff;border-radius:2px;text-decoration:none}
+#nf-app .pg-sk-v{font-size:11px;color:#81c784;margin-top:6px}
+#nf-app .pg-goal{background:#12301c;border-radius:12px;padding:12px;margin-bottom:10px}
+#nf-app .pg-goal-h{display:flex;justify-content:space-between;align-items:center;font-size:14px}
+#nf-app .pg-goal-h button{width:36px;height:36px;margin-left:6px;border-radius:10px;border:1px solid rgba(0,230,118,.3);background:#0f2a18;color:#e8f5e9;font-size:20px;cursor:pointer}
+#nf-app .pg-stats3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+#nf-app .pg-stats3 div{background:#12301c;border-radius:12px;padding:10px 4px;text-align:center}
+#nf-app .pg-stats3 b{display:block;font-size:22px;color:#00e676}#nf-app .pg-stats3 small{font-size:10px;color:#81c784;line-height:1.3;display:block}
+#nf-app .pg-cols{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;align-items:end;margin-top:6px}
+#nf-app .pg-col{display:flex;flex-direction:column;align-items:center}
+#nf-app .pg-col-n{font-size:11px;font-weight:700;height:14px}
+#nf-app .pg-col-b{display:flex;flex-direction:column-reverse;justify-content:flex-start;width:100%;height:90px;background:rgba(255,255,255,.05);border-radius:6px;overflow:hidden}
+#nf-app .pg-col-b i{display:block;width:100%}#nf-app .pg-col-b i.t{background:#00e676}#nf-app .pg-col-b i.g{background:#f97316}
+#nf-app .pg-col-l{font-size:9px;color:#81c784;margin-top:4px;text-align:center}
+#nf-app .pg-legend{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:10px;font-size:12px;color:#a5d6a7}
+#nf-app .pg-legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+#nf-app .pg-sub{font-size:14px;font-weight:700;margin:6px 0 8px}
+#nf-app .pg-mood{display:flex;align-items:center;justify-content:center;gap:16px;background:#12301c;border-radius:12px;padding:12px}
+#nf-app .pg-mood div{text-align:center}#nf-app .pg-mood b{display:block;font-size:28px}#nf-app .pg-mood small{font-size:11px;color:#81c784}
+#nf-app .pg-arrow{font-size:24px;color:#81c784}
+#nf-app .pg-last{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}
+#nf-app .pg-last div{display:flex;justify-content:space-between;background:#12301c;border-radius:10px;padding:8px 12px;font-size:13px}
+
+#sec-plan .pl-bar{margin-bottom:10px}
+#sec-plan .pl-bar label,#sec-plan .pl-lbl{display:block;font-size:12px;color:var(--text-secondary);margin-bottom:6px;font-weight:600}
+#sec-plan .pl-bar select,#sec-plan .pl-input,#sec-plan .pl-row select{width:100%;box-sizing:border-box;min-height:48px;padding:0 12px;border-radius:12px;border:1px solid rgba(0,230,118,.25);background:var(--bg-elevated);color:var(--text);font-size:15px;font-family:inherit}
+#sec-plan .pl-input{margin-bottom:12px}
+#sec-plan .pl-btns{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin-bottom:10px}
+#sec-plan .pl-btns button,#sec-plan .pl-save button,#sec-plan .pl-add{min-height:46px;border-radius:12px;border:1px solid rgba(0,230,118,.3);background:var(--bg-elevated);color:var(--text);font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;padding:0 10px}
+#sec-plan .pl-btns button.danger{color:#ff8a80;border-color:rgba(255,138,128,.4)}
+#sec-plan .pl-btns button:disabled{opacity:.35;cursor:default}
+#sec-plan .pl-btns button.primary,#sec-plan .pl-save button.pl-primary{background:var(--accent);color:#06210f;border-color:var(--accent)}
+#sec-plan .pl-hint{font-size:12px;color:var(--text-secondary);line-height:1.5;margin:4px 0 12px}
+#sec-plan .pl-today{font-size:10px;color:var(--accent);font-weight:700;margin-left:6px;text-transform:uppercase}
+#sec-plan .pl-empty{font-size:13px;color:var(--text-secondary);text-align:center;padding:12px 4px}
+#sec-plan .pl-days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin:4px 0 12px}
+#sec-plan .pl-day{position:relative;min-height:46px;border-radius:10px;border:1px solid rgba(0,230,118,.2);background:var(--bg-elevated);color:var(--text);font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;padding:0}
+#sec-plan .pl-day.on{background:var(--accent);color:#06210f;border-color:var(--accent)}
+#sec-plan .pl-day small{display:block;font-size:10px;font-weight:600;opacity:.8;min-height:11px}
+#sec-plan .pl-dayname{font-size:16px;font-weight:800;margin:0 0 10px}
+#sec-plan .pl-row{background:var(--bg-elevated);border-radius:14px;padding:10px;margin-bottom:8px;display:flex;flex-direction:column;gap:8px}
+#sec-plan .pl-row select{background:var(--bg-card)}
+#sec-plan .pl-row .pl-input{margin:0}
+#sec-plan .pl-times{display:flex;align-items:center;gap:8px}
+#sec-plan .pl-times input[type=time]{flex:1;min-width:0;min-height:46px;border-radius:12px;border:1px solid rgba(0,230,118,.25);background:var(--bg-card);color:var(--text);font-size:16px;padding:0 8px;font-family:inherit;box-sizing:border-box}
+#sec-plan .pl-x{flex:none;width:46px;height:46px;border-radius:12px;border:none;background:rgba(255,138,128,.12);color:#ff8a80;font-size:24px;cursor:pointer}
+#sec-plan .pl-add{width:100%;margin-top:4px;border-style:dashed}
+#sec-plan .pl-link{display:block;width:100%;margin:12px 0 0;padding:10px;background:none;border:none;color:var(--accent);font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
+#sec-plan .pl-copy{background:var(--bg-elevated);border-radius:14px;padding:12px;margin-top:6px}
+#sec-plan .pl-save{display:grid;grid-template-columns:1fr;gap:8px;margin-top:18px}
 .lf-hide{display:none!important}.lib-q{width:100%;background:var(--bg-elevated);border:1px solid rgba(0,230,118,.15);border-radius:var(--radius-sm);padding:12px;color:var(--text);font-size:16px}
 .lvl{display:flex;align-items:center;gap:14px}.lvl .ava{font-size:40px;width:64px;height:64px;border-radius:50%;background:var(--bg-elevated);display:flex;align-items:center;justify-content:center}
 .lvl .info{flex:1}.lvl .nm{font-weight:800;font-size:17px}.lvl .xpbar{height:10px;background:rgba(255,255,255,.1);border-radius:5px;overflow:hidden;margin:6px 0 4px}.lvl .xpbar i{display:block;height:100%;background:var(--warning);border-radius:5px}
@@ -2027,115 +2116,10 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
 </section>
 <section class="section" id="sec-plan">
   <div style="height:12px;"></div>
+  <div class="card" id="planCard"></div>
   <div class="card">
-    <div class="card-title"><i class="fas fa-calendar-week"></i> План на неделю</div>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;font-size:11px;">
-      <span class="badge badge-green">🌅 Зарядка</span>
-      <span class="badge badge-yellow">⚽ Тренировка</span>
-      <span class="badge badge-blue">💪 ОФП</span>
-      <span style="display:inline-block;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;background:rgba(206,147,216,0.15);color:var(--purple);">🌙 Отбой</span>
-    </div>
-    <div class="accordion-item open">
-      <div class="accordion-header" onclick="toggleAcc(this)">
-        <span class="day-label"><i class="fas fa-sun"></i> Понедельник</span>
-        <i class="fas fa-chevron-down chevron"></i>
-      </div>
-      <div class="accordion-body">
-        <div class="time-row"><span class="time tag-charge">07:00-07:15</span><span class="activity">Зарядка</span></div>
-        <div class="time-row"><span class="time">07:15-07:25</span><span class="activity">Гигиена</span></div>
-        <div class="time-row"><span class="time">07:25-07:40</span><span class="activity">Завтрак</span></div>
-        <div class="time-row"><span class="time tag-school">08:30-15:00</span><span class="activity">Школа</span></div>
-        <div class="time-row"><span class="time">15:00-16:00</span><span class="activity">Обед, личное время</span></div>
-        <div class="time-row"><span class="time tag-train">16:00-18:00</span><span class="activity">Тренировка в клубе</span></div>
-        <div class="time-row"><span class="time">18:00-19:00</span><span class="activity">Ужин, личное время</span></div>
-        <div class="time-row"><span class="time">19:00-21:00</span><span class="activity">Уроки, сбор вещей в школу и на тренировку</span></div>
-        <div class="time-row"><span class="time">21:00-21:15</span><span class="activity">Растяжка</span></div>
-        <div class="time-row"><span class="time">21:15-22:00</span><span class="activity">Личное время</span></div>
-        <div class="time-row"><span class="time tag-sleep">22:00</span><span class="activity">Гигиена, отбой</span></div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header" onclick="toggleAcc(this)">
-        <span class="day-label"><i class="fas fa-sun"></i> Вторник</span>
-        <i class="fas fa-chevron-down chevron"></i>
-      </div>
-      <div class="accordion-body">
-        <div class="time-row"><span class="time tag-charge">07:00-07:15</span><span class="activity">Зарядка</span></div>
-        <div class="time-row"><span class="time">07:15-07:25</span><span class="activity">Гигиена</span></div>
-        <div class="time-row"><span class="time">07:25-07:40</span><span class="activity">Завтрак</span></div>
-        <div class="time-row"><span class="time tag-school">08:30-15:00</span><span class="activity">Школа</span></div>
-        <div class="time-row"><span class="time">15:00-16:00</span><span class="activity">Обед, личное время</span></div>
-        <div class="time-row"><span class="time tag-train">16:00-18:00</span><span class="activity">Тренировка в клубе</span></div>
-        <div class="time-row"><span class="time">18:00-19:00</span><span class="activity">Ужин, личное время</span></div>
-        <div class="time-row"><span class="time">19:00-21:00</span><span class="activity">Уроки, сбор вещей в школу и на тренировку</span></div>
-        <div class="time-row"><span class="time">21:00-21:15</span><span class="activity">Растяжка</span></div>
-        <div class="time-row"><span class="time">21:15-22:00</span><span class="activity">Личное время</span></div>
-        <div class="time-row"><span class="time tag-sleep">22:00</span><span class="activity">Гигиена, отбой</span></div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header" onclick="toggleAcc(this)">
-        <span class="day-label"><i class="fas fa-sun"></i> Среда</span>
-        <i class="fas fa-chevron-down chevron"></i>
-      </div>
-      <div class="accordion-body">
-        <div class="time-row"><span class="time tag-charge">07:00-07:15</span><span class="activity">Зарядка</span></div>
-        <div class="time-row"><span class="time">07:15-07:25</span><span class="activity">Гигиена</span></div>
-        <div class="time-row"><span class="time">07:25-07:40</span><span class="activity">Завтрак</span></div>
-        <div class="time-row"><span class="time tag-school">08:30-15:00</span><span class="activity">Школа</span></div>
-        <div class="time-row"><span class="time">15:00-16:00</span><span class="activity">Обед, личное время</span></div>
-        <div class="time-row"><span class="time tag-train">16:00-18:00</span><span class="activity">Тренировка в клубе</span></div>
-        <div class="time-row"><span class="time">18:00-19:00</span><span class="activity">Ужин, личное время</span></div>
-        <div class="time-row"><span class="time">19:00-21:00</span><span class="activity">Уроки, сбор вещей в школу и на тренировку</span></div>
-        <div class="time-row"><span class="time">21:00-21:15</span><span class="activity">Растяжка</span></div>
-        <div class="time-row"><span class="time">21:15-22:00</span><span class="activity">Личное время</span></div>
-        <div class="time-row"><span class="time tag-sleep">22:00</span><span class="activity">Гигиена, отбой</span></div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header" onclick="toggleAcc(this)">
-        <span class="day-label"><i class="fas fa-bolt"></i> Четверг</span>
-        <i class="fas fa-chevron-down chevron"></i>
-      </div>
-      <div class="accordion-body">
-        <div class="time-row"><span class="time tag-charge">07:00-07:15</span><span class="activity">Зарядка</span></div>
-        <div class="time-row"><span class="time">07:15-07:25</span><span class="activity">Гигиена</span></div>
-        <div class="time-row"><span class="time">07:25-07:40</span><span class="activity">Завтрак</span></div>
-        <div class="time-row"><span class="time tag-school">08:30-15:00</span><span class="activity">Школа</span></div>
-        <div class="time-row"><span class="time">15:00-16:00</span><span class="activity">Обед, личное время</span></div>
-        <div class="time-row"><span class="time tag-ofp">16:00-18:00</span><span class="activity">Индивидуальная тренировка (ОФП, техника)</span></div>
-        <div class="time-row"><span class="time">18:00-19:00</span><span class="activity">Ужин, личное время</span></div>
-        <div class="time-row"><span class="time">19:00-21:00</span><span class="activity">Уроки, сбор вещей в школу и на тренировку</span></div>
-        <div class="time-row"><span class="time">21:00-21:15</span><span class="activity">Растяжка</span></div>
-        <div class="time-row"><span class="time">21:15-22:00</span><span class="activity">Личное время</span></div>
-        <div class="time-row"><span class="time tag-sleep">22:00</span><span class="activity">Гигиена, отбой</span></div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header" onclick="toggleAcc(this)">
-        <span class="day-label"><i class="fas fa-sun"></i> Пятница</span>
-        <i class="fas fa-chevron-down chevron"></i>
-      </div>
-      <div class="accordion-body">
-        <div class="time-row"><span class="time tag-charge">07:00-07:15</span><span class="activity">Зарядка</span></div>
-        <div class="time-row"><span class="time">07:15-07:25</span><span class="activity">Гигиена</span></div>
-        <div class="time-row"><span class="time">07:25-07:40</span><span class="activity">Завтрак</span></div>
-        <div class="time-row"><span class="time tag-school">08:30-15:00</span><span class="activity">Школа</span></div>
-        <div class="time-row"><span class="time">15:00-16:00</span><span class="activity">Обед, личное время</span></div>
-        <div class="time-row"><span class="time tag-train">16:00-18:00</span><span class="activity">Тренировка в клубе</span></div>
-        <div class="time-row"><span class="time">18:00-21:00</span><span class="activity">Ужин, личное время, хобби</span></div>
-        <div class="time-row"><span class="time">21:00-21:15</span><span class="activity">Растяжка</span></div>
-        <div class="time-row"><span class="time">21:15-22:00</span><span class="activity">Личное время</span></div>
-        <div class="time-row"><span class="time tag-sleep">22:00</span><span class="activity">Гигиена, отбой</span></div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header" onclick="toggleAcc(this)">
-        <span class="day-label"><i class="fas fa-futbol"></i> Суббота / Воскресенье</span>
-        <i class="fas fa-chevron-down chevron"></i>
-      </div>
-      <div class="accordion-body">
-        <div class="weekend-box">
+    <div class="card-title">🏟️ Выходные и игровые дни</div>
+    <div class="weekend-box">
           <strong>Игровой день</strong><br>
           Если <strong>суббота</strong> -- игровой день: вечером растяжка и восстановление.<br>
           <strong>Воскресенье</strong> -- лёгкая зарядка утром, в течение дня восстановление, массаж, растяжка.
@@ -2143,8 +2127,6 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
           В субботу и воскресенье -- не менее <strong>2 часов</strong> на домашние задания, подготовку докладов и проектных работ.
           
         </div>
-      </div>
-    </div>
   </div>
   <div class="card">
     <div class="card-title"><i class="fas fa-bell"></i> Напоминания</div>
@@ -2635,15 +2617,6 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-title"><i class="fas fa-trophy"></i> Мои рекорды</div>
-    <div class="record-form">
-      <input type="text" id="rName" placeholder="Название (например, Отжимания)">
-      <input type="text" id="rVal" placeholder="Значение (например, 25 раз)">
-    </div>
-    <button class="btn-save" onclick="addRecord()" style="margin-top:0;margin-bottom:12px;"><i class="fas fa-plus"></i> Добавить рекорд</button>
-    <div id="recordsList"></div>
-  </div>
 </section>
 
 <section class="section" id="sec-tips">
@@ -2765,6 +2738,11 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
 <section class="section" id="sec-diary">
   <div style="height:12px;"></div>
   <a class="prog-chip" style="display:inline-block;margin:0 0 12px 2px" onclick="showSection('today')">← На главную</a>
+  <div class="dia-tabs">
+    <button type="button" class="on" id="diaT1" onclick="diaTab('entry')">✍️ Сделать запись</button>
+    <button type="button" id="diaT2" onclick="diaTab('records')">🏆 Мои рекорды</button>
+  </div>
+  <div id="diaEntry">
   <div class="card">
     <div class="card-title"><i class="fas fa-pen"></i> Личный дневник</div>
     <div class="profile-form">
@@ -2785,6 +2763,18 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
       <button class="btn-save" id="dBtn" onclick="addDiaryEntry()"><i class="fas fa-plus"></i> Добавить запись</button>
     </div>
     <div class="diary-entries" id="diaryEntries"></div>
+  </div>
+  </div>
+  <div id="diaRecords" style="display:none">
+  <div class="card">
+    <div class="card-title"><i class="fas fa-trophy"></i> Мои рекорды</div>
+    <div class="record-form">
+      <input type="text" id="rName" placeholder="Название (например, Отжимания)">
+      <input type="text" id="rVal" placeholder="Значение (например, 25 раз)">
+    </div>
+    <button class="btn-save" id="rBtn" onclick="addRecord()" style="margin-top:0;margin-bottom:12px;"><i class="fas fa-plus"></i> Добавить рекорд</button>
+    <div id="recordsList"></div>
+  </div>
   </div>
 </section>
 
@@ -3476,30 +3466,27 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
 
             </div>
 
-            <div class="nf-card">
-                <h3 class="nf-card-title blue">📈 Динамика прогресса</h3>
-
-                <div class="period-selector">
-                    <button class="period-btn active" onclick="setPeriod('week')">Неделя</button>
-                    <button class="period-btn" onclick="setPeriod('month')">Месяц</button>
-                    <button class="period-btn" onclick="setPeriod('year')">Год</button>
-                    <button class="period-btn" onclick="setPeriod('all')">Всё время</button>
+            <div class="nf-card" id="pgSkillsCard">
+                <h3 class="nf-card-title blue">🚀 Рост навыков</h3>
+                <p class="pg-explain">Сравниваем твои первые записи с последними. Шкала навыков — от 1 до 10.</p>
+                <div class="pg-chips" id="pgSkillTabs">
+                    <button type="button" class="pg-chip on" data-s="tech" onclick="pgSetSkill('tech')">Техника</button>
+                    <button type="button" class="pg-chip" data-s="tactic" onclick="pgSetSkill('tactic')">Тактика</button>
+                    <button type="button" class="pg-chip" data-s="phys" onclick="pgSetSkill('phys')">Физика</button>
                 </div>
+                <div id="pgSkills"></div>
+            </div>
 
-                <div class="chart-container">
-                    <canvas id="progressChart" width="350" height="250"></canvas>
-                </div>
+            <div class="nf-card" id="pgRegCard">
+                <h3 class="nf-card-title blue">📅 Регулярность</h3>
+                <p class="pg-explain">Сколько тренировок и игр ты делаешь каждую неделю. Результат важнее оценок — главное не пропускать.</p>
+                <div id="pgReg"></div>
+            </div>
 
-                <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
-                    <div style="display: flex; align-items: center; gap: 5px;">
-                        <div style="width: 12px; height: 12px; background: #00e676; border-radius: 2px;"></div>
-                        <span style="font-size: 12px; color: #81c784;">Тренировки</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 5px;">
-                        <div style="width: 12px; height: 12px; background: #f97316; border-radius: 2px;"></div>
-                        <span style="font-size: 12px; color: #81c784;">Игры</span>
-                    </div>
-                </div>
+            <div class="nf-card" id="pgMoodCard">
+                <h3 class="nf-card-title blue">💚 Состояние и эмоции</h3>
+                <p class="pg-explain">Как ты себя чувствуешь до и после тренировок и как волнение влияет на игру.</p>
+                <div id="pgMood"></div>
             </div>
 
             <!-- Awards Subsection -->
@@ -3629,8 +3616,12 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
             <div class="hb-hint" style="margin-top:8px;">Нажми на день — отметить или снять отметку.</div>
             <label class="hb-note-label" id="hbCalNoteLabel" for="hbCalNote">Заметка</label>
             <input type="text" id="hbCalNote" class="hb-name-input hb-small" maxlength="50" placeholder="Например: 30 минут, 2 литра..." onchange="hbSaveCalNote(this.value)">
+            <div class="hb-prog">
+                <div class="hb-prog-title">Прогресс по привычке</div>
+                <div class="hb-seg" id="hbSeg"><button type="button" data-p="day" class="on">Дни</button><button type="button" data-p="week">Недели</button><button type="button" data-p="month">Месяцы</button><button type="button" data-p="all">Всё время</button></div>
+                <div id="hbProgBody"></div>
+            </div>
             <div class="hb-det-actions">
-                <button type="button" class="hb-btn" onclick="showHabitChart(currentHabitId)">📈 График</button>
                 <button type="button" class="hb-btn danger" onclick="deleteHabit(currentHabitId)">🗑 Удалить</button>
             </div>
         </div>
@@ -3649,25 +3640,7 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
         </div>
     </div>
 
-        <!-- Habits Chart Modal -->
-    <div class="habits-modal" id="habitsChartModal">
-        <div class="habits-modal-content">
-            <span class="habits-close-modal" onclick="closeHabitsModal('habitsChartModal')">&times;</span>
-            <h2 id="habitsChartTitle">График прогресса</h2>
-            <div class="habits-chart-tabs">
-                <button class="habits-chart-tab active" onclick="switchHabitsChart('week')">Неделя</button>
-                <button class="habits-chart-tab" onclick="switchHabitsChart('month')">Месяц</button>
-                <button class="habits-chart-tab" onclick="switchHabitsChart('year')">Год</button>
-                <button class="habits-chart-tab" onclick="switchHabitsChart('all')">Всё время</button>
-            </div>
-            <div class="habits-chart-container">
-                <canvas id="habitsProgressChart"></canvas>
-            </div>
-            <div id="habitsChartStats"></div>
-        </div>
-    </div>
-
-    <!-- Habits Note Modal -->
+        <!-- Habits Note Modal -->
     <div class="habits-modal" id="habitsNoteModal">
         <div class="habits-modal-content habits-note-modal-content">
             <span class="habits-close-modal" onclick="closeHabitsModal('habitsNoteModal')">&times;</span>
@@ -3715,7 +3688,6 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
   <a class="nav-item" data-sec="plan" onclick="showSection('plan')"><span class="ni">📅</span><span>План</span></a>
   <a class="nav-item" data-sec="examples" onclick="showSection('examples')"><span class="ni">🎬</span><span>Библиотека</span></a>
   <a class="nav-item" data-sec="nf" onclick="openNF('development')"><span class="ni">📈</span><span>Развитие</span></a>
-  <a class="nav-item" data-sec="progress" onclick="showSection('progress')"><span class="ni">🏆</span><span>Прогресс</span></a>
   <a class="nav-item" data-sec="profile" onclick="showSection('profile')"><span class="ni">👤</span><span>Я</span></a>
 </nav>
 <div id="toast" role="status" aria-live="polite"></div>
@@ -3922,7 +3894,7 @@ function loadRecords(){
   if(!recs.length){ container.innerHTML='<p style="text-align:center;color:var(--text-secondary);font-size:13px;padding:10px;">Пока нет рекордов. Добавь первый!</p>'; return; }
   recs.slice().reverse().forEach((r,idx)=>{
     const div=document.createElement('div'); div.className='record-item';
-    div.innerHTML='<div><div class="r-name">'+escapeHtml(r.name)+'</div><div class="r-date">'+new Date(r.date).toLocaleDateString('ru')+'</div></div><div class="r-val">'+escapeHtml(r.val)+'</div><button onclick="deleteRecord('+(recs.length-1-idx)+')">&times;</button>';
+    div.innerHTML='<div><div class="r-name">'+escapeHtml(r.name)+'</div><div class="r-date">'+new Date(r.date).toLocaleDateString('ru')+'</div></div><div class="r-val">'+escapeHtml(r.val)+'</div><button class="rec-edit" aria-label="Изменить" onclick="editRecord('+(recs.length-1-idx)+')">✏️</button><button aria-label="Удалить" onclick="deleteRecord('+(recs.length-1-idx)+')">&times;</button>';
     container.appendChild(div);
   });
 }
@@ -3931,14 +3903,33 @@ function addRecord(){
   const val=document.getElementById('rVal').value.trim();
   if(!name||!val){ alert('Заполни название и значение'); return; }
   const recs=JSON.parse(localStorage.getItem('fp_records')||'[]');
-  recs.push({name,val,date:Date.now()});
+  const editing=editingRecordIdx>=0&&recs[editingRecordIdx];
+  if(editing){ recs[editingRecordIdx].name=name; recs[editingRecordIdx].val=val; }
+  else recs.push({name,val,date:Date.now()});
   localStorage.setItem('fp_records',JSON.stringify(recs));
   document.getElementById('rName').value=''; document.getElementById('rVal').value='';
-  loadRecords(); fireConfetti();
+  editingRecordIdx=-1; document.getElementById('rBtn').innerHTML='<i class="fas fa-plus"></i> Добавить рекорд';
+  loadRecords(); if(!editing) fireConfetti();
+}
+let editingRecordIdx=-1;
+function editRecord(idx){
+  const recs=JSON.parse(localStorage.getItem('fp_records')||'[]'); const r=recs[idx]; if(!r) return;
+  document.getElementById('rName').value=r.name; document.getElementById('rVal').value=r.val;
+  editingRecordIdx=idx; document.getElementById('rBtn').innerHTML='<i class="fas fa-save"></i> Сохранить изменения';
+  document.getElementById('rName').scrollIntoView({behavior:'smooth',block:'center'}); document.getElementById('rName').focus();
+}
+function diaTab(w){
+  document.getElementById('diaEntry').style.display=w==='entry'?'':'none';
+  document.getElementById('diaRecords').style.display=w==='records'?'':'none';
+  document.getElementById('diaT1').classList.toggle('on',w==='entry');
+  document.getElementById('diaT2').classList.toggle('on',w==='records');
 }
 function deleteRecord(idx){
   const recs=JSON.parse(localStorage.getItem('fp_records')||'[]');
-  recs.splice(idx,1); localStorage.setItem('fp_records',JSON.stringify(recs)); loadRecords();
+  recs.splice(idx,1); localStorage.setItem('fp_records',JSON.stringify(recs));
+  if(editingRecordIdx===idx){ editingRecordIdx=-1; document.getElementById('rName').value=''; document.getElementById('rVal').value=''; document.getElementById('rBtn').innerHTML='<i class="fas fa-plus"></i> Добавить рекорд'; }
+  else if(editingRecordIdx>idx) editingRecordIdx--;
+  loadRecords();
 }
 
 // ===== PROFILE & DIARY =====
@@ -4590,7 +4581,7 @@ function openNF(id){
 
         // Reset forms
         function resetTrainingForm() {
-            document.querySelectorAll('#training .form-input').forEach(function(i) { i.value = ''; });
+            document.querySelectorAll('#training input, #training textarea, #training select').forEach(function(i) { i.value = ''; });
             document.querySelectorAll('#training .rating-btn').forEach(function(b) { b.classList.remove('active'); });
             currentRatings = {};
             trainSkills = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
@@ -4606,7 +4597,7 @@ function openNF(id){
         }
 
         function resetGameForm() {
-            document.querySelectorAll('#games .form-input').forEach(function(i) { i.value = ''; });
+            document.querySelectorAll('#games input, #games textarea, #games select').forEach(function(i) { i.value = ''; });
             document.querySelectorAll('#games .rating-btn').forEach(function(b) { b.classList.remove('active'); });
             currentRatings = {};
             tacticSkills = [5, 5, 5, 5, 5, 5, 5, 5];
@@ -4662,6 +4653,7 @@ function openNF(id){
 
         // Render history with pagination and search
         function renderHistory() {
+            renderProgressBlocks();
             renderTrainingHistory();
             renderGamesHistory();
         }
@@ -4792,7 +4784,6 @@ function openNF(id){
             html += '<div class="view-grid">';
             html += '<div class="view-item"><div class="view-item-label">Дата</div><div class="view-item-value">' + dateStr + '</div></div>';
             html += '<div class="view-item"><div class="view-item-label">Время</div><div class="view-item-value">' + (t.time || '--:--') + '</div></div>';
-            html += '<div class="view-item"><div class="view-item-label">Вес</div><div class="view-item-value">' + (t.weight || '--') + ' кг</div></div>';
             html += '<div class="view-item"><div class="view-item-label">Оценка</div><div class="view-item-value">' + t.totalRate + '/10</div></div>';
             html += '</div>';
 
@@ -4856,6 +4847,19 @@ function openNF(id){
 
             html += '<div class="view-section"><h4>Что получилось</h4><p>' + g.success + '</p></div>';
             html += '<div class="view-section"><h4>Что улучшить</h4><p>' + g.improve + '</p></div>';
+
+            var gameSkillBlock = function(title, names, vals, color) {
+                if (!vals || !vals.length) return '';
+                var out = '<div class="view-section"><h4>' + title + '</h4><div class="skills-grid">';
+                vals.forEach(function(val, idx) {
+                    out += '<div class="skill-item"><span class="skill-name">' + (names[idx] || '') + '</span><div class="skill-value">';
+                    for (var i = 1; i <= 10; i++) out += '<div class="skill-dot ' + color + (i <= val ? ' active' : '') + '"></div>';
+                    out += '</div></div>';
+                });
+                return out + '</div></div>';
+            };
+            html += gameSkillBlock('Тактика', ['Комбинационная игра', 'Футбольное мышление', 'Принятие решений', 'Игра с партнёрами', 'Из обороны в атаку', 'Из атаки в оборону', 'Игровая дисциплина', 'Позиционирование'], g.tacticSkills, 'blue');
+            html += gameSkillBlock('Физика', ['Мобильность', 'Координация', 'Скорость', 'Выносливость', 'Реакция', 'Гибкость', 'Техника передвижения'], g.physicSkills, 'orange');
 
             document.getElementById('viewModalTitle').textContent = 'Просмотр игры';
             document.getElementById('viewModalBody').innerHTML = html;
@@ -5364,7 +5368,116 @@ function openNF(id){
         }
 
         // Progress chart
+
+        // ==================== Прогресс: рост навыков / регулярность / состояние ====================
+        var PG_NAMES = {
+            tech: ['Правая нога', 'Контроль мяча', 'Игра головой', 'Игра в пас', 'Игра корпусом', 'Левая нога', 'Точность передач', 'Сила удара', 'Отбор мяча', 'Дриблинг'],
+            tactic: ['Комбинационная игра', 'Футбольное мышление', 'Принятие решений', 'Игра с партнёрами', 'Из обороны в атаку', 'Из атаки в оборону', 'Игровая дисциплина', 'Позиционирование'],
+            phys: ['Мобильность', 'Координация', 'Скорость', 'Выносливость', 'Реакция', 'Гибкость', 'Техника передвижения']
+        };
+        var pgSkillTab = 'tech';
+        function pgD(s) { var p = String(s).split('-').map(Number); return new Date(p[0], p[1] - 1, p[2]); }
+        function pgWeekStart(d) { var x = new Date(d); x.setHours(0, 0, 0, 0); x.setDate(x.getDate() - ((x.getDay() + 6) % 7)); return x; }
+        function pgFmt(d) { return String(d.getDate()).padStart(2, '0') + '.' + String(d.getMonth() + 1).padStart(2, '0'); }
+        function pgAvg(arr) { return arr.length ? arr.reduce(function(a, b) { return a + b; }, 0) / arr.length : 0; }
+        function pgR1(x) { return Math.round(x * 10) / 10; }
+        function pgSetSkill(s) { pgSkillTab = s; renderProgressBlocks(); }
+        function pgSetGoal(d) {
+            var g = Math.max(1, Math.min(7, (parseInt(localStorage.getItem('fp_goal')) || 3) + d));
+            localStorage.setItem('fp_goal', g);
+            renderProgressBlocks();
+        }
+
+        function renderProgressBlocks() {
+            if (!document.getElementById('pgSkills')) return;
+            var byDate = function(a, b) { return pgD(a.date) - pgD(b.date); };
+            var tr = trainings.slice().sort(byDate), gm = games.slice().sort(byDate);
+
+            // ---------- 1. Рост навыков ----------
+            document.querySelectorAll('#pgSkillTabs .pg-chip').forEach(function(c) { c.classList.toggle('on', c.dataset.s === pgSkillTab); });
+            var recs, key;
+            if (pgSkillTab === 'tech') { recs = tr.filter(function(t) { return t.skills && t.skills.length; }); key = 'skills'; }
+            else if (pgSkillTab === 'tactic') { recs = gm.filter(function(g) { return g.tacticSkills && g.tacticSkills.length; }); key = 'tacticSkills'; }
+            else { recs = gm.filter(function(g) { return g.physicSkills && g.physicSkills.length; }); key = 'physicSkills'; }
+            var names = PG_NAMES[pgSkillTab], sk = document.getElementById('pgSkills'), html = '';
+            if (!recs.length) {
+                html = '<div class="pg-empty">Пока нет записей. ' + (pgSkillTab === 'tech' ? 'Заполни навыки в разделе «Тренировки».' : 'Заполни навыки в разделе «Игры».') + '</div>';
+            } else {
+                var first = recs[0][key], last = recs[recs.length - 1][key], two = recs.length >= 2;
+                var rows = names.map(function(n, i) { return { n: n, a: first[i] || 0, b: last[i] || 0, d: (last[i] || 0) - (first[i] || 0) }; });
+                var best = rows.slice().sort(function(x, y) { return y.d - x.d; })[0];
+                var weak = rows.slice().sort(function(x, y) { return x.b - y.b; })[0];
+                html += '<div class="pg-tip-row">';
+                if (two && best.d > 0) html += '<div class="pg-tip good"><small>Растёт лучше всего</small><b>' + best.n + ' +' + best.d + '</b></div>';
+                html += '<div class="pg-tip warn"><small>Стоит подтянуть</small><b>' + weak.n + ' · ' + weak.b + '/10</b></div></div>';
+                html += '<div class="pg-hint">' + (two ? 'Записей: ' + recs.length + ' · с ' + pgFmt(pgD(recs[0].date)) + ' по ' + pgFmt(pgD(recs[recs.length - 1].date)) + '. Метка на шкале — где ты начинал.' : 'Пока одна запись — после второй увидишь, как растут навыки.') + '</div>';
+                rows.forEach(function(r) {
+                    var cls = r.d > 0 ? 'up' : (r.d < 0 ? 'down' : 'eq');
+                    var badge = !two ? '' : (r.d > 0 ? '▲ +' + r.d : (r.d < 0 ? '▼ ' + r.d : '= без изменений'));
+                    html += '<div class="pg-sk"><div class="pg-sk-h"><span>' + r.n + '</span>' + (two ? '<b class="' + cls + '">' + badge + '</b>' : '<b class="eq">' + r.b + '/10</b>') + '</div>' +
+                        '<div class="pg-bar"><i style="width:' + Math.min(100, r.b * 10) + '%"></i>' + (two ? '<u style="left:' + Math.min(100, r.a * 10) + '%"></u>' : '') + '</div>' +
+                        (two ? '<div class="pg-sk-v">было ' + r.a + ' → стало ' + r.b + '</div>' : '') + '</div>';
+                });
+            }
+            sk.innerHTML = html;
+
+            // ---------- 2. Регулярность ----------
+            var goal = parseInt(localStorage.getItem('fp_goal')) || 3, today = new Date(); today.setHours(0, 0, 0, 0);
+            var wk0 = pgWeekStart(today), weeks = [];
+            for (var w = 7; w >= 0; w--) {
+                var s = new Date(wk0); s.setDate(wk0.getDate() - 7 * w);
+                var e = new Date(s); e.setDate(s.getDate() + 6);
+                var inW = function(r) { var d = pgD(r.date); return d >= s && d <= e; };
+                weeks.push({ s: s, t: tr.filter(inW).length, g: gm.filter(inW).length });
+            }
+            var cur = weeks[7], mx = Math.max(goal, 3);
+            weeks.forEach(function(x) { mx = Math.max(mx, x.t + x.g); });
+            var streak = 0, wi = cur.t >= goal ? 7 : 6;
+            for (; wi >= 0 && weeks[wi].t >= goal; wi--) streak++;
+            var mStart = new Date(today.getFullYear(), today.getMonth(), 1);
+            var mT = tr.filter(function(r) { return pgD(r.date) >= mStart; }).length, mG = gm.filter(function(r) { return pgD(r.date) >= mStart; }).length;
+            var pct = Math.min(100, Math.round(cur.t / goal * 100));
+            var rh = '<div class="pg-goal"><div class="pg-goal-h"><span>Цель на неделю: <b>' + goal + ' трен.</b></span><span><button type="button" onclick="pgSetGoal(-1)" aria-label="Меньше">−</button><button type="button" onclick="pgSetGoal(1)" aria-label="Больше">+</button></span></div>' +
+                '<div class="pg-bar"><i style="width:' + pct + '%"></i></div><div class="pg-sk-v">' + (cur.t >= goal ? '🎉 Цель недели выполнена!' : 'Сделано ' + cur.t + ' из ' + goal + ' — осталось ' + (goal - cur.t)) + '</div></div>';
+            rh += '<div class="pg-stats3"><div><b>' + cur.t + '</b><small>тренировок за неделю</small></div><div><b>' + cur.g + '</b><small>игр за неделю</small></div><div><b>' + streak + '</b><small>недель подряд с целью</small></div></div>';
+            rh += '<div class="pg-hint">В этом месяце: ' + mT + ' тренировок и ' + mG + ' игр.</div>';
+            rh += '<div class="pg-cols">';
+            weeks.forEach(function(x, i) {
+                var th = Math.round(x.t / mx * 100), gh = Math.round(x.g / mx * 100);
+                rh += '<div class="pg-col"><div class="pg-col-n">' + (x.t + x.g || '') + '</div><div class="pg-col-b"><i class="g" style="height:' + gh + '%"></i><i class="t" style="height:' + th + '%"></i></div><div class="pg-col-l">' + (i === 7 ? 'сейчас' : pgFmt(x.s)) + '</div></div>';
+            });
+            rh += '</div><div class="pg-legend"><span><i style="background:#00e676"></i>Тренировки</span><span><i style="background:#f97316"></i>Игры</span><span class="pg-hint" style="margin:0">Подпись — понедельник недели</span></div>';
+            document.getElementById('pgReg').innerHTML = (tr.length || gm.length) ? rh : '<div class="pg-empty">Пока нет записей. Сохрани первую тренировку или игру — и здесь появится твой ритм занятий.</div>';
+
+            // ---------- 3. Состояние и эмоции ----------
+            var mh = '';
+            if (tr.length) {
+                var pre = pgAvg(tr.map(function(t) { return +t.preState || 0; })), post = pgAvg(tr.map(function(t) { return +t.postState || 0; }));
+                var better = tr.filter(function(t) { return +t.postState > +t.preState; }).length;
+                mh += '<div class="pg-sub">🏃 После тренировок</div><div class="pg-mood"><div><b>' + pgR1(pre) + '</b><small>самочувствие до</small></div><span class="pg-arrow">→</span><div><b class="' + (post >= pre ? 'up' : 'down') + '">' + pgR1(post) + '</b><small>после</small></div></div>' +
+                    '<div class="pg-hint">' + (better ? 'В ' + better + ' из ' + tr.length + ' тренировок тебе стало лучше, чем было перед ней.' : 'Пока самочувствие после тренировки не выше, чем до неё. Следи за отдыхом и сном.') + '</div>';
+                mh += '<div class="pg-last">' + tr.slice(-5).reverse().map(function(t) {
+                    var d = (+t.postState) - (+t.preState);
+                    return '<div><span>' + pgFmt(pgD(t.date)) + '</span><span>' + t.preState + ' → ' + t.postState + '</span><b class="' + (d > 0 ? 'up' : (d < 0 ? 'down' : 'eq')) + '">' + (d > 0 ? '▲ +' + d : (d < 0 ? '▼ ' + d : '=')) + '</b></div>';
+                }).join('') + '</div>';
+            }
+            if (gm.length) {
+                var nerv = pgAvg(gm.map(function(g) { return +g.preNerves || 0; })), enj = pgAvg(gm.map(function(g) { return +g.enjoy || 0; }));
+                mh += '<div class="pg-sub">⚽ В играх</div><div class="pg-mood"><div><b>' + pgR1(nerv) + '</b><small>волнение</small></div><span class="pg-arrow">·</span><div><b class="up">' + pgR1(enj) + '</b><small>удовольствие</small></div></div>';
+                var calm = gm.filter(function(g) { return +g.preNerves <= 5; }), wild = gm.filter(function(g) { return +g.preNerves > 5; });
+                if (calm.length && wild.length) {
+                    var ca = pgAvg(calm.map(function(g) { return +g.totalRate; })), wa = pgAvg(wild.map(function(g) { return +g.totalRate; }));
+                    mh += '<div class="pg-hint">Когда волнение низкое (до 5), оценка игры в среднем <b>' + pgR1(ca) + '</b>, когда высокое — <b>' + pgR1(wa) + '</b>. ' + (ca > wa ? 'Спокойствие помогает играть лучше — попробуй дыхание и настрой перед матчем.' : 'Волнение тебе не мешает — отличный знак!') + '</div>';
+                } else {
+                    mh += '<div class="pg-hint">Когда наберётся больше игр, покажем, как волнение влияет на твою оценку.</div>';
+                }
+            }
+            document.getElementById('pgMood').innerHTML = mh || '<div class="pg-empty">Пока нет записей. Оценивай самочувствие до и после тренировки и волнение перед игрой.</div>';
+        }
+
         function drawProgressChart() {
+            renderProgressBlocks();
+            return;
             var canvas = document.getElementById('progressChart');
             if (!canvas) {
                 console.warn('Canvas progressChart не найден');
@@ -5614,6 +5727,12 @@ function initHabits() {
             renderHabits();
             checkAwards();
         });
+        hbE('hbSeg').addEventListener('click', e => {
+            const b = e.target.closest('[data-p]');
+            if (!b) return;
+            hbProgMode = b.dataset.p;
+            hbRenderProg();
+        });
         hbE('hbTpl').addEventListener('click', e => {
             const b = e.target.closest('[data-i]');
             if (!b) return;
@@ -5756,7 +5875,6 @@ function deleteHabit(id) {
     if (confirm('Удалить эту привычку вместе со всей историей?')) {
         habits = habits.filter(h => String(h.id) !== String(id));
         closeHabitsModal('habitsDetailModal');
-        closeHabitsModal('habitsChartModal');
         hbSave();
         renderHabits();
         checkAwards();
@@ -5778,6 +5896,7 @@ function openHabitDetail(id) {
     const d = hbParse(hbSelKey || hbToday());
     hbCalY = d.getFullYear(); hbCalM = d.getMonth(); hbCalSel = hbKey(d);
     hbE('hbDetName').value = h.name;
+    hbProgMode = 'day';
     hbRenderCal();
     hbE('habitsDetailModal').classList.add('active');
 }
@@ -5810,6 +5929,7 @@ function hbRenderCal() {
     const sd = hbParse(hbCalSel || today);
     hbE('hbCalNoteLabel').textContent = 'Заметка к ' + sd.getDate() + ' ' + hbMonthsG[sd.getMonth()];
     hbE('hbCalNote').value = h.notes[hbKey(sd)] || '';
+    hbRenderProg();
 }
 function hbSaveCalNote(v) {
     const h = hbFind(currentHabitId);
@@ -5856,116 +5976,65 @@ function deleteHabitNote() {
     closeHabitsModal('habitsNoteModal');
 }
 
-// ---- графики (по реальным данным) ----
-function showHabitChart(habitId) {
-    const h = hbFind(habitId);
-    if (!h) return;
-    currentHabitId = h.id;
-    currentHabitChartType = 'week';
-    document.querySelectorAll('.habits-chart-tab').forEach((t, i) => t.classList.toggle('active', i === 0));
-    hbE('habitsChartModal').classList.add('active');
-    updateHabitChart();
-}
-function closeHabitsModal(modalId) {
-    hbE(modalId).classList.remove('active');
-    if (modalId === 'habitsChartModal' && currentHabitChart) {
-        if (typeof currentHabitChart.destroy === 'function') currentHabitChart.destroy();
-        currentHabitChart = null;
-    }
-}
-function switchHabitsChart(type) {
-    currentHabitChartType = type;
-    document.querySelectorAll('.habits-chart-tab').forEach(tab => tab.classList.remove('active'));
-    event.target.classList.add('active');
-    updateHabitChart();
-}
-function updateHabitChart() {
-    const habit = hbFind(currentHabitId);
-    if (!habit) return;
-    hbE('habitsChartTitle').textContent = 'График: ' + (habit.name || 'Без названия');
-    const canvas = hbE('habitsProgressChart');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    if (typeof Chart === 'undefined') { toast('График недоступен без интернета'); return; }
-    if (currentHabitChart) currentHabitChart.destroy();
-    const data = generateHabitChartData(habit, currentHabitChartType);
-    currentHabitChart = new Chart(ctx, {
-        type: 'line',
-        data: { labels: data.labels, datasets: [{ label: 'Выполнено (%)', data: data.values, borderColor: '#4caf50', backgroundColor: 'rgba(76,175,80,0.1)', borderWidth: 3, fill: true, tension: 0.3, spanGaps: false, pointBackgroundColor: '#4caf50', pointRadius: 5 }] },
-        options: {
-            responsive: true, maintainAspectRatio: false,
-            plugins: { legend: { display: false }, tooltip: { callbacks: { afterLabel: function(c) { return data.notes[c.dataIndex] || ''; } } } },
-            scales: { y: { beginAtZero: true, max: 100, ticks: { callback: function(v) { return v + '%'; } } } }
-        }
-    });
-    updateHabitChartStats(habit, data);
-}
-function generateHabitChartData(habit, type) {
-    const labels = [], values = [], notes = [];
-    const now = new Date(); now.setHours(0, 0, 0, 0);
-    const today = hbKey(now);
-    const pct = (keys) => {
-        const past = keys.filter(k => k <= today);
-        if (!past.length) return null;
-        return Math.round(past.filter(k => hbHas(habit, k)).length / past.length * 100);
+// ---- прогресс по привычке: дни / недели / месяцы / всё время (с заметками) ----
+let hbProgMode = 'day';
+function closeHabitsModal(modalId) { hbE(modalId).classList.remove('active'); }
+function hbShort(d) { return hbWdShort[d.getDay()] + ', ' + d.getDate() + ' ' + hbMonthsG[d.getMonth()].slice(0, 3); }
+function hbNoteLine(k, t) { const d = hbParse(k); return '<div class="hb-pnote"><b>' + d.getDate() + ' ' + hbMonthsG[d.getMonth()] + '</b> ' + hbEsc(t) + '</div>'; }
+function hbRenderProg() {
+    const h = hbFind(currentHabitId), box = hbE('hbProgBody');
+    if (!h || !box) return;
+    document.querySelectorAll('#hbSeg button').forEach(b => b.classList.toggle('on', b.dataset.p === hbProgMode));
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const tk = hbKey(today);
+    const noteKeys = (from, to) => Object.keys(h.notes).filter(k => k >= from && k <= to).sort().reverse();
+    const row = (label, done, total, notes, cur) => {
+        const p = total ? Math.round(done / total * 100) : 0;
+        return '<div class="hb-pr"><div class="hb-pr-h"><span>' + label + (cur ? ' <small>сейчас</small>' : '') + '</span><b>' + done + ' из ' + total + '</b></div>' +
+            '<div class="hb-bar"><i style="width:' + p + '%"></i></div>' +
+            (notes.length ? '<div class="hb-pnotes">' + notes.map(k => hbNoteLine(k, h.notes[k])).join('') + '</div>' : '') + '</div>';
     };
-    if (type === 'week') {
-        for (let i = 6; i >= 0; i--) {
-            const d = new Date(now); d.setDate(d.getDate() - i);
-            const k = hbKey(d);
-            labels.push(d.toLocaleDateString('ru-RU', { weekday: 'short', day: 'numeric' }));
-            values.push(hbHas(habit, k) ? 100 : 0);
-            notes.push(habit.notes[k] || '');
+    const firstKeys = Object.keys(h.log).concat(Object.keys(h.notes)).sort();
+    const created = hbKey(new Date(h.createdAt));
+    const first = firstKeys.length && firstKeys[0] < created ? firstKeys[0] : created;
+    const firstD = hbParse(first);
+    let html = '';
+    if (hbProgMode === 'day') {
+        for (let i = 0; i < 14; i++) {
+            const d = new Date(today); d.setDate(d.getDate() - i);
+            const k = hbKey(d), on = hbHas(h, k);
+            html += '<div class="hb-pd"><div class="hb-pd-h"><span>' + (i === 0 ? 'Сегодня' : i === 1 ? 'Вчера' : hbShort(d)) + '</span><i class="' + (on ? 'on' : '') + '">' + (on ? '✓' : '—') + '</i></div>' +
+                (h.notes[k] ? hbNoteLine(k, h.notes[k]) : '') + '</div>';
         }
-    } else if (type === 'month') {
-        const y = now.getFullYear(), m = now.getMonth(), dim = hbDaysIn(y, m);
-        for (let i = 1; i <= dim; i += 3) {
-            const keys = [], pn = [];
-            for (let j = i; j < Math.min(i + 3, dim + 1); j++) {
-                const k = hbKey(new Date(y, m, j)); keys.push(k);
-                if (habit.notes[k]) pn.push(j + ': ' + habit.notes[k]);
-            }
-            labels.push(i + '-' + Math.min(i + 2, dim));
-            values.push(pct(keys));
-            notes.push(pn.join('; '));
-        }
-    } else if (type === 'year') {
-        const y = now.getFullYear();
-        hbMonthsN.forEach((mn, idx) => {
-            const keys = [];
-            for (let j = 1; j <= hbDaysIn(y, idx); j++) keys.push(hbKey(new Date(y, idx, j)));
-            labels.push(mn.slice(0, 3));
-            values.push(pct(keys));
-            notes.push('');
-        });
-    } else {
-        const mon = new Date(now); mon.setDate(now.getDate() - ((now.getDay() + 6) % 7));
-        for (let w = 11; w >= 0; w--) {
+    } else if (hbProgMode === 'week') {
+        const mon = new Date(today); mon.setDate(today.getDate() - ((today.getDay() + 6) % 7));
+        for (let w = 0; w < 12; w++) {
             const s = new Date(mon); s.setDate(mon.getDate() - 7 * w);
-            const keys = [];
-            for (let j = 0; j < 7; j++) { const d = new Date(s); d.setDate(s.getDate() + j); keys.push(hbKey(d)); }
-            labels.push(String(s.getDate()).padStart(2, '0') + '.' + String(s.getMonth() + 1).padStart(2, '0'));
-            values.push(pct(keys));
-            notes.push('');
+            const e = new Date(s); e.setDate(s.getDate() + 6);
+            if (w > 0 && hbKey(e) < hbKey(firstD) && w > 3) break;
+            let done = 0, total = 0;
+            for (let j = 0; j < 7; j++) { const d = new Date(s); d.setDate(s.getDate() + j); if (hbKey(d) <= tk) { total++; if (hbHas(h, hbKey(d))) done++; } }
+            const label = s.getMonth() === e.getMonth() ? s.getDate() + '–' + e.getDate() + ' ' + hbMonthsG[e.getMonth()].slice(0, 3) : s.getDate() + ' ' + hbMonthsG[s.getMonth()].slice(0, 3) + ' – ' + e.getDate() + ' ' + hbMonthsG[e.getMonth()].slice(0, 3);
+            html += row(label, done, total, noteKeys(hbKey(s), hbKey(e)), w === 0);
         }
+    } else if (hbProgMode === 'month') {
+        for (let m = 0; m < 12; m++) {
+            const d0 = new Date(today.getFullYear(), today.getMonth() - m, 1);
+            const y = d0.getFullYear(), mo = d0.getMonth(), dim = hbDaysIn(y, mo);
+            if (m > 2 && hbKey(new Date(y, mo, dim)) < hbKey(firstD)) break;
+            let done = 0, total = 0;
+            for (let j = 1; j <= dim; j++) { const k = hbKey(new Date(y, mo, j)); if (k <= tk) { total++; if (hbHas(h, k)) done++; } }
+            html += row(hbMonthsN[mo] + ' ' + y, done, total, noteKeys(hbKey(new Date(y, mo, 1)), hbKey(new Date(y, mo, dim))), m === 0);
+        }
+    } else {
+        const done = hbCount(h), total = hbDayDiff(today, firstD) + 1, p = total ? Math.round(done / total * 100) : 0;
+        const allNotes = Object.keys(h.notes).sort().reverse();
+        html += '<div class="hb-det-stats"><div><b>' + done + '</b><small>дней выполнено</small></div><div><b>' + p + '%</b><small>с начала</small></div><div><b>' + hbBest(h) + '</b><small>🏆 рекорд серии</small></div></div>' +
+            '<div class="hb-hint" style="margin:6px 2px 10px;">Начато: ' + firstD.getDate() + ' ' + hbMonthsG[firstD.getMonth()] + ' ' + firstD.getFullYear() + ' · текущая серия: ' + hbCur(h) + ' · заметок: ' + allNotes.length + '</div>' +
+            '<div class="hb-bar"><i style="width:' + p + '%"></i></div>' +
+            (allNotes.length ? '<div class="hb-pnotes" style="margin-top:12px">' + allNotes.slice(0, 40).map(k => hbNoteLine(k, h.notes[k]).replace('</b>', ' ' + hbParse(k).getFullYear() + '</b>')).join('') + (allNotes.length > 40 ? '<div class="hb-hint">…и ещё ' + (allNotes.length - 40) + '</div>' : '') + '</div>' : '<div class="hb-hint" style="margin-top:10px">Заметок пока нет — добавь их в календаре выше.</div>');
     }
-    return { labels, values, notes };
-}
-function updateHabitChartStats(habit, data) {
-    const done = hbCount(habit);
-    const first = Object.keys(habit.log).sort()[0];
-    const now = new Date(); now.setHours(0, 0, 0, 0);
-    const total = first ? hbDayDiff(now, hbParse(first)) + 1 : 0;
-    const p = total ? Math.round(done / total * 100) : 0;
-    const notesCount = Object.keys(habit.notes || {}).length;
-    hbE('habitsChartStats').innerHTML =
-        '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;margin-top:20px;">' +
-        '<div style="background:#e8f5e9;padding:12px;border-radius:8px;"><h4 style="font-size:.9em;">Выполнено</h4><p style="font-size:1.8em;color:#4caf50;margin:5px 0;">' + done + '/' + total + '</p>' +
-        '<div class="habit-progress-bar"><div class="habit-progress-fill" style="width:' + p + '%">' + p + '%</div></div></div>' +
-        '<div style="background:#e3f2fd;padding:12px;border-radius:8px;"><h4 style="font-size:.9em;">Текущая серия</h4><p style="font-size:1.8em;color:#1565c0;margin:5px 0;">' + hbCur(habit) + '</p></div>' +
-        '<div style="background:#fff3e0;padding:12px;border-radius:8px;"><h4 style="font-size:.9em;">Лучшая серия</h4><p style="font-size:1.8em;color:#ef6c00;margin:5px 0;">' + hbBest(habit) + '</p></div>' +
-        '<div style="background:#f3e5f5;padding:12px;border-radius:8px;"><h4 style="font-size:.9em;">Заметки</h4><p style="font-size:1.8em;color:#7b1fa2;margin:5px 0;">' + notesCount + '</p></div></div>';
+    box.innerHTML = html;
 }
 
 // ---- хранение ----
@@ -6031,6 +6100,103 @@ function exportHabitsData() {
     
 </script>
 <script>
+// ===== Конструктор плана на неделю =====
+(function(){
+const DN=['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'], DS=['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];
+const ACT=['Зарядка','Гигиена','Завтрак','Школа','Обед, личное время','Тренировка в клубе','Индивидуальная тренировка (ОФП, техника)','Игра / матч','Ужин, личное время','Уроки','Уроки, сбор вещей в школу и на тренировку','Растяжка','Восстановление, массаж','Укрепление стоп (теннисный мяч)','Развитие мышления, анализ игр','Чтение','Прогулка, свежий воздух','Личное время','Гигиена, отбой'];
+const DEFAULT={"id": "tpl_default", "name": "Школьная неделя", "days": [[{"s": "07:00", "e": "07:15", "a": "Зарядка"}, {"s": "07:15", "e": "07:25", "a": "Гигиена"}, {"s": "07:25", "e": "07:40", "a": "Завтрак"}, {"s": "08:30", "e": "15:00", "a": "Школа"}, {"s": "15:00", "e": "16:00", "a": "Обед, личное время"}, {"s": "16:00", "e": "18:00", "a": "Тренировка в клубе"}, {"s": "18:00", "e": "19:00", "a": "Ужин, личное время"}, {"s": "19:00", "e": "21:00", "a": "Уроки, сбор вещей в школу и на тренировку"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "21:15", "e": "22:00", "a": "Личное время"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}], [{"s": "07:00", "e": "07:15", "a": "Зарядка"}, {"s": "07:15", "e": "07:25", "a": "Гигиена"}, {"s": "07:25", "e": "07:40", "a": "Завтрак"}, {"s": "08:30", "e": "15:00", "a": "Школа"}, {"s": "15:00", "e": "16:00", "a": "Обед, личное время"}, {"s": "16:00", "e": "18:00", "a": "Тренировка в клубе"}, {"s": "18:00", "e": "19:00", "a": "Ужин, личное время"}, {"s": "19:00", "e": "21:00", "a": "Уроки, сбор вещей в школу и на тренировку"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "21:15", "e": "22:00", "a": "Личное время"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}], [{"s": "07:00", "e": "07:15", "a": "Зарядка"}, {"s": "07:15", "e": "07:25", "a": "Гигиена"}, {"s": "07:25", "e": "07:40", "a": "Завтрак"}, {"s": "08:30", "e": "15:00", "a": "Школа"}, {"s": "15:00", "e": "16:00", "a": "Обед, личное время"}, {"s": "16:00", "e": "18:00", "a": "Тренировка в клубе"}, {"s": "18:00", "e": "19:00", "a": "Ужин, личное время"}, {"s": "19:00", "e": "21:00", "a": "Уроки, сбор вещей в школу и на тренировку"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "21:15", "e": "22:00", "a": "Личное время"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}], [{"s": "07:00", "e": "07:15", "a": "Зарядка"}, {"s": "07:15", "e": "07:25", "a": "Гигиена"}, {"s": "07:25", "e": "07:40", "a": "Завтрак"}, {"s": "08:30", "e": "15:00", "a": "Школа"}, {"s": "15:00", "e": "16:00", "a": "Обед, личное время"}, {"s": "16:00", "e": "18:00", "a": "Индивидуальная тренировка (ОФП, техника)"}, {"s": "18:00", "e": "19:00", "a": "Ужин, личное время"}, {"s": "19:00", "e": "21:00", "a": "Уроки, сбор вещей в школу и на тренировку"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "21:15", "e": "22:00", "a": "Личное время"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}], [{"s": "07:00", "e": "07:15", "a": "Зарядка"}, {"s": "07:15", "e": "07:25", "a": "Гигиена"}, {"s": "07:25", "e": "07:40", "a": "Завтрак"}, {"s": "08:30", "e": "15:00", "a": "Школа"}, {"s": "15:00", "e": "16:00", "a": "Обед, личное время"}, {"s": "16:00", "e": "18:00", "a": "Тренировка в клубе"}, {"s": "18:00", "e": "21:00", "a": "Ужин, личное время, хобби"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "21:15", "e": "22:00", "a": "Личное время"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}], [{"s": "09:00", "e": "09:15", "a": "Зарядка"}, {"s": "09:15", "e": "09:25", "a": "Гигиена"}, {"s": "09:25", "e": "10:00", "a": "Завтрак"}, {"s": "10:30", "e": "12:30", "a": "Уроки"}, {"s": "12:30", "e": "14:00", "a": "Обед, личное время"}, {"s": "15:00", "e": "16:00", "a": "Укрепление стоп (теннисный мяч)"}, {"s": "16:00", "e": "17:00", "a": "Развитие мышления, анализ игр"}, {"s": "17:00", "e": "19:00", "a": "Личное время"}, {"s": "19:00", "e": "20:00", "a": "Ужин, личное время"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}], [{"s": "09:00", "e": "09:15", "a": "Зарядка"}, {"s": "09:15", "e": "09:25", "a": "Гигиена"}, {"s": "09:25", "e": "10:00", "a": "Завтрак"}, {"s": "10:30", "e": "12:30", "a": "Уроки"}, {"s": "12:30", "e": "14:00", "a": "Обед, личное время"}, {"s": "15:00", "e": "16:00", "a": "Восстановление, массаж"}, {"s": "16:00", "e": "19:00", "a": "Личное время"}, {"s": "19:00", "e": "20:00", "a": "Ужин, личное время"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}]]};
+const $=id=>document.getElementById(id), esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clone=o=>JSON.parse(JSON.stringify(o));
+let data=load(), ed=null, copyOpen=false, copyTo=[];
+function load(){try{const d=JSON.parse(localStorage.getItem('fp_plans')||'null');if(d&&Array.isArray(d.templates)&&d.templates.length){if(!d.templates.some(t=>t.id===d.active))d.active=d.templates[0].id;return d;}}catch(e){}
+  return {active:DEFAULT.id,templates:[clone(DEFAULT)]};}
+function save(){try{localStorage.setItem('fp_plans',JSON.stringify(data));}catch(e){}document.dispatchEvent(new Event('planchange'));}
+const active=()=>data.templates.find(t=>t.id===data.active)||data.templates[0];
+const mins=t=>{const m=String(t||'').match(/^(\d\d?):(\d\d)$/);return m?+m[1]*60+ +m[2]:null;};
+const tagOf=a=>/отбой/i.test(a)?'tag-sleep':/^Зарядка/.test(a)?'tag-charge':/^Школа/.test(a)?'tag-school':/Индивидуальная/.test(a)?'tag-ofp':/^(Тренировка|Игра)/.test(a)?'tag-train':'';
+const sortRows=r=>r.sort((a,b)=>(mins(a.s)??1e9)-(mins(b.s)??1e9));
+window.planDayRows=function(idx){const t=active();return ((t&&t.days[idx])||[]).map(r=>{const s=mins(r.s);if(s==null)return null;const e=mins(r.e);return{s:s,e:(e!=null&&e>s)?e:s+30,a:r.a};}).filter(Boolean).sort((a,b)=>a.s-b.s);};
+const todayIdx=()=>(new Date().getDay()+6)%7;
+const dayIcon=rows=>rows.some(r=>/^Игра/.test(r.a))?'⚽':rows.some(r=>/Индивидуальная/.test(r.a))?'⚡':rows.some(r=>/^Тренировка/.test(r.a))?'🏃':'☀️';
+
+function render(){
+  const c=$('planCard');if(!c)return;
+  c.innerHTML=ed?editor():viewer();
+}
+function viewer(){
+  const t=active(),ti=todayIdx();
+  let h='<div class="card-title">📅 План на неделю</div>';
+  h+='<div class="pl-bar"><label for="plSel">Активный план</label><select id="plSel" onchange="planSelect(this.value)">'+data.templates.map(x=>'<option value="'+esc(x.id)+'"'+(x.id===t.id?' selected':'')+'>'+esc(x.name)+'</option>').join('')+'</select></div>';
+  h+='<div class="pl-btns"><button type="button" onclick="planEdit()">✏️ Править</button><button type="button" onclick="planCopy()">📋 Копия</button><button type="button" onclick="planNew()">＋ Пустой</button><button type="button" class="danger" onclick="planDelete()"'+(data.templates.length<2?' disabled':'')+'>🗑 Удалить</button></div>';
+  h+='<div class="pl-hint">Этот план показывается на главном экране в блоке «Сейчас / Дальше». Любой план можно править или сохранить как шаблон.</div>';
+  for(let d=0;d<7;d++){
+    const rows=sortRows(clone(t.days[d]||[]));
+    h+='<div class="accordion-item'+(d===ti?' open':'')+'"><div class="accordion-header" onclick="toggleAcc(this)"><span class="day-label">'+dayIcon(rows)+' '+DN[d]+(d===ti?' <small class="pl-today">сегодня</small>':'')+'</span><i class="fas fa-chevron-down chevron"></i></div><div class="accordion-body">';
+    h+=rows.length?rows.map(r=>'<div class="time-row"><span class="time '+tagOf(r.a)+'">'+esc(r.s)+(r.e?'-'+esc(r.e):'')+'</span><span class="activity">'+esc(r.a)+'</span></div>').join(''):'<div class="pl-empty">В этот день занятий нет. Нажми «Править», чтобы добавить.</div>';
+    h+='</div></div>';
+  }
+  return h;
+}
+function editor(){
+  const d=ed.day,rows=ed.draft.days[d];
+  let h='<div class="card-title">✏️ Конструктор плана</div>';
+  h+='<label class="pl-lbl" for="plName">Название плана</label><input type="text" id="plName" class="pl-input" maxlength="40" placeholder="Например: неделя с игрой в среду" value="'+esc(ed.draft.name)+'" oninput="planName(this.value)">';
+  h+='<div class="pl-days">'+DS.map((n,i)=>'<button type="button" class="pl-day'+(i===d?' on':'')+'" onclick="planDay('+i+')">'+n+'<small>'+(ed.draft.days[i].length||'')+'</small></button>').join('')+'</div>';
+  h+='<div class="pl-dayname">'+DN[d]+'</div>';
+  h+=rows.length?rows.map((r,i)=>rowEd(r,i)).join(''):'<div class="pl-empty">Пока пусто. Добавь первое занятие.</div>';
+  h+='<button type="button" class="pl-add" onclick="planAddRow()">＋ Добавить занятие</button>';
+  h+='<button type="button" class="pl-link" onclick="planToggleCopy()">📋 Скопировать этот день на другие дни</button>';
+  if(copyOpen){
+    h+='<div class="pl-copy"><div class="pl-hint" style="margin-top:0">Выбери дни — их расписание будет заменено расписанием дня «'+DN[d]+'».</div><div class="pl-days">'+DS.map((n,i)=>i===d?'':'<button type="button" class="pl-day'+(copyTo.includes(i)?' on':'')+'" onclick="planCopyTog('+i+')">'+n+'</button>').join('')+'</div><div class="pl-btns"><button type="button" onclick="planCopyWeek()">Все будни</button><button type="button" onclick="planCopyAll()">Все дни</button><button type="button" class="primary" onclick="planCopyGo()">Скопировать</button></div></div>';
+  }
+  h+='<div class="pl-save"><button type="button" class="pl-primary" onclick="planSave(false)">💾 Сохранить</button>'+(ed.isNew?'':'<button type="button" onclick="planSave(true)">Сохранить как новый шаблон</button>')+'<button type="button" onclick="planCancel()">Отмена</button></div>';
+  return h;
+}
+function rowEd(r,i){
+  const custom=!!r.custom||(!ACT.includes(r.a)&&r.a!=='');
+  return '<div class="pl-row"><div class="pl-times"><input type="time" value="'+esc(r.s)+'" aria-label="Начало" onchange="planRow('+i+',\'s\',this.value)"><span>–</span><input type="time" value="'+esc(r.e)+'" aria-label="Конец (необязательно)" onchange="planRow('+i+',\'e\',this.value)"><button type="button" class="pl-x" aria-label="Удалить" onclick="planDelRow('+i+')">&times;</button></div>'+
+    '<select aria-label="Занятие" onchange="planAct('+i+',this.value)"><option value="">Выбери занятие…</option>'+ACT.map(a=>'<option'+(a===r.a?' selected':'')+'>'+esc(a)+'</option>').join('')+'<option value="__custom"'+(custom?' selected':'')+'>✏️ Своё занятие…</option></select>'+
+    (custom?'<input type="text" class="pl-input" maxlength="60" placeholder="Название занятия" value="'+esc(r.a)+'" oninput="planRow('+i+',\'a\',this.value)">':'')+'</div>';
+}
+// ---- actions ----
+window.planSelect=id=>{data.active=id;save();render();};
+function startEdit(draft,isNew){ed={draft:draft,id:draft.id,isNew:isNew,day:Math.min(todayIdx(),6)};copyOpen=false;copyTo=[];render();$('planCard').scrollIntoView({behavior:'smooth',block:'start'});}
+const uid=()=>'tpl_'+Date.now().toString(36);
+window.planEdit=()=>startEdit(clone(active()),false);
+window.planCopy=()=>{const c=clone(active());c.id=uid();c.name=c.name+' (копия)';startEdit(c,true);};
+window.planNew=()=>startEdit({id:uid(),name:'Новый план',days:[[],[],[],[],[],[],[]]},true);
+window.planDelete=()=>{if(data.templates.length<2)return;const t=active();if(!confirm('Удалить план «'+t.name+'»?'))return;data.templates=data.templates.filter(x=>x.id!==t.id);data.active=data.templates[0].id;save();render();toast('План удалён');};
+window.planName=v=>{ed.draft.name=v;};
+window.planDay=i=>{ed.draft.days[ed.day]=sortRows(ed.draft.days[ed.day]);ed.day=i;copyOpen=false;copyTo=[];render();};
+window.planAddRow=()=>{const rows=ed.draft.days[ed.day];const last=rows.length?rows[rows.length-1]:null;rows.push({s:last&&last.e?last.e:(last?last.s:''),e:'',a:''});render();};
+window.planDelRow=i=>{ed.draft.days[ed.day].splice(i,1);render();};
+window.planRow=(i,f,v)=>{ed.draft.days[ed.day][i][f]=v;};
+window.planAct=(i,v)=>{const r=ed.draft.days[ed.day][i];r.custom=v==='__custom';r.a=v==='__custom'?'':v;render();
+  if(v==='__custom'){const inp=document.querySelectorAll('#planCard .pl-row')[i].querySelector('input.pl-input');if(inp)inp.focus();}};
+window.planToggleCopy=()=>{copyOpen=!copyOpen;copyTo=[];render();};
+window.planCopyTog=i=>{copyTo=copyTo.includes(i)?copyTo.filter(x=>x!==i):copyTo.concat(i);render();};
+window.planCopyWeek=()=>{copyTo=[0,1,2,3,4].filter(i=>i!==ed.day);render();};
+window.planCopyAll=()=>{copyTo=[0,1,2,3,4,5,6].filter(i=>i!==ed.day);render();};
+window.planCopyGo=()=>{if(!copyTo.length){toast('Выбери дни для копирования');return;}const src=clone(ed.draft.days[ed.day]);copyTo.forEach(i=>ed.draft.days[i]=clone(src));copyOpen=false;const n=copyTo.length;copyTo=[];render();toast('Скопировано на дней: '+n);};
+window.planCancel=()=>{ed=null;render();};
+window.planSave=asNew=>{
+  const dr=clone(ed.draft);
+  dr.days=dr.days.map(rows=>sortRows(rows.filter(r=>mins(r.s)!=null&&String(r.a||'').trim()).map(r=>({s:r.s,e:(mins(r.e)!=null&&mins(r.e)>mins(r.s))?r.e:'',a:String(r.a).trim()}))));
+  dr.name=(dr.name||'').trim()||'Мой план';
+  if(!dr.days.some(r=>r.length)){toast('Добавь хотя бы одно занятие');return;}
+  if(asNew||ed.isNew){
+    if(asNew){dr.id=uid();if(data.templates.some(t=>t.name===dr.name))dr.name+=' (копия)';}
+    data.templates.push(dr);
+  }else{
+    const i=data.templates.findIndex(t=>t.id===ed.id);if(i>=0)data.templates[i]=dr;else data.templates.push(dr);
+  }
+  data.active=dr.id;ed=null;save();render();toast('План «'+dr.name+'» сохранён ✅');
+};
+window.planRender=render;
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render);else render();
+})();
+</script>
+<script>
 // ===== v2 additions =====
 (function(){
 const $=id=>document.getElementById(id);
@@ -6048,16 +6214,16 @@ window.timerDone=function(){releaseAwake();fireConfetti();beep(988,600);if(navig
 const MON=['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
 const DAYS=['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'];
 const p2=n=>String(n).padStart(2,'0'), hm=m=>p2(Math.floor(m/60))+':'+p2(m%60);
+document.addEventListener('planchange',()=>renderToday(false));
 function renderToday(openAcc){
   const d=new Date(),wd=d.getDay(),h=d.getHours();
   $('todayDate').textContent=DAYS[wd]+', '+d.getDate()+' '+MON[d.getMonth()];
   const nm=((JSON.parse(localStorage.getItem('fp_profile')||'{}').name)||'').split(' ')[0];
   $('todayHello').textContent=(h<12?'Доброе утро':h<18?'Добрый день':'Добрый вечер')+(nm?', '+nm:'')+'! ⚽';
-  const items=document.querySelectorAll('#sec-plan .accordion-item'),idx=(wd===0||wd===6)?5:wd-1;
-  if(openAcc)items.forEach((a,i)=>a.classList.toggle('open',i===idx));
+  const idx=(wd+6)%7;
   const box=$('todayNow');
-  if(idx===5){box.innerHTML='<b>Выходной ⚽</b>Лёгкая зарядка, растяжка и уроки (не меньше 2 часов). В игровой день главное — восстановиться.';return;}
-  const rows=[...items[idx].querySelectorAll('.time-row')].map(r=>{const t=r.querySelector('.time').textContent.match(/(\d\d):(\d\d)(?:-(\d\d):(\d\d))?/);const s=+t[1]*60+ +t[2];return{s,e:t[3]?+t[3]*60+ +t[4]:s+30,a:r.querySelector('.activity').textContent};});
+  const rows=window.planDayRows?window.planDayRows(idx):[];
+  if(!rows.length){box.innerHTML='<b>Свободный день ⚽</b>В этом дне плана нет занятий. Добавь их во вкладке «План».';return;}
   const m=h*60+d.getMinutes(),cur=rows.find(r=>m>=r.s&&m<r.e),nx=rows.find(r=>r.s>m);
   let html='';
   if(cur)html+='Сейчас:<b>'+cur.a+'</b>до '+hm(cur.e);
@@ -6135,7 +6301,7 @@ const _sp=saveProfile;saveProfile=function(){const av=prof().avatar;_sp();if(av)
 const LV=['Новичок','Дебютант','Игрок','Звезда','Капитан','Легенда'];
 const xp=()=>J('fp_doneDays','[]').length*10+J('trainings','[]').length*20+J('games','[]').length*20+J('fp_records','[]').length*5+J('fp_diary','[]').length*5;
 const lvl=x=>Math.floor(Math.sqrt(x/25))+1,best=()=>+($('atBest')||{}).textContent||0;
-const BD=[['🔥','3 дня подряд',()=>best()>=3],['⭐','7 дней подряд',()=>best()>=7],['🌅','5 дней в плане',()=>J('fp_doneDays','[]').length>=5],['📓','Первая запись о тренировке или игре',()=>J('trainings','[]').length+J('games','[]').length>=1],['🏆','Первый рекорд',()=>J('fp_records','[]').length>=1],['🌱','Первая отметка привычки',()=>{try{return habits.some(x=>hbCount(x)>0)}catch(e){return false}}],['✅','Идеальный день: все привычки (от 3)',()=>{try{if(habits.length<3)return false;const ks=new Set();habits.forEach(x=>Object.keys(x.log||{}).forEach(k=>ks.add(k)));return [...ks].some(k=>habits.every(x=>hbHas(x,k)))}catch(e){return false}}],['⚽','5 тренировок или игр',()=>J('trainings','[]').length+J('games','[]').length>=5],['💯','Оценка 10/10',()=>[...J('trainings','[]'),...J('games','[]')].some(x=>x.totalRate===10)],['🚀','Уровень 3',()=>lvl(xp())>=3]];
+const BD=[['📓','Первая запись о тренировке или игре',()=>J('trainings','[]').length+J('games','[]').length>=1],['🏆','Первый рекорд',()=>J('fp_records','[]').length>=1],['🌱','Первая отметка привычки',()=>{try{return habits.some(x=>hbCount(x)>0)}catch(e){return false}}],['✅','Идеальный день: все привычки (от 3)',()=>{try{if(habits.length<3)return false;const ks=new Set();habits.forEach(x=>Object.keys(x.log||{}).forEach(k=>ks.add(k)));return [...ks].some(k=>habits.every(x=>hbHas(x,k)))}catch(e){return false}}],['⚽','5 тренировок или игр',()=>J('trainings','[]').length+J('games','[]').length>=5],['💯','Оценка 10/10',()=>[...J('trainings','[]'),...J('games','[]')].some(x=>x.totalRate===10)],['🚀','Уровень 3',()=>lvl(xp())>=3],['🔥','7 дней подряд по привычке',()=>{try{return habits.some(x=>hbBest(x)>=7)}catch(e){return false}}],['✍️','5 записей в дневнике',()=>J('fp_diary','[]').length>=5],['📝','Заметка к привычке',()=>{try{return habits.some(x=>Object.keys(x.notes||{}).length>0)}catch(e){return false}}]];
 const lc=document.createElement('div');lc.className='card';lc.id='lvlCard';$('ageNote').before(lc);
 const bc=document.createElement('div');bc.className='card';bc.innerHTML='<div class="wins-head"><div class="card-title">🏅 Мои победы</div><div class="wins-count" id="winsCount"></div></div><div class="wins-grid" id="bdRow"></div><div id="winsMore"></div>';$('todayTasks').after(bc);
 function refresh(){
