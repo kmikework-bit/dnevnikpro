@@ -2059,6 +2059,64 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
 .si-ages div{background:var(--bg-card);border-radius:10px;padding:8px 6px;font-size:12px;text-align:center;line-height:1.35}
 .si-ages div.on{box-shadow:inset 0 0 0 1.5px var(--accent)}
 .si-ages span{display:block;font-size:10px;color:var(--text-secondary);margin-bottom:3px}
+
+.lib-how{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.08);font-size:13px;line-height:1.5}
+.lib-how .lh-t{display:block;font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.4px;margin:0 0 6px}
+.lib-how ol{margin:0 0 10px;padding-left:20px;color:var(--text)}
+.lib-how li{margin-bottom:3px}
+.lib-how .lh-tip{background:rgba(255,193,7,.1);border-left:3px solid #ffc107;border-radius:8px;padding:8px 10px;margin-bottom:12px;color:#ffe082}
+.lib-how .lh-ages{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.lib-how .lh-ages div{background:var(--bg-elevated);border-radius:10px;padding:8px 6px;font-size:12px;line-height:1.4;text-align:center}
+.lib-how .lh-ages span{display:block;font-size:10px;color:var(--text-secondary);margin-bottom:3px}
+.lib-how .lh-ages div.lock{opacity:.55}
+body[data-age="7-9"] .lib-how .lh-ages [data-a="7-9"],body[data-age="10-12"] .lib-how .lh-ages [data-a="10-12"],body[data-age="13-15"] .lib-how .lh-ages [data-a="13-15"]{box-shadow:inset 0 0 0 1.5px var(--accent)}
+
+body[data-age="7-9"] .exc[data-hard]{display:none}
+.exv{max-width:560px;margin:0 auto;padding:0 2px 24px}
+.ex-hero{background:linear-gradient(135deg,#0c3a1f,#145a30);border:1px solid rgba(105,240,174,.35);border-radius:22px;padding:16px;margin-bottom:14px;box-shadow:0 8px 22px rgba(0,0,0,.3)}
+.ex-hero-t{display:flex;align-items:center;gap:12px}
+.ex-hero-e{font-size:42px;line-height:1}
+.ex-hero h2{margin:0;font-size:22px;font-weight:800}.ex-hero p{margin:3px 0 0;font-size:13px;color:#b9f6ca;line-height:1.35}
+.ex-chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.ex-chips span{background:rgba(255,255,255,.12);border-radius:20px;padding:6px 12px;font-size:13px;font-weight:700}
+.ex-age{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ex-age>span{font-size:12px;color:#b9f6ca;margin-right:2px}
+.ex-age button{min-height:40px;padding:0 12px;border-radius:20px;border:1.5px solid rgba(255,255,255,.25);background:transparent;color:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+.ex-age button.on{background:#00e676;color:#06210f;border-color:#00e676}
+.ex-agehint{font-size:12px;color:#ffe082;margin-top:8px;line-height:1.45}
+.ex-prog{margin-top:14px}.ex-prog-h{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
+.ex-bar{height:12px;border-radius:8px;background:rgba(255,255,255,.15);overflow:hidden}
+.ex-bar i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,#00e676,#ffd740);transition:width .4s}
+.ex-go{width:100%;margin-top:14px;min-height:50px;border-radius:16px;border:none;background:#ffd740;color:#3b2d00;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit}
+.exb{margin-bottom:16px}
+.exb-h{display:flex;align-items:center;gap:12px;margin:0 2px 10px}
+.exb-ic{width:42px;height:42px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px;flex:none}
+.exb-h b{display:block;font-size:16px}.exb-h small{font-size:12px;color:var(--text-secondary)}
+.exb-star{margin-left:auto;font-size:26px;opacity:.4}.exb-star.on{opacity:1;animation:exStar .6s ease}
+@keyframes exStar{0%{transform:scale(.4) rotate(-30deg)}60%{transform:scale(1.3) rotate(10deg)}100%{transform:scale(1)}}
+.exc{background:var(--bg-card);border:1px solid rgba(255,255,255,.07);border-left:4px solid var(--c);border-radius:18px;margin-bottom:10px;overflow:hidden;transition:background .2s}
+.exc.done{background:rgba(0,230,118,.12);border-color:rgba(0,230,118,.35);border-left-color:var(--c)}
+.exc-main{display:flex;align-items:center;gap:12px;padding:12px;cursor:pointer}
+.exc-ic{width:54px;height:54px;flex:none;border-radius:16px;background:var(--bg-elevated);display:flex;align-items:center;justify-content:center;font-size:28px}
+.exc-ic .an{display:inline-block}
+.exc-info{flex:1;min-width:0}
+.exc-name{font-size:15px;font-weight:700;line-height:1.3}
+.exc-dose{font-size:13px;color:var(--accent);margin-top:3px;font-weight:600;line-height:1.35}
+.exc-eq{font-size:11px;color:var(--text-secondary);margin-top:2px}
+.exc-check{position:relative;flex:none;width:48px;height:48px;border-radius:50%;border:2.5px solid rgba(255,255,255,.3);background:transparent;cursor:pointer;padding:0;transition:.2s}
+.exc-check::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:21px;margin:-13px 0 0 -5px;border-right:4px solid #06210f;border-bottom:4px solid #06210f;transform:rotate(45deg);opacity:0}
+.exc.done .exc-check{background:#00e676;border-color:#00e676}.exc.done .exc-check::after{opacity:1}
+.exc-body{padding:0 14px 14px;font-size:13px;line-height:1.5;border-top:1px solid rgba(255,255,255,.06)}
+.exc-t{display:block;font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.4px;margin:12px 0 6px}
+.exc-body ol{margin:0;padding-left:20px}.exc-body li{margin-bottom:3px}
+.exc-tip{background:rgba(255,193,7,.1);border-left:3px solid #ffc107;border-radius:8px;padding:8px 10px;margin-top:8px;color:#ffe082}
+.exc-ages,.si-ages{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.exc-ages div{background:var(--bg-elevated);border-radius:10px;padding:8px 6px;font-size:12px;text-align:center;line-height:1.4}
+.exc-ages span{display:block;font-size:10px;color:var(--text-secondary);margin-bottom:3px}
+.exc-ages div.on{box-shadow:inset 0 0 0 1.5px var(--accent)}.exc-ages div.lock{opacity:.55}
+.ex-rem{background:rgba(255,193,7,.08);border:1px solid rgba(255,193,7,.3);border-radius:16px;padding:12px 14px;font-size:13px;line-height:1.5}
+.ex-rem b{display:block;margin-bottom:4px;color:#ffe082}.ex-rem ul{margin:0;padding-left:18px}
+.si-ol{margin:4px 0 0;padding-left:20px}.si-tip{background:rgba(255,193,7,.1);border-left:3px solid #ffc107;border-radius:8px;padding:7px 10px;margin-top:8px;color:#ffe082}
 .lf-hide{display:none!important}.lib-q{width:100%;background:var(--bg-elevated);border:1px solid rgba(0,230,118,.15);border-radius:var(--radius-sm);padding:12px;color:var(--text);font-size:16px}
 .lvl{display:flex;align-items:center;gap:14px}.lvl .ava{font-size:40px;width:64px;height:64px;border-radius:50%;background:var(--bg-elevated);display:flex;align-items:center;justify-content:center}
 .lvl .info{flex:1}.lvl .nm{font-weight:800;font-size:17px}.lvl .xpbar{height:10px;background:rgba(255,255,255,.1);border-radius:5px;overflow:hidden;margin:6px 0 4px}.lvl .xpbar i{display:block;height:100%;background:var(--warning);border-radius:5px}
@@ -2173,152 +2231,12 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
 </section>
 <section class="section" id="sec-charge">
   <div style="height:12px;"></div>
-  <div class="card">
-    <div class="card-title"><i class="fas fa-sun"></i> Утренняя зарядка</div>
-    <div class="ex-block block-warm">
-      <div class="ex-block-header"><div class="dot" style="background:var(--accent)"></div> Блок 1: Суставная гимнастика</div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">1</span>Суставная гимнастика</div>
-        <div class="ex-desc">Плавные вращения в голеностопе, коленях, тазобедренных суставах по 10 раз в каждую сторону.</div>
-      </div>
-    </div>
-    <div class="ex-block block-speed">
-      <div class="ex-block-header"><div class="dot" style="background:var(--warning)"></div> Блок 2: Активация</div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">1</span>Быстрые подъёмы колен на уровень таза</div>
-        <div class="ex-dose">20 сек / 3 подхода, отдых 30 сек</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">2</span>Выпады поочерёдно на каждую ногу</div>
-        <div class="ex-dose">20 сек / 3 подхода, отдых 30 сек</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">3</span>Прыжки из приседа вверх</div>
-        <div class="ex-dose">8 прыжков / 3 подхода, отдых 30 сек</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">4</span>Подъёмы на носки на степе</div>
-        <div class="ex-desc">Встать носками на край степа, пятки свисают. Медленно опустить пятки вниз (растяжение), мощно подняться на носки.</div>
-        <div class="ex-dose">10 раз на двух ногах и по 6 раз на каждой ноге / 3 подхода, отдых 30 сек</div>
-      </div>
-    </div>
-    <div class="ex-block block-strength">
-      <div class="ex-block-header"><div class="dot" style="background:var(--info)"></div> Блок 3: Сила корпуса</div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">1</span>Отжимания</div>
-        <div class="ex-dose">8-10 раз / 3 подхода, отдых 15 сек</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">2</span>Планка</div>
-        <div class="ex-dose">20-30 сек / 3 подхода, отдых 15 сек</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">3</span>Подтягивания</div>
-        <div class="ex-dose">5-8 раз полные / 4-6 раз негативные / 10-12 раз с резинкой</div>
-      </div>
-    </div>
-    <div class="ex-block block-cool">
-      <div class="ex-block-header"><div class="dot" style="background:var(--purple)"></div> Блок 4: Заминка</div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">1</span>Растяжка и дыхательные упражнения</div>
-        <div class="ex-desc">Спокойная статическая растяжка основных мышечных групп. Глубокое диафрагмальное дыхание.</div>
-        <div class="ex-dose">5-7 минут</div>
-      </div>
-    </div>
-  </div>
+  <div id="exv-charge" class="exv"></div>
 </section>
 
 <section class="section" id="sec-ofp">
   <div style="height:12px;"></div>
-  <div class="card">
-    <div class="card-title"><i class="fas fa-dumbbell"></i> ОФП -- Общая физическая подготовка</div>
-    <p style="font-size:12px;color:var(--text-secondary);margin-bottom:16px;">Выполнять в дни без тяжёлой футбольной тренировки. Все прыжковые упражнения -- только на гимнастическом мате!</p>
-    <div class="ex-block block-warm">
-      <div class="ex-block-header"><div class="dot" style="background:var(--accent)"></div> 🟢 Блок 1: Разминка</div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">1</span>Суставная гимнастика</div>
-        <div class="ex-desc">Плавные вращения в голеностопе, коленях, тазобедренных суставах по 10 раз в каждую сторону.</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">2</span>«Гусеница»</div>
-        <div class="ex-desc">Из положения стоя наклониться вперёд, руками «пройти» по полу до положения планки, затем ногами «подойти» к рукам.</div>
-        <div class="ex-dose">3-4 повторения</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">3</span>Активация стопы</div>
-        <div class="ex-desc">Стоя на одной ноге, медленно перекатываться с пятки на носок. Удерживать баланс.</div>
-        <div class="ex-dose">15 секунд на каждую ногу</div>
-      </div>
-    </div>
-    <div class="ex-block block-speed">
-      <div class="ex-block-header"><div class="dot" style="background:var(--warning)"></div> 🟡 Блок 2: Скорость и взрыв</div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">4</span>Pogo Jumps (Прыжки-пого)</div>
-        <div class="ex-desc">Прыгаем как пружина! Колени почти прямые, работаем только голеностопом. Приземление мягкое на носок.</div>
-        <div class="ex-dose">3 подхода по 6 прыжков. Отдых 1,5-2 мин</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">5</span>Fast Feet (Быстрые ноги)</div>
-        <div class="ex-desc">Максимально частые переборы ногами на месте. Пятки не опускаем, корпус наклонён вперёд, руки работают в темп ног.</div>
-        <div class="ex-dose">3 подхода по 10 сек. Отдых 1,5-2 мин</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">6</span>Запрыгивание на степ</div>
-        <div class="ex-desc">Из полуприседа мощный прыжок на степ. Приземление мягкое, колени согнуты. <strong>ВАЖНО:</strong> сходим со степа шагом назад, НЕ спрыгиваем!</div>
-        <div class="ex-dose">3 подхода по 5 прыжков. Отдых 1,5-2 мин</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">7</span>Старты из нестандартных положений</div>
-        <div class="ex-desc">По хлопку -- максимально быстрый старт из положения лежа на животе, сидя или спиной вперёд. Первые 3-5 метров -- взрывное ускорение.</div>
-        <div class="ex-dose">3-4 старта. Отдых 1,5 мин</div>
-      </div>
-    </div>
-    <div class="ex-block block-strength">
-      <div class="ex-block-header"><div class="dot" style="background:var(--info)"></div> 🔵 Блок 3: Силовой фундамент</div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">8</span>Болгарские выпады</div>
-        <div class="ex-desc">Задняя нога на диване/степе, приседание на передней ноге. Колено строго над стопой, не заваливается внутрь. Спина прямая.</div>
-        <div class="ex-dose">3 подхода по 8 раз на каждую ногу. Отдых 30-60 сек</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">9</span>Подъёмы на носках на степе</div>
-        <div class="ex-desc">Встать носками на край степа, пятки свисают. Медленно опустить пятки вниз (растяжение), мощно подняться на носки.</div>
-        <div class="ex-dose">3 подхода по 15 повторений. Отдых 30-60 сек</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">10</span>«Мёртвый жук» (Dead Bug)</div>
-        <div class="ex-desc">Лежа на спине, поясница ПРИЖАТА к полу. Медленно опускаем разноимённые руку и ногу, не отрывая поясницу от мата.</div>
-        <div class="ex-dose">3 подхода по 8 раз на каждую сторону. Отдых 30-60 сек</div>
-      </div>
-    </div>
-    <div class="ex-block block-cool">
-      <div class="ex-block-header"><div class="dot" style="background:var(--purple)"></div> 🟣 Блок 4: Шведская стенка и заминка</div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">11</span>Вис на перекладине</div>
-        <div class="ex-desc">Просто висеть, расслабив спину. Декомпрессия позвоночника после нагрузки.</div>
-        <div class="ex-dose">20-30 секунд</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">12</span>Подъём коленей в висе</div>
-        <div class="ex-desc">В висе на перекладине поднимаем колени к груди, контролируя движение. Укрепляет пресс и мышцы бедра.</div>
-        <div class="ex-dose">3 подхода по 8 раз. Отдых 30-60 сек</div>
-      </div>
-      <div class="exercise">
-        <div class="ex-name"><span class="num">13</span>Растяжка задней поверхности бедра</div>
-        <div class="ex-desc">Пятку на перекладину шведской стенки (комфортная высота), нога прямая. Аккуратно наклонить корпус вперёд, спина прямая.</div>
-        <div class="ex-dose">Держать 20-30 секунд на каждую ногу</div>
-      </div>
-    </div>
-    <div class="card" style="border-left:3px solid var(--danger);">
-      <div class="card-title" style="color:var(--danger)"><i class="fas fa-exclamation-triangle"></i> Важные напоминания</div>
-      <ul style="font-size:13px;color:var(--text-secondary);line-height:1.9;margin-left:18px;">
-        <li>Все прыжковые упражнения -- только на гимнастическом мате!</li>
-        <li>Между подходами в блоке скорости -- 1,5-2 минуты полного отдыха</li>
-        <li>Если испытываешь боль ниже колена или в пятке -- немедленно прекрати прыжки</li>
-        <li>Этот комплекс -- в дни без тяжёлой футбольной тренировки</li>
-      </ul>
-    </div>
-  </div>
+  <div id="exv-ofp" class="exv"></div>
 </section>
 <section class="section" id="sec-examples">
   <div style="height:12px;"></div>
@@ -3823,6 +3741,7 @@ function scaleDose(text,age){
     const pl=(n,o,t,f)=>n%10===1&&n%100!==11?o:(n%10>=2&&n%10<=4&&(n%100<10||n%100>=20))?t:f;
     let uu=u;
     if(/прыжк/.test(u)) uu=u.replace(/прыжк[а-я]*/,pl(last,'прыжок','прыжка','прыжков'));
+    else if(/раз/.test(u)) uu=u.replace(/раз[а]?/,pl(last,'раз','раза','раз'));
     else if(/повторени/.test(u)) uu=u.replace(/повторени[яй]/,pl(last,'повторение','повторения','повторений'));
     return (y&&y!==x?x+'-'+y:x)+uu;
   });
@@ -3838,17 +3757,13 @@ function renderSteps() {
     const restText = s.rest ? ' + отдых '+s.rest+'сек' : '';
     html += '<div class="step-row'+(act?' active':'')+(open?' open':'')+'"><div class="step-head" onclick="toggleStepInfo('+i+')"><span>'+(i+1)+'. '+s.name+' <small>('+s.sec+'сек'+restText+')</small>'+(act?' ←':'')+'</span><i class="step-chev"></i></div>';
     if(open){
-      const info=findExInfo(tProg,s.name);
+      const ex=window.exById&&exById(s.ex);
       html+='<div class="step-info">';
-      if(info){
-        if(info.desc) html+='<div class="si-block"><b>Как делать</b><div>'+info.desc+'</div></div>';
-        if(info.tech) html+='<div class="si-block"><b>Техника</b><div>'+info.tech+'</div></div>';
-        if(info.dose){
-          if(AGE_F[age]) html+='<div class="si-block si-dose"><b>Сколько делать · '+AGE_LBL[age]+'</b><div>'+scaleDose(info.dose,age)+'</div></div>';
-          else html+='<div class="si-block si-dose"><b>Сколько делать</b><div>'+info.dose+'</div><small>Выбери возраст в профиле — подберём количество для тебя.</small></div>';
-          html+='<div class="si-ages">'+['7-9','10-12','13-15'].map(a=>'<div class="'+(a===age?'on':'')+'"><span>'+AGE_LBL[a]+'</span>'+scaleDose(info.dose,a)+'</div>').join('')+'</div>';
-        }
-        if(!info.desc&&!info.tech&&!info.dose) html+='<div class="si-block">Выполняй по таймеру, следи за техникой.</div>';
+      if(ex){
+        html+='<div class="si-block"><b>Как делать</b><ol class="si-ol">'+ex.s.map(x=>'<li>'+x+'</li>').join('')+'</ol></div><div class="si-tip">⚠️ '+ex.t+'</div>';
+        const ds=exDoses(ex,s);
+        html+='<div class="si-block si-dose"><b>Сколько делать'+(AGE_LBL[age]?' · '+AGE_LBL[age]:'')+'</b><div>'+exDose(ex,s,age)+'</div>'+(AGE_LBL[age]?'':'<small>Выбери возраст в профиле — подберём количество для тебя.</small>')+'</div>';
+        html+='<div class="si-ages">'+['7-9','10-12','13-15'].map((a,k)=>'<div class="'+(a===age?'on':'')+'"><span>'+AGE_LBL[a]+'</span>'+(k===0&&ex.hard?'Пока не выполняется — только с тренером':ds[k])+'</div>').join('')+'</div>';
       } else html+='<div class="si-block">Выполняй по таймеру, следи за техникой. Если что-то болит — сразу остановись.</div>';
       html+='</div>';
     }
@@ -6164,6 +6079,127 @@ function exportHabitsData() {
     
 </script>
 <script>
+// ===== Единая база упражнений: Зарядка, ОФП, Таймер, Библиотека =====
+(function(){
+const EX=[{"id": "joints", "n": "Суставная гимнастика", "e": "🤸", "an": "an-bob", "eq": "", "hard": false, "lib": "", "s": ["Встань прямо, ноги на ширине плеч.", "Плавно вращай по очереди: стопы, колени, таз, плечи.", "Делай вращения в обе стороны, без рывков.", "Дыши ровно и не торопись."], "t": "Разминка нужна всегда — она бережёт суставы.", "d": ["5 вращений в каждую сторону", "8 вращений в каждую сторону", "10 вращений в каждую сторону"]}, {"id": "knees", "n": "Быстрые подъёмы колен на уровень таза", "e": "🏃", "an": "an-run", "eq": "", "hard": false, "lib": "Подъёмы колен на уровне таза", "s": ["Встань прямо, корпус ровный.", "Беги на месте с максимальной амплитудой.", "Колени поднимай до уровня таза.", "Руки активно работают, как при беге."], "t": "Не откидывайся назад.", "d": {"b": "20 сек / 3 подхода, отдых 30 сек"}}, {"id": "lunge", "n": "Выпады поочерёдно на каждую ногу", "e": "🦵", "an": "an-bob2", "eq": "", "hard": false, "lib": "", "s": ["Встань прямо, руки на поясе.", "Сделай шаг вперёд и опустись, пока оба колена не согнутся примерно под 90°.", "Переднее колено над стопой, спина прямая.", "Оттолкнись и вернись в стойку, затем смени ногу."], "t": "Колено не заваливай внутрь и не выносить далеко за носок.", "d": {"b": "20 сек / 3 подхода, отдых 30 сек"}}, {"id": "squatjump", "n": "Прыжки из приседа вверх", "e": "🦘", "an": "an-jump", "eq": "мат", "hard": true, "lib": "Прыжки из приседа резко вверх", "s": ["Опустись в глубокий присед, спина прямая.", "Резко выпрыгни вверх, руки помогают замахом.", "Приземлись мягко, колени согнуты.", "Сразу опустись в следующий присед."], "t": "Прыгай только на мате, колени не заваливай внутрь.", "d": {"b": "8 прыжков / 3 подхода, отдых 30 сек"}}, {"id": "calf", "n": "Подъёмы на носки на степе", "e": "🦶", "an": "an-bob", "eq": "степ", "hard": false, "lib": "Подъёмы на носках на степе", "s": ["Встань носками на край степа, пятки свисают.", "Медленно опусти пятки вниз — почувствуй растяжение.", "Мощно поднимись на носки.", "Держи равновесие — можно слегка придерживаться за опору."], "t": "Движение плавное, без рывков.", "d": ["10 подъёмов на двух ногах, 2 серии", "12 подъёмов на двух ногах + 6 на каждой ноге, 3 серии", "15 подъёмов на двух ногах + 8 на каждой ноге, 3 серии"]}, {"id": "pushup", "n": "Отжимания", "e": "💪", "an": "an-jump", "eq": "", "hard": false, "lib": "Отжимания", "s": ["Упор лёжа, руки чуть шире плеч, тело — прямая линия.", "Опускайся до касания грудью пола.", "Локти идут назад под углом 45°, а не в стороны.", "Выжимай вверх, не прогибая поясницу."], "t": "Если тяжело — делай отжимания от колен или от опоры.", "d": ["2 подхода по 5 раз (можно от колен)", "3 подхода по 6–8 раз", "3 подхода по 8–10 раз"]}, {"id": "plank", "n": "Планка", "e": "🛡️", "an": "an-bob2", "eq": "", "hard": false, "lib": "Планка", "s": ["Встань на предплечья, локти под плечами.", "Тело — прямая линия от головы до пяток.", "Не провисай поясницей и не поднимай таз.", "Дыши ровно, держи положение по таймеру."], "t": "Если поясница прогибается — остановись и отдохни.", "d": {"b": "20-30 сек / 3 подхода"}}, {"id": "pullup", "n": "Подтягивания", "e": "🧗", "an": "an-bob", "eq": "перекладина", "hard": true, "lib": "Подтягивания", "s": ["Вис на турнике 20–30 сек для укрепления хвата.", "Негативные: запрыгни в верхнюю точку, медленно опускайся 3–5 сек.", "С резиной: петля на перекладине, ногу в петлю — помогай подниматься.", "Опускайся плавно, как «тормозишь лифт»."], "t": "Не раскачивайся и не падай вниз — всегда контролируй спуск.", "d": ["Пока не выполняется — только с тренером", "Вис 15–20 сек × 3; негативные 3 × 3 раза; с резинкой 3 × 6 раз", "5–8 раз полные / 4–6 негативные / 10–12 с резинкой"]}, {"id": "cooldown", "n": "Растяжка и дыхательные упражнения", "e": "🧘", "an": "an-bob2", "eq": "", "hard": false, "lib": "", "s": ["Встань или сядь удобно, спина прямая.", "Плавно потянись: шея, плечи, спина, ноги — каждое по 15–20 сек.", "Дыши глубоко: вдох носом (живот надувается), выдох ртом.", "Закончи лёгкой встряской рук и ног."], "t": "Растягивайся без боли — только до приятного натяжения.", "d": ["3–4 минуты", "5 минут", "5–7 минут"]}, {"id": "caterpillar", "n": "«Гусеница»", "e": "🐛", "an": "an-glide", "eq": "", "hard": false, "lib": "", "s": ["Встань прямо, наклонись вперёд и положи ладони на пол.", "Иди руками вперёд до положения планки.", "Маленькими шагами подведи ноги к рукам.", "Выпрямись и повтори."], "t": "Если тяжело — слегка согни колени.", "d": ["2 повторения", "3 повторения", "3–4 повторения"]}, {"id": "foot", "n": "Активация стопы", "e": "🦶", "an": "an-bob2", "eq": "стена (опора)", "hard": false, "lib": "", "s": ["Встань на одну ногу, рядом — стена для опоры.", "Медленно перекатывайся с пятки на носок.", "Колено слегка согнуто, держи равновесие.", "Через время смени ногу."], "t": "Не торопись — важна точность и баланс.", "d": ["10 сек на каждую ногу", "15 сек на каждую ногу", "15–20 сек на каждую ногу"]}, {"id": "pogo", "n": "Pogo Jumps (Прыжки-пого)", "e": "🐸", "an": "an-jump", "eq": "мат", "hard": true, "lib": "Pogo Jumps", "s": ["Встань прямо, колени почти прямые.", "Прыгай как пружина, работая только голеностопом.", "Приземляйся на носок, мягко.", "Руки вдоль тела, спина прямая."], "t": "Не сгибай колени сильно — вся работа в голеностопе.", "d": {"b": "3 подхода по 6 прыжков. Отдых 1,5-2 мин"}}, {"id": "fastfeet", "n": "Fast Feet (Быстрые ноги)", "e": "⚡", "an": "an-run", "eq": "", "hard": false, "lib": "Fast Feet", "s": ["Встань в лёгкую стойку, корпус слегка наклонён вперёд.", "Максимально часто переставляй ноги на месте.", "Пятки не опускай, руки работают в темп ног.", "Закончи подход строго по таймеру."], "t": "Если стопы устали — сделай паузу, техника важнее скорости.", "d": {"b": "3 подхода по 10 сек. Отдых 1,5-2 мин"}}, {"id": "stepjump", "n": "Запрыгивание на степ", "e": "🪜", "an": "an-jump", "eq": "степ, мат", "hard": true, "lib": "Запрыгивание на степ", "s": ["Поставь степ ровно на нескользкую поверхность.", "Из полуприседа сделай мощный прыжок на степ двумя ногами.", "Приземлись мягко, колени согнуты.", "Сходи со степа шагом назад — не спрыгивай."], "t": "Высоту степа подбирай под рост и уровень, не выше колена.", "d": {"b": "3 подхода по 5 прыжков"}}, {"id": "starts", "n": "Старты из нестандартных положений", "e": "🏁", "an": "an-run", "eq": "ровная площадка", "hard": true, "lib": "", "s": ["Прими необычное положение: сидя, лёжа на животе, на спине или в упоре лёжа.", "По сигналу быстро вскочи и сделай спринт 5–10 м.", "Первые шаги короткие и частые.", "Остановись и вернись шагом."], "t": "Только на ровной нескользкой площадке.", "d": ["Пока не выполняется — только с тренером", "3 старта, отдых 1,5 мин", "3–4 старта, отдых 1,5 мин"]}, {"id": "bulgarian", "n": "Болгарские выпады", "e": "🦵", "an": "an-bob", "eq": "степ или диван", "hard": true, "lib": "Болгарские выпады", "s": ["Поставь заднюю ногу носком на диван или степ.", "Присядь на передней ноге, спина прямая.", "Колено не выходит за носок и не заваливается внутрь.", "Поднимись и повтори; затем смени ногу."], "t": "Следи за равновесием, не торопись.", "d": {"b": "3 подхода по 8 раз на каждую ногу"}}, {"id": "deadbug", "n": "«Мёртвый жук» (Dead Bug)", "e": "🪲", "an": "an-bob2", "eq": "мат", "hard": false, "lib": "Мёртвый жук", "s": ["Лягте на спину, руки вверх, ноги согнуты под 90°.", "Медленно опусти правую руку и левую ногу, не отрывая поясницу от пола.", "Вернись и смени сторону.", "Дыши ровно, движение медленное."], "t": "Поясница прижата к полу весь подход.", "d": {"b": "3 подхода по 8 раз на каждую сторону"}}, {"id": "hang", "n": "Вис на перекладине", "e": "🐒", "an": "an-bob", "eq": "перекладина", "hard": false, "lib": "", "s": ["Возьмись за перекладину хватом чуть шире плеч.", "Повисни на прямых руках, плечи не поднимай к ушам.", "Дыши ровно и держись по таймеру.", "Слезай мягко, не спрыгивай с большой высоты."], "t": "Если ладони скользят — вытри их.", "d": ["10 сек × 2 раза", "15–20 сек × 2 раза", "20–30 сек × 3 раза"]}, {"id": "kneeraise", "n": "Подъём коленей в висе", "e": "🦵", "an": "an-bob2", "eq": "перекладина", "hard": true, "lib": "Подъём коленей в висе", "s": ["Повисни на перекладине, хват чуть шире плеч.", "Согни ноги и подними колени к груди.", "Опусти ноги плавно, без раскачивания.", "Дыши ровно, плечи не поднимай к ушам."], "t": "Если не можешь поднять колени без раскачки — делай меньше повторов.", "d": ["Пока не выполняется — только с тренером", "3 подхода по 5 раз", "3 подхода по 8 раз"]}, {"id": "hamstring", "n": "Растяжка задней поверхности бедра", "e": "🧘", "an": "an-bob", "eq": "шведская стенка", "hard": false, "lib": "Растяжка задней поверхности бедра", "s": ["Поставь пятку на перекладину шведской стенки (низко).", "Нога прямая, носок на себя.", "Аккуратно наклони корпус вперёд, спина прямая.", "Задержись и дыши ровно."], "t": "Растяжка не должна быть болезненной — без рывков.", "d": {"b": "20-30 сек на каждую ногу"}}], PROG={"charge": {"title": "Утренняя зарядка", "emoji": "🌞", "sub": "Проснись и зарядись энергией на весь день!", "blocks": [{"n": "Суставная гимнастика", "e": "🟢", "c": "#00e676", "items": [{"ex": "joints", "tn": "Суставная гимнастика", "sec": 180}]}, {"n": "Активация", "e": "🟡", "c": "#ffb300", "items": [{"ex": "knees", "tn": "Быстрые подъёмы колен", "sec": 20, "rest": 30}, {"ex": "lunge", "tn": "Выпады", "sec": 20, "rest": 30}, {"ex": "squatjump", "tn": "Прыжки из приседа", "sec": 60, "rest": 30}, {"ex": "calf", "tn": "Подъёмы на носки", "sec": 90, "rest": 30, "d": ["8 подъёмов на двух ногах, 2 серии, отдых 30 сек", "10 подъёмов на двух ногах и по 5 раз на каждой ноге / 3 подхода, отдых 30 сек", "10 раз на двух ногах и по 6 раз на каждой ноге / 3 подхода, отдых 30 сек"]}]}, {"n": "Сила корпуса", "e": "🔵", "c": "#4fc3f7", "items": [{"ex": "pushup", "tn": "Отжимания", "sec": 60, "rest": 15}, {"ex": "plank", "tn": "Планка", "sec": 30, "rest": 15}, {"ex": "pullup", "tn": "Подтягивания", "sec": 90, "rest": 30}]}, {"n": "Заминка", "e": "🟣", "c": "#b388ff", "items": [{"ex": "cooldown", "tn": "Заминка", "sec": 300}]}]}, "ofp": {"title": "ОФП", "emoji": "💪", "sub": "Общая физическая подготовка — делай в дни без тяжёлой тренировки.", "blocks": [{"n": "Разминка", "e": "🟢", "c": "#00e676", "items": [{"ex": "joints", "tn": "Разминка: суставная", "sec": 180}, {"ex": "caterpillar", "tn": "Гусеница", "sec": 60, "rest": 30}, {"ex": "foot", "tn": "Активация стопы", "sec": 60, "rest": 30}]}, {"n": "Скорость и взрыв", "e": "🟡", "c": "#ffb300", "items": [{"ex": "pogo", "tn": "Pogo Jumps", "sec": 30, "rest": 90}, {"ex": "fastfeet", "tn": "Fast Feet", "sec": 10, "rest": 90}, {"ex": "stepjump", "tn": "Запрыгивание на степ", "sec": 60, "rest": 90}, {"ex": "starts", "tn": "Старты", "sec": 60, "rest": 90}]}, {"n": "Силовой фундамент", "e": "🔵", "c": "#4fc3f7", "items": [{"ex": "bulgarian", "tn": "Болгарские выпады", "sec": 120, "rest": 45}, {"ex": "calf", "tn": "Подъёмы на носки", "sec": 90, "rest": 45, "d": ["2 подхода по 8 повторений. Отдых 30-60 сек", "3 подхода по 12 повторений. Отдых 30-60 сек", "3 подхода по 15 повторений. Отдых 30-60 сек"]}, {"ex": "deadbug", "tn": "Мёртвый жук", "sec": 90, "rest": 45}]}, {"n": "Шведская стенка и заминка", "e": "🟣", "c": "#b388ff", "items": [{"ex": "hang", "tn": "Вис на перекладине", "sec": 30, "rest": 30}, {"ex": "kneeraise", "tn": "Подъём коленей в висе", "sec": 90, "rest": 45}, {"ex": "hamstring", "tn": "Растяжка бедра", "sec": 60, "rest": 30}]}]}};
+window.EXDB=EX; window.EXPROG=PROG;
+const byId=id=>EX.find(e=>e.id===id);
+window.exById=byId;
+const E=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const LBL={'7-9':'7–9 лет','10-12':'10–12 лет','13-15':'13–15 лет'}, AGES=['7-9','10-12','13-15'];
+const age=()=>(JSON.parse(localStorage.getItem('fp_profile')||'{}').age)||'';
+const idx=a=>a==='7-9'?0:a==='10-12'?1:2;
+window.exDoses=function(ex,item){const d=(item&&item.d)||ex.d;return Array.isArray(d)?d:[scaleDose(d.b,'7-9'),scaleDose(d.b,'10-12'),d.b];};
+window.exDose=function(ex,item,a){return exDoses(ex,item)[idx(a)];};
+// таймер: программы берутся из той же базы
+Object.keys(PROG).forEach(k=>{const arr=[];PROG[k].blocks.forEach(b=>b.items.forEach(it=>{const o={name:it.tn,sec:it.sec,ex:it.ex};if(it.rest)o.rest=it.rest;if(it.d)o.d=it.d;arr.push(o);}));programs[k]=arr;});
+
+const todayK=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');};
+function st(){let s;try{s=JSON.parse(localStorage.getItem('fp_exdone')||'{}');}catch(e){s={};}if(s.date!==todayK())s={date:todayK(),charge:[],ofp:[]};return s;}
+const open={};
+const REM=['Все прыжковые упражнения — только на гимнастическом мате!','Между подходами в блоке скорости — 1,5–2 минуты полного отдыха.','Если появилась боль ниже колена или в пятке — сразу прекрати прыжки и скажи тренеру или родителям.','Комплекс делай в дни без тяжёлой футбольной тренировки.'];
+
+function render(prog){
+  const P=PROG[prog],root=E('exv-'+prog);if(!root)return;
+  const a=age(),s=st(),done=s[prog]||[];
+  const hid=ex=>a==='7-9'&&ex.hard;
+  let total=0,dn=0,secs=0;
+  P.blocks.forEach(b=>b.items.forEach(it=>{const ex=byId(it.ex);if(hid(ex))return;total++;secs+=it.sec+(it.rest||0);if(done.includes(it.ex))dn++;}));
+  const pct=total?Math.round(dn/total*100):0;
+  let h='<div class="ex-hero"><div class="ex-hero-t"><span class="ex-hero-e">'+P.emoji+'</span><div><h2>'+P.title+'</h2><p>'+P.sub+'</p></div></div>'+
+    '<div class="ex-chips"><span>⏱ ≈ '+Math.max(1,Math.round(secs/60))+' мин</span><span>📋 '+total+' упражнений</span></div>'+
+    '<div class="ex-age"><span>Мой возраст:</span>'+AGES.map(x=>'<button type="button" data-act="age" data-a="'+x+'" class="'+(a===x?'on':'')+'">'+LBL[x]+'</button>').join('')+'</div>'+
+    (a?'':'<div class="ex-agehint">Выбери возраст — подберём количество повторений для тебя. Пока показана норма для 13–15 лет.</div>')+
+    (a==='7-9'?'<div class="ex-agehint">Сложные прыжковые и силовые упражнения скрыты — делай их позже вместе с тренером.</div>':'')+
+    '<div class="ex-prog"><div class="ex-prog-h"><b>Сегодня сделано: '+dn+' из '+total+'</b><span>'+pct+'%</span></div><div class="ex-bar"><i style="width:'+pct+'%"></i></div></div>'+
+    '<button type="button" class="ex-go" data-act="timer">▶ Запустить таймер</button></div>';
+  let n=0;
+  P.blocks.forEach((b,bi)=>{
+    const items=b.items.filter(it=>!hid(byId(it.ex)));if(!items.length)return;
+    const bd=items.filter(it=>done.includes(it.ex)).length,full=bd===items.length;
+    h+='<div class="exb"><div class="exb-h"><span class="exb-ic" style="background:'+b.c+'">'+b.e+'</span><div><b>Блок '+(bi+1)+' · '+b.n+'</b><small>'+bd+' из '+items.length+'</small></div><span class="exb-star'+(full?' on':'')+'">'+(full?'⭐':'☆')+'</span></div>';
+    items.forEach(it=>{
+      const ex=byId(it.ex);n++;
+      const dd=done.includes(it.ex),op=!!open[prog+it.ex];
+      h+='<div class="exc'+(dd?' done':'')+(op?' open':'')+'" data-id="'+it.ex+'" style="--c:'+b.c+'">'+
+        '<div class="exc-main" data-act="open"><span class="exc-ic"><span class="an '+ex.an+'">'+ex.e+'</span></span>'+
+        '<div class="exc-info"><div class="exc-name">'+n+'. '+esc(ex.n)+'</div><div class="exc-dose">🔁 '+esc(exDose(ex,it,a))+'</div>'+(ex.eq?'<div class="exc-eq">🧰 '+esc(ex.eq)+'</div>':'')+'</div>'+
+        '<button type="button" class="exc-check" data-act="check" aria-label="Сделал"></button></div>';
+      if(op){
+        const ds=exDoses(ex,it);
+        h+='<div class="exc-body"><b class="exc-t">Как делать</b><ol>'+ex.s.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol><div class="exc-tip">⚠️ '+esc(ex.t)+'</div><b class="exc-t">Сколько делать по возрасту</b><div class="exc-ages">'+
+          AGES.map((x,i)=>'<div class="'+(x===a?'on':'')+(i===0&&ex.hard?' lock':'')+'"><span>'+LBL[x]+'</span>'+esc(i===0&&ex.hard?'Пока не выполняется — только с тренером':ds[i])+'</div>').join('')+'</div></div>';
+      }
+      h+='</div>';
+    });
+    h+='</div>';
+  });
+  h+='<div class="ex-rem"><b>Важные напоминания</b><ul>'+REM.map(x=>'<li>'+x+'</li>').join('')+'</ul></div>';
+  root.innerHTML=h;
+}
+function complete(prog){
+  let log=[];try{log=JSON.parse(localStorage.getItem('fp_exfull')||'[]');}catch(e){}
+  const k=todayK();
+  if(!log.some(x=>x.date===k&&x.prog===prog)){log.push({date:k,prog:prog});localStorage.setItem('fp_exfull',JSON.stringify(log));}
+  if(typeof fireConfetti==='function')fireConfetti();
+  if(window.toast)toast('Комплекс «'+PROG[prog].title+'» выполнен! 🎉');
+  const row=document.querySelector('#progressChecks .check-row[onclick*="\''+prog+'\'"]');
+  if(row&&!row.classList.contains('checked')&&typeof toggleCheck==='function')toggleCheck(row,prog);
+  if(window.refresh)try{refresh();}catch(e){}
+}
+function onClick(prog,e){
+  const b=e.target.closest('[data-act]');if(!b)return;
+  const act=b.dataset.act;
+  if(act==='age'){
+    const p=JSON.parse(localStorage.getItem('fp_profile')||'{}');p.age=b.dataset.a;localStorage.setItem('fp_profile',JSON.stringify(p));
+    const sel=E('pAge');if(sel)sel.value=b.dataset.a;
+    if(window.applyAge)applyAge();else renderAll();
+    return;
+  }
+  if(act==='timer'){if(window.goTimer)goTimer(prog);return;}
+  const card=b.closest('.exc');if(!card)return;
+  const id=card.dataset.id;
+  if(act==='open'){open[prog+id]=!open[prog+id];render(prog);return;}
+  if(act==='check'){
+    const s=st(),arr=s[prog]||(s[prog]=[]),i=arr.indexOf(id);
+    if(i>=0)arr.splice(i,1);else{arr.push(id);if(navigator.vibrate)navigator.vibrate(20);}
+    localStorage.setItem('fp_exdone',JSON.stringify(s));
+    render(prog);
+    const a=age(),vis=[];PROG[prog].blocks.forEach(bl=>bl.items.forEach(it=>{if(!(a==='7-9'&&byId(it.ex).hard))vis.push(it.ex);}));
+    if(i<0&&vis.every(x=>arr.includes(x)))complete(prog);
+  }
+}
+function renderAll(){render('charge');render('ofp');}
+['charge','ofp'].forEach(p=>{const r=E('exv-'+p);if(r)r.addEventListener('click',e=>onClick(p,e));});
+document.addEventListener('agechange',()=>{renderAll();if(typeof renderSteps==='function')renderSteps();});
+renderAll();
+})();
+</script>
+<script>
+// ===== Библиотека: как выполнять + дозировка по возрасту (общие упражнения — из единой базы) =====
+(function(){
+const LIBX={"Ведение мяча": {"s": ["Поставь мяч перед собой и касайся его внутренней стороной стопы и подъёмом.", "Веди по прямой 10–20 м: мяч всё время рядом, на расстоянии шага.", "Затем пройди «змейкой» между конусами (расстояние 1,5–2 м).", "Поднимай голову и поглядывай вперёд, а не только на мяч."], "t": "Не бей по мячу, а толкай его мягко — так мяч не убегает.", "d": ["4 прохода по 10 м (прямая + змейка)", "5 проходов по 15 м", "6 проходов по 20 м, с ускорением на последних 5 м"]}, "Пас на стену": {"s": ["Встань в 3–4 м от стены, опорная нога рядом с мячом.", "Пас внутренней стороной стопы, носок ударной ноги подтянут.", "Остановив мяч первым касанием, сразу готовь следующий пас.", "Затем пасуй в движении, поочерёдно обеими ногами."], "t": "Следи, чтобы работали обе ноги поровну, не только «любимая».", "d": ["2 подхода по 10 пасов каждой ногой", "3 подхода по 15 пасов каждой ногой", "3 подхода по 20 пасов, часть — в одно касание"]}, "Жонглирование": {"s": ["Возьми мяч в руки, подбрось и ударь подъёмом (шнуровкой) чуть ниже колена.", "Мяч должен подлетать невысоко — примерно до пояса.", "Считай касания подряд; когда мяч упал — начни заново.", "Чередуй правую и левую ногу, потом добавь бедро."], "t": "Не торопись: лучше 10 аккуратных касаний, чем 30 «как попало».", "d": ["5 попыток, цель — 5–10 касаний подряд", "По 10 касаний каждой ногой × 3 серии, цель — 30 подряд", "По 10 касаний каждой ногой × 3 серии, цель — 100 подряд"]}, "Удары по воротам": {"s": ["Подойди к мячу под углом 30–45°, опорная нога ставится рядом с мячом.", "Носок ударной ноги опущен вниз, стопа жёсткая и зафиксирована.", "Бей подъёмом (шнуровкой) по центру мяча, корпус над мячом.", "После удара доведи ногу вперёд и смотри на мяч до самого удара."], "t": "Опорная нога слишком далеко от мяча — самая частая ошибка: мяч улетает вверх.", "d": ["10 ударов с места, с небольшого расстояния", "2 серии по 8 ударов с трёх позиций", "3 серии по 8: после обводки, первым касанием, со штрафного"]}, "Мяч об стенку": {"s": ["Встань в 2 м от стены с теннисным мячом.", "Брось мяч в стену и поймай отскок двумя руками.", "Усложняй: лови одной рукой, затем с хлопком перед ловлей.", "Позже — закрой глаза до отскока или развернись спиной."], "t": "Мяч ловим «мягкими» руками, не отбиваем.", "d": ["2 подхода по 10 ловлей двумя руками", "3 подхода по 10: одной рукой, с хлопком", "3 подхода по 12 с поворотом и закрытыми глазами до отскока"]}, "Резко поймать падающий мяч": {"s": ["Партнёр держит мяч на вытянутой руке на уровне груди.", "Ты стоишь рядом, руки опущены и расслаблены.", "Партнёр отпускает мяч без предупреждения.", "Поймай мяч до касания пола."], "t": "Смотри на мяч, а не на руку партнёра — так реакция лучше.", "d": ["8 попыток", "2 серии по 10 попыток", "3 серии по 10 попыток, высоту меняет партнёр"]}, "Базовый бег по лесенке": {"s": ["Положи лесенку на пол ровно.", "В каждую ячейку ставь по одной ноге, касаясь носком.", "Колени поднимай высоко, руки согнуты под 90° и работают в темп ног.", "Смотри вперёд, а не на ступеньки."], "t": "Сначала выполняй медленно и точно, потом быстрее.", "d": ["3 прохода медленным темпом", "4 прохода, темп средний", "5 проходов в быстром темпе"]}, "Боковые шаги": {"s": ["Встань боком к началу лесенки.", "Правая нога в ячейку, затем левая; следующий шаг — обе ноги выходят наружу.", "Продвигайся вдоль лесенки: два шага внутрь, два наружу.", "Следи, чтобы стопы касались земли на носках."], "t": "Не перепутай ноги — лучше идти медленно и правильно.", "d": ["2 прохода в каждую сторону", "3 прохода в каждую сторону", "4 прохода в каждую сторону, быстрее"]}, "Прыжки «ножницы»": {"s": ["Встань перед лесенкой, ноги вместе.", "Прыжком — обе ноги в ячейку; следующим прыжком — ноги по бокам ячейки.", "Чередуй «вместе — врозь» по всей лесенке.", "Руки помогают, как при беге; приземляйся мягко на носки."], "t": "Прыгай только на ровной нескользкой поверхности.", "d": ["2 прохода, медленно", "3 прохода", "4 прохода, в ритме"]}, "Пятка-носок": {"s": ["Беги по лесенке: в каждую ячейку ставь ногу пяткой, затем носком.", "Чередуй пятку и носок, не спеши.", "Корпус слегка вперёд, руки работают.", "Когда получится плавно — ускоряйся."], "t": "Не наступай на ступеньки лесенки.", "d": ["2 прохода", "3 прохода", "4 прохода в быстром темпе"]}, "Скручивания лёжа руками до пяток": {"s": ["Лягте на спину, ноги согнуты, стопы на полу.", "Руки вдоль тела, подними плечи от пола.", "Тянись руками к пяткам поочерёдно — правой, потом левой.", "Опускайся плавно, поясница прижата к полу."], "t": "Не тяни голову руками — работает только пресс.", "d": ["2 подхода по 8 раз", "3 подхода по 10 раз", "3 подхода по 15 раз"]}, "Скручивания влево и вправо": {"s": ["Лягте на спину, ноги подняты под углом 90°.", "Руки скрести на груди или положи за голову.", "Плавно скручивай корпус поочерёдно к правому и левому колену.", "Движение медленное, с контролем."], "t": "Если болит поясница — согни ноги и опусти стопы.", "d": ["2 подхода по 6 раз на сторону", "3 подхода по 8 раз на сторону", "3 подхода по 12 раз на сторону"]}, "Пресс с мячом": {"s": ["Лягте на спину, руки за головой, ноги согнуты.", "Подними туловище к коленям и вернись плавно.", "Вариант: мяч между ног — подними к голове, возьми руками и верни к ногам.", "Дыши ровно: выдох на подъёме."], "t": "Не рви шею — поднимай корпус за счёт пресса.", "d": ["2 подхода по 6 раз (без мяча)", "3 подхода по 8 раз", "3 подхода по 10–12 раз"]}, "Скалолаз": {"s": ["Встань в упор лёжа (как для отжиманий), руки под плечами.", "Поочерёдно подтягивай колени к груди, как при беге на месте.", "Спина прямая, таз не провисает и не поднимается.", "Дыши ровно, темп постепенно увеличивай."], "t": "Не «горби» спину и не опускай таз.", "d": ["2 подхода по 15 сек", "3 подхода по 20 сек", "3 подхода по 30 сек"]}, "Прыжок из колен": {"s": ["Встань на колени на мате, спина прямая.", "Резко замахнись руками назад и вперёд, выпрыгни в полуприсед на обе ноги.", "Приземляйся мягко, корпус наклонён вперёд на 45°.", "Сразу выполни короткий спринт 5–10 м."], "t": "Только мат, резиновое покрытие или грунт. Никакого бетона.", "d": ["Пока не выполняется — только с тренером", "3 повтора, отдых 1,5–2 мин", "4–5 повторов, отдых 1,5–2 мин"]}, "Серия из 3 прыжков из колен": {"s": ["Выполняй три упражнения подряд, отдыхая между ними.", "Упр. 1: с колен — на пятки — резкий выпрыг в присед.", "Упр. 2: на коленях с упором на носки — мощный выпрыг в присед.", "Упр. 3: комбинированный прыжок — смотри описание выше."], "t": "Приземление мягкое, колени не заваливай внутрь.", "d": ["Пока не выполняется — только с тренером", "1 серия, отдых 2 мин", "2–3 серии, отдых 2 мин"]}, "Бег в горку": {"s": ["Найди пологий склон 15–30 м.", "Беги вверх с мощным отталкиванием, колени высоко.", "Шаг не сокращай — работай технично, руки помогают.", "Вниз спускайся шагом, не бегом."], "t": "Не беги по скользкому склону, только в удобной обуви.", "d": ["3 подъёма по 10–15 м лёгким бегом", "4 подъёма по 15–20 м", "5–6 подъёмов по 20–30 м"]}, "Приседания на одной ноге": {"s": ["Встань у стены или стула для опоры.", "Одну ногу вытяни вперёд, присядь на опорной.", "Колено не заваливается внутрь, спина прямая.", "Поднимись и смени ногу."], "t": "Сначала держись за опору, потом пробуй без неё.", "d": ["Пока не выполняется — только с тренером", "2 подхода по 5 раз на ногу (с опорой)", "3 подхода по 6 раз на ногу"]}, "Шпагат сидя": {"s": ["Сядь на пол, расставь ноги широко (не больше комфорта).", "Спина прямая, наклоняйся вперёд к одной ноге.", "Затем наклонись к другой ноге и между ними.", "Стремись коснуться грудью пола, но без боли."], "t": "Не пружинь и не дави на колени — растягивайся плавно.", "d": ["2 раза по 10 сек (мягко)", "2 раза по 15 сек", "3 раза по 20–30 сек"]}, "Поза кошки": {"s": ["Встань на четвереньки, руки под плечами, колени под тазом.", "Выгни спину вверх («кошка»), опусти голову.", "Прогнись вниз («корова»), подними голову.", "Двигайся плавно, на выдохе — вверх, на вдохе — вниз."], "t": "Не торопись, следи за дыханием.", "d": {"b": "10-12 повторений"}}, "Упражнения для коленей": {"s": ["Сядь на стул, спина прямая.", "Медленно выпрями одну ногу и подними на уровень сиденья.", "Удержи 5 сек.", "Плавно опусти и смени ногу."], "t": "Если колено болит — остановись и скажи тренеру или родителям.", "d": ["6 раз на каждую ногу", "8 раз на каждую ногу", "10 раз на каждую ногу, 2 подхода"]}, "Упражнения с теннисным мячом": {"s": ["Сядь на стул или встань, под стопу положи теннисный мяч.", "Медленно перекатывай мяч под стопой от пятки к носку.", "Чуть надавливай, но без боли.", "Затем смени ногу."], "t": "Давление должно быть приятным, без боли.", "d": ["1 минута на каждую стопу", "1,5–2 минуты на каждую стопу", "2–3 минуты на каждую стопу"]}};
+const AGES=['7-9','10-12','13-15'], LBL={'7-9':'7–9 лет','10-12':'10–12 лет','13-15':'13–15 лет'};
+const NO='Пока не выполняется — только с тренером';
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+document.querySelectorAll('#sec-examples .lib-card').forEach(card=>{
+  const h4=card.querySelector('h4'); if(!h4) return;
+  const name=h4.textContent.trim();
+  const ex=(window.EXDB||[]).find(e=>e.lib&&name.includes(e.lib));
+  const key=ex?ex.id:Object.keys(LIBX).find(k=>name.includes(k)); if(!key) return;
+  const x=ex?{s:ex.s,t:ex.t,d:ex.d}:LIBX[key];
+  const doses=(Array.isArray(x.d)?x.d.slice():[scaleDose(x.d.b,'7-9'),scaleDose(x.d.b,'10-12'),x.d.b]);
+  if(ex&&ex.hard) doses[0]=NO;
+  const hardKid=/^Пока не/.test(doses[0]);
+  let html='<div class="lib-how"><b class="lh-t">Как выполнять</b><ol>'+x.s.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol>'+
+    '<div class="lh-tip">⚠️ '+esc(x.t)+'</div>'+
+    '<b class="lh-t">Сколько делать по возрасту</b><div class="lh-ages">'+
+    AGES.map((a,i)=>'<div data-a="'+a+'" class="'+(i===0&&hardKid?'lock':'')+'"><span>'+LBL[a]+'</span>'+esc(doses[i])+'</div>').join('')+'</div></div>';
+  card.insertAdjacentHTML('beforeend',html);
+});
+})();
+</script>
+<script>
 // ===== Конструктор плана на неделю =====
 (function(){
 const DN=['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'], DS=['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];
@@ -6301,10 +6337,12 @@ const FULL=JSON.parse(JSON.stringify(programs));
 const NOTE={'7-9':'👶 Режим 7-9 лет: сложные упражнения (подтягивания, прыжки, выпады) спрятаны. Делай их только с тренером.','10-12':'🧒 Режим 10-12 лет: бери меньше повторов, главное — техника. Прыжки только на мате.','13-15':'⚡ Режим 13-15 лет: полный набор. Не забывай про разминку и отдых.','':'Выбери возраст в профиле — приложение подберёт упражнения. <a class="prog-chip" onclick="showSection(\'profile\')">Выбрать</a>'};
 window.applyAge=function(){
   const a=JSON.parse(localStorage.getItem('fp_profile')||'{}').age||'',kid=a==='7-9';
+  document.body.dataset.age=a;
   document.querySelectorAll('.exercise,.lib-card').forEach(e=>{const n=(e.querySelector('.ex-name,h4')||{}).textContent||'';e.style.display=(kid&&HARD.some(w=>n.includes(w)))?'none':'';});
   ['charge','ofp'].forEach(k=>{programs[k]=FULL[k].filter(s=>!(kid&&HARD.some(w=>s.name.includes(w))));});
   if(!tRunning)timerReset();
   $('ageNote').innerHTML=NOTE[a]||NOTE[''];
+  document.dispatchEvent(new Event('agechange'));
 };
 const _sp=saveProfile;saveProfile=function(){const a=$('pAge').value;_sp();const p=JSON.parse(localStorage.getItem('fp_profile')||'{}');p.age=a;localStorage.setItem('fp_profile',JSON.stringify(p));applyAge();renderToday(false);};
 const _lp=loadProfile;loadProfile=function(){_lp();const p=JSON.parse(localStorage.getItem('fp_profile')||'{}');if(p.age)$('pAge').value=p.age;};
@@ -6363,9 +6401,9 @@ function paintAv(){const a=prof().avatar||'';document.querySelectorAll('.av-opt'
 const _sp=saveProfile;saveProfile=function(){const av=prof().avatar;_sp();if(av)setP({avatar:av});paintAv();refresh();};
 // уровни и «Первые победы»
 const LV=['Новичок','Дебютант','Игрок','Звезда','Капитан','Легенда'];
-const xp=()=>J('fp_doneDays','[]').length*10+J('trainings','[]').length*20+J('games','[]').length*20+J('fp_records','[]').length*5+J('fp_diary','[]').length*5;
+const xp=()=>J('fp_doneDays','[]').length*10+J('trainings','[]').length*20+J('games','[]').length*20+J('fp_records','[]').length*5+J('fp_diary','[]').length*5+J('fp_exfull','[]').length*15;
 const lvl=x=>Math.floor(Math.sqrt(x/25))+1,best=()=>+($('atBest')||{}).textContent||0;
-const BD=[['📓','Первая запись о тренировке или игре',()=>J('trainings','[]').length+J('games','[]').length>=1],['🏆','Первый рекорд',()=>J('fp_records','[]').length>=1],['🌱','Первая отметка привычки',()=>{try{return habits.some(x=>hbCount(x)>0)}catch(e){return false}}],['✅','Идеальный день: все привычки (от 3)',()=>{try{if(habits.length<3)return false;const ks=new Set();habits.forEach(x=>Object.keys(x.log||{}).forEach(k=>ks.add(k)));return [...ks].some(k=>habits.every(x=>hbHas(x,k)))}catch(e){return false}}],['⚽','5 тренировок или игр',()=>J('trainings','[]').length+J('games','[]').length>=5],['💯','Оценка 10/10',()=>[...J('trainings','[]'),...J('games','[]')].some(x=>x.totalRate===10)],['🚀','Уровень 3',()=>lvl(xp())>=3],['🔥','7 дней подряд по привычке',()=>{try{return habits.some(x=>hbBest(x)>=7)}catch(e){return false}}],['✍️','5 записей в дневнике',()=>J('fp_diary','[]').length>=5],['📝','Заметка к привычке',()=>{try{return habits.some(x=>Object.keys(x.notes||{}).length>0)}catch(e){return false}}]];
+const BD=[['📓','Первая запись о тренировке или игре',()=>J('trainings','[]').length+J('games','[]').length>=1],['🏆','Первый рекорд',()=>J('fp_records','[]').length>=1],['🌱','Первая отметка привычки',()=>{try{return habits.some(x=>hbCount(x)>0)}catch(e){return false}}],['✅','Идеальный день: все привычки (от 3)',()=>{try{if(habits.length<3)return false;const ks=new Set();habits.forEach(x=>Object.keys(x.log||{}).forEach(k=>ks.add(k)));return [...ks].some(k=>habits.every(x=>hbHas(x,k)))}catch(e){return false}}],['⚽','5 тренировок или игр',()=>J('trainings','[]').length+J('games','[]').length>=5],['💯','Оценка 10/10',()=>[...J('trainings','[]'),...J('games','[]')].some(x=>x.totalRate===10)],['🚀','Уровень 3',()=>lvl(xp())>=3],['🔥','7 дней подряд по привычке',()=>{try{return habits.some(x=>hbBest(x)>=7)}catch(e){return false}}],['✍️','5 записей в дневнике',()=>J('fp_diary','[]').length>=5],['☀️','Полный комплекс зарядки или ОФП',()=>J('fp_exfull','[]').length>=1]];
 const lc=document.createElement('div');lc.className='card';lc.id='lvlCard';$('ageNote').before(lc);
 const bc=document.createElement('div');bc.className='card';bc.innerHTML='<div class="wins-head"><div class="card-title">🏅 Мои победы</div><div class="wins-count" id="winsCount"></div></div><div class="wins-grid" id="bdRow"></div><div id="winsMore"></div>';$('todayTasks').after(bc);
 function refresh(){
