@@ -2099,7 +2099,9 @@ body[data-age="7-9"] .exc[data-hard]{display:none}
 .exc.done{background:rgba(0,230,118,.12);border-color:rgba(0,230,118,.35);border-left-color:var(--c)}
 .exc-main{display:flex;align-items:center;gap:12px;padding:12px;cursor:pointer}
 .exc-ic{width:54px;height:54px;flex:none;border-radius:16px;background:var(--bg-elevated);display:flex;align-items:center;justify-content:center;font-size:28px}
-.exc-photo{display:block;cursor:pointer;background:#04120e;line-height:0}.exc-photo img{display:block;width:100%;height:auto}.exc.has-photo .exc-main{padding-top:10px}.exc-photo.frames{display:flex;justify-content:center;gap:8px;padding:12px;box-sizing:border-box}.exc-photo.frames img{width:calc((100% - 16px)/3);max-width:130px;height:auto;border-radius:10px}.exc-chev{flex:none;width:36px;height:36px;display:flex;align-items:center;justify-content:center}.exc-chev::after{content:"";width:10px;height:10px;border-right:2.5px solid var(--accent);border-bottom:2.5px solid var(--accent);transform:rotate(45deg);margin-top:-4px;transition:transform .2s,margin .2s}.exc.open .exc-chev::after{transform:rotate(-135deg);margin-top:4px}.exc-ic .an{display:inline-block}.exc-ic img{width:32px;height:32px;object-fit:contain;display:block}
+.exc-photo{display:block;cursor:pointer;background:#04120e;line-height:0}.exc-photo img{display:block;width:100%;height:auto}.exc.has-photo .exc-main{padding-top:10px}#clrBtn{background:#ef5350!important;color:#fff!important}
+.data-note{background:rgba(255,193,7,.1);border-left:3px solid #ffc107;border-radius:10px;padding:10px 12px;margin:2px 0 10px;color:#ffe082;font-size:13px;line-height:1.5}.data-note b{display:block;margin-bottom:3px;color:#ffd54f}
+.exc-photo.frames{display:flex;justify-content:center;gap:8px;padding:12px;box-sizing:border-box}.exc-photo.frames img{width:calc((100% - 16px)/3);max-width:130px;height:auto;border-radius:10px}.exc-chev{flex:none;width:36px;height:36px;display:flex;align-items:center;justify-content:center}.exc-chev::after{content:"";width:10px;height:10px;border-right:2.5px solid var(--accent);border-bottom:2.5px solid var(--accent);transform:rotate(45deg);margin-top:-4px;transition:transform .2s,margin .2s}.exc.open .exc-chev::after{transform:rotate(-135deg);margin-top:4px}.exc-ic .an{display:inline-block}.exc-ic img{width:32px;height:32px;object-fit:contain;display:block}
 .exc-info{flex:1;min-width:0}
 .exc-name{font-size:15px;font-weight:700;line-height:1.3}
 .exc-dose{font-size:13px;color:var(--accent);margin-top:3px;font-weight:600;line-height:1.35}
@@ -3365,7 +3367,6 @@ body[data-age="7-9"] .exc[data-hard]{display:none}
                 <div id="hbList"></div>
 
                 <div class="hb-foot">
-                    <button type="button" class="hb-link" onclick="exportHabitsData()">📊 Экспорт данных</button>
                     <div class="hb-hint">Нажми на кружок — отметить день. Нажми на название — календарь месяца и история.</div>
                 </div>
             </div>
@@ -3510,19 +3511,6 @@ body[data-age="7-9"] .exc[data-hard]{display:none}
                 </div>
             </div>
 
-            <div class="nf-card">
-                <h3 class="nf-card-title blue">💾 Управление данными</h3>
-                <p style="color: #81c784; font-size: 13px; margin-bottom: 15px; line-height: 1.5;">
-                    Экспортируй данные для резервного копирования или переноса на другое устройство. 
-                    Импортируй ранее сохранённые данные.
-                </p>
-                <div class="data-actions">
-                    <button class="btn btn-blue" onclick="exportData()">📤 Экспорт</button>
-                    <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">📥 Импорт</button>
-                </div>
-                <input type="file" id="importFile" class="file-input" accept=".json" onchange="importData(event)">
-                <button class="btn btn-red" onclick="confirmClearAll()" style="margin-top: 10px;">🗑️ Очистить все данные</button>
-            </div>
         </section>
     </main>
 
@@ -6451,12 +6439,69 @@ function askParent(){const pin=localStorage.getItem('fp_pin');if(pin){const r=pr
 const gb=[...document.querySelectorAll('#nf-app button')].find(b=>b.textContent.includes('Открыть для родителей'));
 if(gb)gb.onclick=()=>{if(!askParent())return;[...document.querySelectorAll('#nf-app .nf-card')].filter(c=>c.style.display==='none'&&/Поддержать проект/.test(c.textContent.slice(0,90))).forEach(c=>c.style.display='');gb.closest('.nf-card').remove();if(w)w.closest('.nf-form-group').style.display='';};
 const pc=document.createElement('div');pc.className='card';
-pc.innerHTML='<div class="card-title">🔒 Для родителей и тренера</div><div class="hint" id="wkReport"></div><button class="btn-save" style="margin-top:0" id="bkBtn">💾 Скачать копию данных</button><button class="btn-save alt" id="rsBtn">📂 Восстановить из файла</button><button class="btn-save alt" id="pinBtn">🔑 Задать или сменить PIN</button><input type="file" id="rsFile" accept=".json" style="display:none">';
-$('sec-profile').appendChild(pc);
-$('bkBtn').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(Object.assign({},localStorage))],{type:'application/json'}));a.download='football-pro-backup.json';a.click();localStorage.setItem('fp_lastbackup',Date.now());toast('Копия сохранена 💾');};
+pc.innerHTML='<div class="card-title">📊 Итоги недели</div><div class="hint" id="wkReport"></div>';
+const dc=document.createElement('div');dc.className='card';dc.id='dataBlock';
+dc.innerHTML='<div class="card-title">💾 Данные и резервная копия</div><div class="data-note"><b>⚠️ Зачем нужна копия</b>Все данные хранятся только в этом браузере на этом устройстве. Если очистить данные браузера, удалить браузер или приложение, а также при переходе на другой телефон, тренировки, привычки, очки и награды пропадут. Сохраняй копию раз в неделю и храни файл в надёжном месте: в облаке или отправь себе на почту.</div><div class="hint" id="bkInfo"></div><button class="btn-save" style="margin-top:0" id="bkBtn">💾 Скачать копию данных</button><button class="btn-save alt" id="rsBtn">📂 Загрузить из файла</button><button class="btn-save alt" id="clrBtn">🗑️ Очистить все данные</button><div class="hint" style="margin-top:8px">В копию входит всё: тренировки, игры, привычки, дневник, рекорды, зарядка и ОФП, награды и очки. Загрузка и очистка защищены PIN.</div><input type="file" id="rsFile" accept=".json,application/json" style="display:none">';
+const kc=document.createElement('div');kc.className='card';
+kc.innerHTML='<div class="card-title">🔑 PIN для взрослых</div><div class="hint">Защищает загрузку и очистку данных, а также оплату и донаты, чтобы ребёнок не нажал случайно. Пока PIN не задан, вместо него спрашивается пример на умножение. PIN хранится на этом устройстве.</div><div class="hint" id="pinInfo"></div><button class="btn-save alt" id="pinBtn">🔑 Задать или сменить PIN</button>';
+$('sec-profile').appendChild(pc);$('sec-profile').appendChild(dc);$('sec-profile').appendChild(kc);
+window.fpPinInfo=function(){const el=$('pinInfo');if(!el)return;const has=!!localStorage.getItem('fp_pin');el.textContent=has?'✅ PIN задан':'PIN не задан';el.style.color=has?'#69f0ae':'#ffd54f';};
+// ===== Единый блок «Данные»: копия, загрузка, очистка =====
+const FPSKIP=['fp_bkshown','fp_lastbackup'];
+const fpDate=()=>new Date().toISOString().slice(0,10);
+function fpSnap(){const o={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(!FPSKIP.includes(k))o[k]=localStorage.getItem(k);}return o;}
+function fpDl(name,obj){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(obj)],{type:'application/json'}));a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),5000);}
+window.fpDataInfo=function(){const el=$('bkInfo');if(!el)return;const lb=+localStorage.getItem('fp_lastbackup')||0,kb=Math.max(1,Math.round(JSON.stringify(fpSnap()).length/1024)),old=!lb||Date.now()-lb>14*864e5;
+  el.textContent=(lb?(old?'⚠️ Последняя копия: ':'✅ Последняя копия: ')+new Date(lb).toLocaleDateString('ru-RU'):'⚠️ Копий ещё не было')+' · Размер данных: '+kb+' КБ';
+  el.style.color=old?'#ffd54f':'#69f0ae';};
+window.fpExport=function(){let nm='';try{nm=prof().name||'';}catch(e){}
+  fpDl('football-pro-backup-'+fpDate()+'.json',{app:'football-pro',v:4,exportedAt:new Date().toISOString(),player:nm,data:fpSnap()});
+  localStorage.setItem('fp_lastbackup',Date.now());fpDataInfo();toast('Копия сохранена 💾');};
+// распознаёт новый формат и три старых (полный дамп из «Я», экспорт из «Прогресса», экспорт привычек)
+function fpParse(t){let o;try{o=JSON.parse(t);}catch(e){return null;}
+  if(!o||typeof o!=='object'||Array.isArray(o))return null;
+  if(o.app==='football-pro'&&o.data&&typeof o.data==='object')return Object.values(o.data).every(v=>typeof v==='string')?{data:o.data,partial:false,date:o.exportedAt}:null;
+  const ks=Object.keys(o);
+  if(ks.length&&ks.every(k=>typeof o[k]==='string')&&ks.some(k=>/^(fp_|trainings$|games$|habits$|profile$|unlockedAwards$)/.test(k)))return{data:o,partial:false};
+  if(o.trainings||o.games||o.profile||o.habits||o.unlockedAwards){const d={};
+    if(Array.isArray(o.trainings))d.trainings=JSON.stringify(o.trainings);
+    if(Array.isArray(o.games))d.games=JSON.stringify(o.games);
+    if(o.profile&&typeof o.profile==='object')d.profile=JSON.stringify(o.profile);
+    if(o.habits)d.habits=JSON.stringify({v:2,habits:Array.isArray(o.habits)?o.habits:(o.habits.habits||[])});
+    if(Array.isArray(o.unlockedAwards))d.unlockedAwards=JSON.stringify(o.unlockedAwards);
+    return Object.keys(d).length?{data:d,partial:true,date:o.exportDate}:null;}
+  return null;}
+// замена данных с откатом: если не хватило места, всё возвращается как было; PIN устройства сохраняется
+function fpApply(res,msg,markBackup){const prev=fpSnap(),pin=localStorage.getItem('fp_pin');
+  try{
+    if(!res.partial)Object.keys(prev).forEach(k=>localStorage.removeItem(k));
+    Object.keys(res.data).forEach(k=>{if(!FPSKIP.includes(k))localStorage.setItem(k,res.data[k]);});
+    if(pin)localStorage.setItem('fp_pin',pin);
+    if(markBackup)localStorage.setItem('fp_lastbackup',Date.now());
+  }catch(e){
+    try{Object.keys(fpSnap()).forEach(k=>localStorage.removeItem(k));Object.keys(prev).forEach(k=>localStorage.setItem(k,prev[k]));}catch(x){}
+    toast('Не хватило места — данные не изменены');return false;}
+  toast(msg);setTimeout(()=>location.reload(),1600);return true;}
+window.goData=function(){showSection('profile');setTimeout(()=>{const b=$('dataBlock');if(b)b.scrollIntoView({behavior:'smooth',block:'start'});fpDataInfo();},60);};
+const _ss0=window.showSection;window.showSection=function(n){_ss0(n);if(n==='profile')fpDataInfo();};
+// старые входы ведут в единый блок
+window.exportData=window.fpExport;window.exportHabitsData=window.goData;window.importData=window.goData;window.confirmClearAll=window.goData;
+$('bkBtn').onclick=()=>fpExport();
 $('rsBtn').onclick=()=>{if(askParent())$('rsFile').click();};
-$('rsFile').onchange=e=>{const f=e.target.files[0];if(!f)return;f.text().then(t=>{try{const o=JSON.parse(t);Object.keys(o).forEach(k=>localStorage.setItem(k,o[k]));toast('Данные восстановлены');setTimeout(()=>location.reload(),800);}catch(x){toast('Файл не подходит');}});};
-$('pinBtn').onclick=()=>{if(localStorage.getItem('fp_pin')&&!askParent())return;const p=prompt('Новый PIN (4 цифры):');if(p&&/^\d{4}$/.test(p)){localStorage.setItem('fp_pin',p);toast('PIN сохранён 🔑');}else if(p!==null)toast('Нужно 4 цифры');};
+$('rsFile').onchange=e=>{const f=e.target.files[0];e.target.value='';if(!f)return;
+  f.text().then(t=>{const r=fpParse(t);if(!r){toast('Файл не подходит');return;}
+    const n=k=>{try{return JSON.parse(r.data[k]||'[]').length;}catch(x){return 0;}};
+    const info='тренировок: '+n('trainings')+', игр: '+n('games')+(r.date?', от '+new Date(r.date).toLocaleDateString('ru-RU'):'');
+    const q=r.partial?'Файл старого формата ('+info+'). Будут заменены только разделы из файла, остальное останется. Продолжить?':'Заменить ВСЕ данные в приложении данными из файла ('+info+')? Текущие данные будут заменены.';
+    if(!confirm(q))return;
+    try{fpDl('football-pro-before-restore-'+fpDate()+'.json',{app:'football-pro',v:4,exportedAt:new Date().toISOString(),data:fpSnap()});}catch(x){}
+    fpApply(r,'Данные загружены ✅',true);});};
+$('clrBtn').onclick=()=>{if(!askParent())return;
+  if(!confirm('Удалить ВСЕ данные приложения: тренировки, игры, привычки, дневник, рекорды, награды и очки? Это нельзя отменить.'))return;
+  try{fpDl('football-pro-before-clear-'+fpDate()+'.json',{app:'football-pro',v:4,exportedAt:new Date().toISOString(),data:fpSnap()});}catch(x){}
+  fpApply({data:{},partial:false},'Все данные удалены',false);};
+fpDataInfo();fpPinInfo();
+$('pinBtn').onclick=()=>{if(localStorage.getItem('fp_pin')&&!askParent())return;const p=prompt('Новый PIN (4 цифры):');if(p&&/^\d{4}$/.test(p)){localStorage.setItem('fp_pin',p);fpPinInfo();toast('PIN сохранён 🔑');}else if(p!==null)toast('Нужно 4 цифры');};
 function report(){const d=J('fp_doneDays','[]'),n=new Date();let c=0;for(let i=0;i<7;i++){const x=new Date(n);x.setDate(n.getDate()-i);if(d.includes(x.getFullYear()+'-'+(x.getMonth()+1)+'-'+x.getDate()))c++;}
   $('wkReport').textContent='Отчёт за неделю: '+c+' из 7 дней засчитано. Всего тренировок: '+J('trainings','[]').length+', игр: '+J('games','[]').length+'.';}
 // библиотека: категории, поиск, раскрывающиеся карточки
@@ -6500,7 +6545,7 @@ paintAv();refresh();report();quickDiary();
 const _ap=applyAge;applyAge=function(){_ap();quickDiary();};
 window.applyAge=applyAge;
 setInterval(()=>{refresh();report();},4000);
-const lb=+localStorage.getItem('fp_lastbackup')||0;if(xp()>0&&Date.now()-lb>14*864e5)setTimeout(()=>toast('Сделай копию данных: Я → Для родителей 💾'),4000);
+const lb=+localStorage.getItem('fp_lastbackup')||0;if(xp()>0&&Date.now()-lb>14*864e5&&localStorage.getItem('fp_bkshown')!==new Date().toISOString().slice(0,10))setTimeout(()=>{localStorage.setItem('fp_bkshown',new Date().toISOString().slice(0,10));toast('Сделай копию данных: Я → Данные 💾');},4000);
 })();
 </script>
 </body>
