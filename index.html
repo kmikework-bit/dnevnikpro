@@ -2043,7 +2043,63 @@ i.fas,i.fab{display:inline-block;width:1em;height:1em;vertical-align:-.125em;fon
 #sec-plan .pl-add{width:100%;margin-top:4px;border-style:dashed}
 #sec-plan .pl-link{display:block;width:100%;margin:12px 0 0;padding:10px;background:none;border:none;color:var(--accent);font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
 #sec-plan .pl-copy{background:var(--bg-elevated);border-radius:14px;padding:12px;margin-top:6px}
-#sec-plan .pl-save{display:grid;grid-template-columns:1fr;gap:8px;margin-top:18px}
+#sec-plan .pw-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.pw-edit{min-height:44px;padding:0 18px;border-radius:22px;border:1.5px solid var(--accent);background:transparent;color:var(--accent);font-size:15px;font-weight:700;font-family:inherit;cursor:pointer}
+.pw-grid{display:grid;grid-template-columns:38px repeat(7,minmax(0,1fr));gap:3px;background:rgba(255,255,255,.04);border-radius:16px;padding:10px;align-items:center;margin-bottom:12px}
+.pw-h{min-height:40px;border:0;border-radius:10px;background:transparent;color:var(--text-secondary);font-size:12px;font-weight:700;font-family:inherit;padding:0;cursor:pointer}
+.pw-h.n{background:var(--accent);color:#04120e}
+.pw-tm{font-size:10px;color:var(--text-secondary)}
+.pw-cont{opacity:.28}
+.pw-mvbtn{width:100%;min-height:44px;margin-bottom:10px;border-radius:22px;border:1.5px solid var(--accent);background:transparent;color:var(--accent);font-size:15px;font-weight:700;font-family:inherit;cursor:pointer}
+.pw-mvbtn.on{background:var(--accent);color:#04120e}
+.pw-seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+.pw-seg button{min-height:44px;border-radius:22px;border:1.5px solid rgba(255,255,255,.18);background:transparent;color:var(--text);font-size:14px;font-weight:700;font-family:inherit;cursor:pointer}
+.pw-seg .on{background:var(--accent);border-color:var(--accent);color:#04120e}
+.pw-mvbar{background:rgba(0,230,118,.1);border-radius:12px;padding:10px 12px;margin-bottom:10px;font-size:13px;line-height:1.5;color:var(--text)}
+.pw-mvon .pw-c{cursor:pointer}
+.pw-pick{box-shadow:0 0 0 3px var(--accent)}
+.pw-c.pw-xs{font-size:8px;letter-spacing:-.2px}
+.pw-c{display:flex;align-items:center;justify-content:center;height:40px;border-radius:8px;font-size:9px;font-weight:700;line-height:1.1;color:#10201a;text-align:center;font-style:normal;cursor:pointer;overflow:hidden;min-width:0}
+.pw-e{border:1px dashed rgba(255,255,255,.16);background:transparent}
+.pw-stack{flex-direction:column;gap:2px;background:transparent}
+.pw-m{flex:1;display:flex;align-items:center;justify-content:center;width:100%;border-radius:5px;font-size:8px;font-weight:700;font-style:normal;color:#10201a}
+.pw-z{background:#dce775}.pw-k{background:#90caf9}.pw-t{background:#a5d6a7}.pw-o{background:#ffcc80}.pw-g{background:#ef9a9a}
+.pw-u{background:#fff59d}.pw-ch{background:#b0bec5}.pw-r{background:#80deea}.pw-s{background:#ce93d8}.pw-q{background:#e0e0e0}
+.pw-lg{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:13px;margin-bottom:10px}
+.pw-lg span{display:flex;align-items:center;gap:6px}
+.pw-dot{width:14px;height:14px;border-radius:5px;display:inline-block}
+.pw-pri{min-height:52px;width:100%;border-radius:26px;border:0;background:var(--accent);color:#04120e;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer}
+.pw-bar{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.pw-back{min-height:44px;padding:0 16px 0 10px;gap:2px;border:0;border-radius:22px;background:rgba(255,255,255,.07);color:var(--text);font-size:14px;font-weight:700;font-family:inherit;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.pw-ttl{font-size:22px;font-weight:800}.pw-sub{font-size:13px;color:var(--text-secondary)}
+.pw-tabs{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin:8px 0 12px}
+.pw-d{min-height:44px;border:0;border-radius:12px;background:rgba(255,255,255,.07);color:var(--text-secondary);font-size:13px;font-weight:700;font-family:inherit;padding:0;cursor:pointer}
+.pw-d.n{background:var(--accent);color:#04120e}
+.pw-b{width:100%;display:flex;align-items:center;justify-content:space-between;min-height:52px;box-sizing:border-box;padding:0 14px;border-radius:14px;color:#10201a;border:0;text-align:left;font-family:inherit;cursor:pointer;margin-bottom:8px}
+.pw-b b{display:block;font-size:15px}.pw-b small{display:block;font-size:12px}
+.pw-open{flex-direction:column;align-items:stretch;padding:10px 14px 12px;gap:8px;cursor:default}
+.pw-xt{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.pw-xh{flex:1;min-width:0;display:flex;align-items:center;justify-content:space-between;gap:8px;border:0;background:transparent;padding:0;min-height:44px;text-align:left;color:#10201a;font-family:inherit;cursor:pointer}
+.pw-xh b{display:block;font-size:15px}.pw-xh small{display:block;font-size:12px}
+.pw-sug{display:flex;flex-wrap:wrap;gap:6px}
+.pw-sc{min-height:40px;max-width:100%;padding:0 12px;border:1px solid rgba(16,32,26,.3);border-radius:20px;color:#10201a;font-size:13px;font-weight:600;font-family:inherit;text-align:left;cursor:pointer}
+.pw-sc.on{box-shadow:0 0 0 2.5px #10201a inset}
+.pw-fold{min-height:44px;display:flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:22px;background:rgba(16,32,26,.14);color:#10201a;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer}
+.pw-st{display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600}
+.pw-sg{display:flex;align-items:center;gap:6px}
+.pw-sg b{font-size:14px;min-width:96px;text-align:center}
+.pw-sb{width:44px;height:44px;flex:none;border:0;border-radius:22px;background:rgba(16,32,26,.14);color:#10201a;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;font-family:inherit}
+.pw-ti{width:96px;min-height:40px;box-sizing:border-box;border:0;border-radius:10px;background:rgba(255,255,255,.55);color:#10201a;font-size:14px;font-weight:700;text-align:center;font-family:inherit}
+.pw-sel,.pw-name{width:100%;min-height:44px;box-sizing:border-box;border:0;border-radius:10px;background:rgba(255,255,255,.55);color:#10201a;font-size:14px;padding:0 10px;font-family:inherit}
+.pw-gap{width:100%;min-height:36px;box-sizing:border-box;border:1px dashed rgba(255,255,255,.22);border-radius:12px;background:transparent;color:var(--text-secondary);font-size:12px;font-family:inherit;margin-bottom:8px;cursor:pointer}
+.pw-gap.on{border-color:var(--accent);color:var(--accent)}
+.pw-tray{background:rgba(255,255,255,.04);border-radius:16px;padding:12px;margin-top:6px}
+.pw-tl{font-size:13px;color:var(--text-secondary);margin-bottom:8px}
+.pw-clr{border:0;background:none;color:var(--accent);font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;padding:0 0 0 8px}
+.pw-chips{display:flex;flex-wrap:wrap;gap:8px}
+.pw-p{min-height:44px;padding:0 14px;border:0;border-radius:22px;color:#10201a;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer}
+.pw-lnk{width:100%;min-height:44px;margin:14px 0 0;border-radius:22px;border:1.5px solid var(--accent);background:transparent;color:var(--accent);font-size:15px;font-weight:700;font-family:inherit;cursor:pointer}
+.pl-save{display:grid;grid-template-columns:1fr;gap:8px;margin-top:18px}
 
 #timerSteps{line-height:1.4!important}
 .step-row{border-radius:12px;background:var(--bg-elevated);margin-bottom:6px;color:var(--text-secondary);overflow:hidden}
@@ -6211,7 +6267,7 @@ const ACT=['Зарядка','Гигиена','Завтрак','Школа','Об
 const DEFAULT={"id": "tpl_default", "name": "Школьная неделя", "days": [[{"s": "07:00", "e": "07:15", "a": "Зарядка"}, {"s": "07:15", "e": "07:25", "a": "Гигиена"}, {"s": "07:25", "e": "07:40", "a": "Завтрак"}, {"s": "08:30", "e": "15:00", "a": "Школа"}, {"s": "15:00", "e": "16:00", "a": "Обед, личное время"}, {"s": "16:00", "e": "18:00", "a": "Тренировка в клубе"}, {"s": "18:00", "e": "19:00", "a": "Ужин, личное время"}, {"s": "19:00", "e": "21:00", "a": "Уроки, сбор вещей в школу и на тренировку"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "21:15", "e": "22:00", "a": "Личное время"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}], [{"s": "07:00", "e": "07:15", "a": "Зарядка"}, {"s": "07:15", "e": "07:25", "a": "Гигиена"}, {"s": "07:25", "e": "07:40", "a": "Завтрак"}, {"s": "08:30", "e": "15:00", "a": "Школа"}, {"s": "15:00", "e": "16:00", "a": "Обед, личное время"}, {"s": "16:00", "e": "18:00", "a": "Тренировка в клубе"}, {"s": "18:00", "e": "19:00", "a": "Ужин, личное время"}, {"s": "19:00", "e": "21:00", "a": "Уроки, сбор вещей в школу и на тренировку"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "21:15", "e": "22:00", "a": "Личное время"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}], [{"s": "07:00", "e": "07:15", "a": "Зарядка"}, {"s": "07:15", "e": "07:25", "a": "Гигиена"}, {"s": "07:25", "e": "07:40", "a": "Завтрак"}, {"s": "08:30", "e": "15:00", "a": "Школа"}, {"s": "15:00", "e": "16:00", "a": "Обед, личное время"}, {"s": "16:00", "e": "18:00", "a": "Тренировка в клубе"}, {"s": "18:00", "e": "19:00", "a": "Ужин, личное время"}, {"s": "19:00", "e": "21:00", "a": "Уроки, сбор вещей в школу и на тренировку"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "21:15", "e": "22:00", "a": "Личное время"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}], [{"s": "07:00", "e": "07:15", "a": "Зарядка"}, {"s": "07:15", "e": "07:25", "a": "Гигиена"}, {"s": "07:25", "e": "07:40", "a": "Завтрак"}, {"s": "08:30", "e": "15:00", "a": "Школа"}, {"s": "15:00", "e": "16:00", "a": "Обед, личное время"}, {"s": "16:00", "e": "18:00", "a": "Индивидуальная тренировка (ОФП, техника)"}, {"s": "18:00", "e": "19:00", "a": "Ужин, личное время"}, {"s": "19:00", "e": "21:00", "a": "Уроки, сбор вещей в школу и на тренировку"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "21:15", "e": "22:00", "a": "Личное время"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}], [{"s": "07:00", "e": "07:15", "a": "Зарядка"}, {"s": "07:15", "e": "07:25", "a": "Гигиена"}, {"s": "07:25", "e": "07:40", "a": "Завтрак"}, {"s": "08:30", "e": "15:00", "a": "Школа"}, {"s": "15:00", "e": "16:00", "a": "Обед, личное время"}, {"s": "16:00", "e": "18:00", "a": "Тренировка в клубе"}, {"s": "18:00", "e": "21:00", "a": "Ужин, личное время, хобби"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "21:15", "e": "22:00", "a": "Личное время"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}], [{"s": "09:00", "e": "09:15", "a": "Зарядка"}, {"s": "09:15", "e": "09:25", "a": "Гигиена"}, {"s": "09:25", "e": "10:00", "a": "Завтрак"}, {"s": "10:30", "e": "12:30", "a": "Уроки"}, {"s": "12:30", "e": "14:00", "a": "Обед, личное время"}, {"s": "15:00", "e": "16:00", "a": "Укрепление стоп (теннисный мяч)"}, {"s": "16:00", "e": "17:00", "a": "Развитие мышления, анализ игр"}, {"s": "17:00", "e": "19:00", "a": "Личное время"}, {"s": "19:00", "e": "20:00", "a": "Ужин, личное время"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}], [{"s": "09:00", "e": "09:15", "a": "Зарядка"}, {"s": "09:15", "e": "09:25", "a": "Гигиена"}, {"s": "09:25", "e": "10:00", "a": "Завтрак"}, {"s": "10:30", "e": "12:30", "a": "Уроки"}, {"s": "12:30", "e": "14:00", "a": "Обед, личное время"}, {"s": "15:00", "e": "16:00", "a": "Восстановление, массаж"}, {"s": "16:00", "e": "19:00", "a": "Личное время"}, {"s": "19:00", "e": "20:00", "a": "Ужин, личное время"}, {"s": "21:00", "e": "21:15", "a": "Растяжка"}, {"s": "22:00", "e": "", "a": "Гигиена, отбой"}]]};
 const $=id=>document.getElementById(id), esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const clone=o=>JSON.parse(JSON.stringify(o));
-let data=load(), ed=null, copyOpen=false, copyTo=[];
+let data=load(), ed=null, copyOpen=false, copyTo=[], mvMode=false, mv=null, mvUndo=null, mvKind='move';
 function load(){try{const d=JSON.parse(localStorage.getItem('fp_plans')||'null');if(d&&Array.isArray(d.templates)&&d.templates.length){if(!d.templates.some(t=>t.id===d.active))d.active=d.templates[0].id;return d;}}catch(e){}
   return {active:DEFAULT.id,templates:[clone(DEFAULT)]};}
 function save(){try{localStorage.setItem('fp_plans',JSON.stringify(data));}catch(e){}document.dispatchEvent(new Event('planchange'));}
@@ -6223,66 +6279,170 @@ window.planDayRows=function(idx){const t=active();return ((t&&t.days[idx])||[]).
 const todayIdx=()=>(new Date().getDay()+6)%7;
 const dayIcon=rows=>rows.some(r=>/^Игра/.test(r.a))?'⚽':rows.some(r=>/Индивидуальная/.test(r.a))?'⚡':rows.some(r=>/^Тренировка/.test(r.a))?'🏃':'☀️';
 
+const nk=(()=>{let n=0;return()=>'r'+(++n);})();
+const p2=n=>String(n).padStart(2,'0'), hm=m=>p2(Math.floor(m/60))+':'+p2(m%60);
+const fd=m=>{const h=Math.floor(m/60),x=m%60;return (h?h+' ч':'')+(x?(h?' ':'')+x+' мин':'');};
+const ICON={back:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>',
+  grip:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10201a" stroke-width="2" aria-hidden="true"><path d="M5 9h14M5 15h14"/></svg>',
+  up:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10201a" stroke-width="2.2" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>',
+  del:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10201a" stroke-width="2" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12h10l1-12M9 7V4h6v3"/></svg>'};
+// категории: цвет и подпись в сетке недели
+const CATN={z:'Зарядка',k:'Школа',t:'Тренировка',o:'ОФП и техника',g:'Игра',u:'Уроки',ch:'Чтение и анализ',r:'Восстановление',s:'Сон',q:'Другое'};
+const RULES=[[/отбой|^Сон/i,'s','Сон'],[/^Зарядка/,'z','Заряд.'],[/^Школа/,'k','Школа'],[/^Игра/,'g','Игра'],[/Индивидуальная/,'o','ОФП'],[/^Тренировка/,'t','Трен.'],[/Укрепление стоп/,'o','Стопы'],[/^Уроки/,'u','Уроки'],[/^Чтение/,'ch','Чтение'],[/Развитие мышления/,'ch','Анализ'],[/^Растяжка/,'r','Растяж.'],[/Восстановление/,'r','Восст.'],[/^Гигиена$/,'q','Гигиена'],[/^Завтрак/,'q','Завтрак'],[/^Обед/,'q','Обед'],[/^Ужин/,'q','Ужин'],[/^Личное время/,'q','Личное'],[/^Прогулка/,'q','Прогул.']];
+const FILL=/^(Гигиена$|Завтрак|Обед|Ужин|Личное время|Прогулка)/;
+function cls(a){a=String(a||'').trim();for(const r of RULES)if(r[0].test(a))return{c:r[1],l:r[2]};return{c:'q',l:a.slice(0,6)};}
+const CHIPS=[['k','Школа','Школа'],['t','Тренировка','Тренировка в клубе'],['o','ОФП','Индивидуальная тренировка (ОФП, техника)'],['u','Уроки','Уроки'],['ch','Чтение','Чтение'],['r','Восстановление','Восстановление, массаж'],['g','Игра','Игра / матч'],['s','Сон','Гигиена, отбой'],['q','Своё','']];
+const DUR={z:15,r:30,ch:30,s:0};
+// строки сетки = реальное время начала занятий из плана; занятие, которое длится дальше, продолжается бледной заливкой
+function board(t){
+  const days=[0,1,2,3,4,5,6].map(d=>(t.days[d]||[]).map(r=>({s:mins(r.s),e:mins(r.e),a:r.a})).filter(r=>r.s!=null));
+  const times=[...new Set([].concat(...days.map(rs=>rs.map(r=>r.s))))].sort((x,y)=>x-y);
+  return times.map(T=>({t:T,label:hm(T),cells:days.map(rs=>{
+    const st=rs.filter(r=>r.s===T);
+    if(st.length)return{t:'s',items:st.map(r=>{const k=cls(r.a);return{c:k.c,l:k.l};})};
+    const cov=rs.find(r=>r.e!=null&&r.e>r.s&&r.s<T&&T<r.e);
+    return cov?{t:'c',c:cls(cov.a).c}:{t:'e'};})}));
+}
+const cellHtml=(cell,d,T)=>{
+  const o=' onclick="'+(mvMode?'planMv('+d+','+T+')':'planOpen('+d+')')+'"',x=(mvMode&&mv&&mv.d===d&&mv.T===T)?' pw-pick':'';
+  if(cell.t==='e')return '<i class="pw-c pw-e'+x+'"'+o+'></i>';
+  if(cell.t==='c')return '<i class="pw-c pw-cont pw-'+cell.c+x+'"'+o+'></i>';
+  const it=cell.items;
+  if(it.length===1)return '<i class="pw-c pw-'+it[0].c+(it[0].l.length>=7?' pw-xs':'')+x+'"'+o+'>'+esc(it[0].l)+'</i>';
+  return '<span class="pw-c pw-stack'+x+'"'+o+'><i class="pw-m pw-'+it[0].c+'">'+esc(it[0].l)+'</i><i class="pw-m pw-'+it[1].c+'">'+(it.length>2?'ещё '+(it.length-1):esc(it[1].l))+'</i></span>';
+};
 function render(){
   const c=$('planCard');if(!c)return;
   c.innerHTML=ed?editor():viewer();
 }
 function viewer(){
-  const t=active(),ti=todayIdx();
-  let h='<div class="card-title">📅 План на неделю</div>';
+  const t=active(),ti=todayIdx(),rows=board(t);
+  let h='<div class="pw-top"><div class="card-title" style="margin:0">📅 План на неделю</div><button type="button" class="pw-edit" onclick="planOpen('+ti+')">Править</button></div>';
   h+='<div class="pl-bar"><label for="plSel">Активный план</label><select id="plSel" onchange="planSelect(this.value)">'+data.templates.map(x=>'<option value="'+esc(x.id)+'"'+(x.id===t.id?' selected':'')+'>'+esc(x.name)+'</option>').join('')+'</select></div>';
-  h+='<div class="pl-btns"><button type="button" onclick="planEdit()">✏️ Править</button><button type="button" onclick="planCopy()">📋 Копия</button><button type="button" onclick="planNew()">＋ Пустой</button><button type="button" class="danger" onclick="planDelete()"'+(data.templates.length<2?' disabled':'')+'>🗑 Удалить</button></div>';
-  h+='<div class="pl-hint">Этот план показывается на главном экране в блоке «Сейчас / Дальше». Любой план можно править или сохранить как шаблон.</div>';
-  for(let d=0;d<7;d++){
-    const rows=sortRows(clone(t.days[d]||[]));
-    h+='<div class="accordion-item'+(d===ti?' open':'')+'"><div class="accordion-header" onclick="toggleAcc(this)"><span class="day-label">'+dayIcon(rows)+' '+DN[d]+(d===ti?' <small class="pl-today">сегодня</small>':'')+'</span><i class="fas fa-chevron-down chevron"></i></div><div class="accordion-body">';
-    h+=rows.length?rows.map(r=>'<div class="time-row"><span class="time '+tagOf(r.a)+'">'+esc(r.s)+(r.e?'-'+esc(r.e):'')+'</span><span class="activity">'+esc(r.a)+'</span></div>').join(''):'<div class="pl-empty">В этот день занятий нет. Нажми «Править», чтобы добавить.</div>';
-    h+='</div></div>';
+  h+='<button type="button" class="pw-mvbtn'+(mvMode?' on':'')+'" onclick="planMvMode()">'+(mvMode?'✓ Готово':'↔ Переставить или копировать блоки')+'</button>';
+  if(mvMode){
+    const sr=mv?findAt(t,mv.d,mv.T):null,cp=mvKind==='copy';
+    h+='<div class="pw-seg"><button type="button" class="'+(cp?'':'on')+'" onclick="planMvKind(\'move\')">↔ Переставить</button><button type="button" class="'+(cp?'on':'')+'" onclick="planMvKind(\'copy\')">⧉ Копировать</button></div>';
+    const who=sr?'Выбрано: <b>'+esc(sr.a)+'</b> ('+DS[mv.d]+', '+hm(mv.T)+'). ':'';
+    h+='<div class="pw-mvbar">'+(sr
+      ?who+(cp?'Нажимай на клетки, куда поставить копию, можно несколько раз. Нажми на этот же блок, чтобы закончить.':'Нажми на клетку, куда переставить, или на этот же блок, чтобы отменить выбор.')
+      :(cp?'Нажми на блок, который хочешь скопировать, затем на клетки, куда поставить копию. Занятая клетка будет заменена.':'Нажми на блок, затем на клетку, куда его поставить. Если клетка занята, блоки поменяются местами.'))
+      +(mvUndo?'<button type="button" class="pw-clr" onclick="planMvUndo()">↶ Отменить</button>':'')+'</div>';
   }
+  h+='<div class="pw-grid'+(mvMode?' pw-mvon':'')+'"><span></span>'+DS.map((n,i)=>'<button type="button" class="pw-h'+(i===ti?' n':'')+'" onclick="planOpen('+i+')" aria-label="'+DN[i]+': собрать день">'+n+'</button>').join('');
+  rows.forEach(r=>{h+='<span class="pw-tm">'+r.label+'</span>'+r.cells.map((c,d)=>cellHtml(c,d,r.t)).join('');});
+  h+='</div>';
+  if(!rows.length)h+='<div class="pl-empty">В этом плане пока нет занятий. Нажми на день, чтобы собрать его.</div>';
+  h+='<div class="pl-hint">Нажми на день, чтобы собрать его из блоков. Бледная клетка продолжение занятия, пустая в это время ничего не идёт. Этот план показывается на главном экране в блоке «Сейчас / Дальше».</div>';
+  h+='<button type="button" class="pw-pri" onclick="planOpen('+ti+')">Собрать день: '+DN[ti].toLowerCase()+'</button>';
+  h+='<div class="pl-btns" style="margin-top:12px"><button type="button" onclick="planCopy()">📋 Копия плана</button><button type="button" onclick="planNew()">＋ Пустой план</button><button type="button" class="danger" onclick="planDelete()"'+(data.templates.length<2?' disabled':'')+'>🗑 Удалить</button></div>';
   return h;
 }
+function blockHtml(r){
+  const k=cls(r.a),s=mins(r.s),e=mins(r.e),dur=(s!=null&&e!=null&&e>s)?e-s:null;
+  const title=r.a?esc(r.a):'Новое занятие',time=(r.s||'—')+(r.e?'–'+esc(r.e):'')+(dur?' · '+fd(dur):'');
+  const q=r._k;
+  if(ed.sel!==q)return '<button type="button" class="pw-b pw-'+k.c+'" onclick="planSel(\''+q+'\')"><span><b>'+title+'</b><small>'+time+'</small></span>'+ICON.grip+'</button>';
+  return '<div class="pw-b pw-open pw-'+k.c+'"><div class="pw-xt"><button type="button" class="pw-xh" aria-label="Свернуть" onclick="planSel(\''+q+'\')"><span><b>'+title+'</b><small>'+time+'</small></span>'+ICON.up+'</button><button type="button" class="pw-sb" aria-label="Убрать занятие" onclick="planDelRow(\''+q+'\')">'+ICON.del+'</button></div>'+
+    '<div class="pw-st"><span>Начало</span><span class="pw-sg"><button type="button" class="pw-sb" aria-label="Раньше на 15 минут" onclick="planStep(\''+q+'\',\'s\',-15)">−</button><input type="time" class="pw-ti" value="'+esc(r.s)+'" aria-label="Начало" onchange="planTime(\''+q+'\',this.value)"><button type="button" class="pw-sb" aria-label="Позже на 15 минут" onclick="planStep(\''+q+'\',\'s\',15)">+</button></span></div>'+
+    '<div class="pw-st"><span>Длительность</span><span class="pw-sg"><button type="button" class="pw-sb" aria-label="Короче на 15 минут" onclick="planStep(\''+q+'\',\'d\',-15)">−</button><b>'+(dur?fd(dur):'—')+'</b><button type="button" class="pw-sb" aria-label="Дольше на 15 минут" onclick="planStep(\''+q+'\',\'d\',15)">+</button></span></div>'+
+    '<input type="text" class="pw-name" maxlength="60" placeholder="Название занятия: напиши своё или выбери ниже" aria-label="Название занятия" value="'+esc(r.a)+'" oninput="planText(\''+q+'\',this.value)" onchange="planNameDone(\''+q+'\')">'+
+    '<div class="pw-sug">'+ACT.map((a,i)=>'<button type="button" class="pw-sc pw-'+cls(a).c+(a===r.a?' on':'')+'" onclick="planPick(\''+q+'\','+i+')">'+esc(a)+'</button>').join('')+'</div>'+
+    '<button type="button" class="pw-fold" onclick="planSel(\''+q+'\')">'+ICON.up+' Свернуть</button></div>';
+}
+
 function editor(){
-  const d=ed.day,rows=ed.draft.days[d];
-  let h='<div class="card-title">✏️ Конструктор плана</div>';
-  h+='<label class="pl-lbl" for="plName">Название плана</label><input type="text" id="plName" class="pl-input" maxlength="40" placeholder="Например: неделя с игрой в среду" value="'+esc(ed.draft.name)+'" oninput="planName(this.value)">';
-  h+='<div class="pl-days">'+DS.map((n,i)=>'<button type="button" class="pl-day'+(i===d?' on':'')+'" onclick="planDay('+i+')">'+n+'<small>'+(ed.draft.days[i].length||'')+'</small></button>').join('')+'</div>';
-  h+='<div class="pl-dayname">'+DN[d]+'</div>';
-  h+=rows.length?rows.map((r,i)=>rowEd(r,i)).join(''):'<div class="pl-empty">Пока пусто. Добавь первое занятие.</div>';
-  h+='<button type="button" class="pl-add" onclick="planAddRow()">＋ Добавить занятие</button>';
-  h+='<button type="button" class="pl-link" onclick="planToggleCopy()">📋 Скопировать этот день на другие дни</button>';
+  const d=ed.day,rows=sortRows(ed.draft.days[d]);
+  let h='<div class="pw-bar"><button type="button" class="pw-back" onclick="planBack()" aria-label="Назад к неделе">'+ICON.back+'<span>К неделе</span></button><div><div class="pw-ttl">'+DN[d]+'</div><div class="pw-sub">'+esc(ed.draft.name||'Новый план')+'</div></div></div>';
+  h+='<div class="pw-tabs">'+DS.map((n,i)=>'<button type="button" class="pw-d'+(i===d?' n':'')+'" onclick="planDay('+i+')">'+n+'</button>').join('')+'</div>';
+  if(!rows.length)h+='<div class="pl-empty">День пока пустой. Выбери занятия внизу.</div>';
+  rows.forEach((r,i)=>{h+=blockHtml(r);const nx=rows[i+1],e=mins(r.e),s2=nx?mins(nx.s):null;
+    if(e!=null&&s2!=null&&s2-e>=30)h+='<button type="button" class="pw-gap'+(ed.insertAt===e?' on':'')+'" onclick="planGap('+e+')">Свободно '+fd(s2-e)+' · нажми, чтобы добавить</button>';});
+  h+='<div class="pw-tray"><div class="pw-tl">'+(ed.insertAt!=null?'Добавить в '+hm(ed.insertAt)+' <button type="button" class="pw-clr" onclick="planGap(null)">отмена</button>':'Добавить в день')+'</div><div class="pw-chips">'+CHIPS.map(c=>'<button type="button" class="pw-p pw-'+c[0]+'" onclick="planAdd(\''+c[0]+'\')">+ '+c[1]+'</button>').join('')+'</div></div>';
+  h+='<label class="pl-lbl" for="plName" style="margin-top:14px">Название плана</label><input type="text" id="plName" class="pl-input" maxlength="40" placeholder="Например: неделя с игрой в среду" value="'+esc(ed.draft.name)+'" oninput="planName(this.value)">';
+  h+='<button type="button" class="pw-lnk" onclick="planToggleCopy()">Скопировать день на другие дни</button>';
   if(copyOpen){
     h+='<div class="pl-copy"><div class="pl-hint" style="margin-top:0">Выбери дни — их расписание будет заменено расписанием дня «'+DN[d]+'».</div><div class="pl-days">'+DS.map((n,i)=>i===d?'':'<button type="button" class="pl-day'+(copyTo.includes(i)?' on':'')+'" onclick="planCopyTog('+i+')">'+n+'</button>').join('')+'</div><div class="pl-btns"><button type="button" onclick="planCopyWeek()">Все будни</button><button type="button" onclick="planCopyAll()">Все дни</button><button type="button" class="primary" onclick="planCopyGo()">Скопировать</button></div></div>';
   }
-  h+='<div class="pl-save"><button type="button" class="pl-primary" onclick="planSave(false)">💾 Сохранить</button>'+(ed.isNew?'':'<button type="button" onclick="planSave(true)">Сохранить как новый шаблон</button>')+'<button type="button" onclick="planCancel()">Отмена</button></div>';
+  h+='<div class="pl-save"><button type="button" class="pw-pri" onclick="planSave(false)">Сохранить</button>'+(ed.isNew?'':'<button type="button" onclick="planSave(true)">Сохранить как новый шаблон</button>')+'<button type="button" onclick="planBack()">Отмена</button></div>';
   return h;
 }
-function rowEd(r,i){
-  const custom=!!r.custom||(!ACT.includes(r.a)&&r.a!=='');
-  return '<div class="pl-row"><div class="pl-times"><input type="time" value="'+esc(r.s)+'" aria-label="Начало" onchange="planRow('+i+',\'s\',this.value)"><span>–</span><input type="time" value="'+esc(r.e)+'" aria-label="Конец (необязательно)" onchange="planRow('+i+',\'e\',this.value)"><button type="button" class="pl-x" aria-label="Удалить" onclick="planDelRow('+i+')">&times;</button></div>'+
-    '<select aria-label="Занятие" onchange="planAct('+i+',this.value)"><option value="">Выбери занятие…</option>'+ACT.map(a=>'<option'+(a===r.a?' selected':'')+'>'+esc(a)+'</option>').join('')+'<option value="__custom"'+(custom?' selected':'')+'>✏️ Своё занятие…</option></select>'+
-    (custom?'<input type="text" class="pl-input" maxlength="60" placeholder="Название занятия" value="'+esc(r.a)+'" oninput="planRow('+i+',\'a\',this.value)">':'')+'</div>';
-}
+// ---- переставить блоки в сетке недели ----
+const findAt=(t,d,T)=>(t.days[d]||[]).find(r=>mins(r.s)===T);
+const durOf=r=>{const s=mins(r.s),e=mins(r.e);return(s!=null&&e!=null&&e>s)?e-s:null;};
+const placed=(r,T,du)=>({s:hm(T),e:du?hm(Math.min(1439,T+du)):'',a:r.a});
+window.planMvMode=()=>{mvMode=!mvMode;mvKind='move';mv=null;mvUndo=null;render();};
+window.planMvKind=k=>{mvKind=k;mv=null;render();};
+window.planMv=(d,T)=>{
+  const t=active();
+  if(!mv){if(!findAt(t,d,T)){toast('Сначала нажми на блок, который хочешь переставить');return;}mv={d:d,T:T};render();return;}
+  if(mv.d===d&&mv.T===T){mv=null;render();return;}
+  const r=findAt(t,mv.d,mv.T);if(!r){mv=null;render();return;}
+  if(mvKind==='copy'){
+    const tg=findAt(t,d,T);mvUndo=clone(t.days);
+    if(tg)t.days[d].splice(t.days[d].indexOf(tg),1);
+    t.days[d].push(placed(r,T,durOf(r)));
+    t.days=t.days.map(rs=>sortRows(rs));
+    save();render();toast(tg?'Скопировано, прежний блок заменён':'Скопировано');return;
+  }
+  const tg=findAt(t,d,T),sd=mv.d,S0=mv.T,dr=durOf(r),dt=tg?durOf(tg):null;
+  mvUndo=clone(t.days);
+  t.days[sd].splice(t.days[sd].indexOf(r),1);
+  if(tg){t.days[d].splice(t.days[d].indexOf(tg),1);t.days[sd].push(placed(tg,S0,dt));}
+  t.days[d].push(placed(r,T,dr));
+  t.days=t.days.map(rs=>sortRows(rs));
+  mv=null;save();render();toast(tg?'Блоки поменялись местами':'Блок перенесён');
+};
+window.planMvUndo=()=>{if(!mvUndo)return;active().days=mvUndo;mvUndo=null;if(!(mvKind==='copy'&&mv&&findAt(active(),mv.d,mv.T)))mv=null;save();render();toast('Отменено');};
 // ---- actions ----
+const rowK=k=>ed.draft.days[ed.day].find(r=>r._k===k);
+const touch=()=>{ed.dirty=true;};
 window.planSelect=id=>{data.active=id;save();render();};
-function startEdit(draft,isNew){ed={draft:draft,id:draft.id,isNew:isNew,day:Math.min(todayIdx(),6)};copyOpen=false;copyTo=[];render();$('planCard').scrollIntoView({behavior:'smooth',block:'start'});}
+function startEdit(draft,isNew,day){mvMode=false;mv=null;mvUndo=null;draft.days.forEach(rs=>rs.forEach(r=>{r._k=nk();}));ed={draft:draft,id:draft.id,isNew:isNew,day:day==null?todayIdx():day,sel:null,insertAt:null,dirty:false};copyOpen=false;copyTo=[];render();$('planCard').scrollIntoView({behavior:'smooth',block:'start'});}
 const uid=()=>'tpl_'+Date.now().toString(36);
-window.planEdit=()=>startEdit(clone(active()),false);
+window.planOpen=d=>startEdit(clone(active()),false,d);
+window.planEdit=()=>startEdit(clone(active()),false,todayIdx());
 window.planCopy=()=>{const c=clone(active());c.id=uid();c.name=c.name+' (копия)';startEdit(c,true);};
 window.planNew=()=>startEdit({id:uid(),name:'Новый план',days:[[],[],[],[],[],[],[]]},true);
 window.planDelete=()=>{if(data.templates.length<2)return;const t=active();if(!confirm('Удалить план «'+t.name+'»?'))return;data.templates=data.templates.filter(x=>x.id!==t.id);data.active=data.templates[0].id;save();render();toast('План удалён');};
-window.planName=v=>{ed.draft.name=v;};
-window.planDay=i=>{ed.draft.days[ed.day]=sortRows(ed.draft.days[ed.day]);ed.day=i;copyOpen=false;copyTo=[];render();};
-window.planAddRow=()=>{const rows=ed.draft.days[ed.day];const last=rows.length?rows[rows.length-1]:null;rows.push({s:last&&last.e?last.e:(last?last.s:''),e:'',a:''});render();};
-window.planDelRow=i=>{ed.draft.days[ed.day].splice(i,1);render();};
-window.planRow=(i,f,v)=>{ed.draft.days[ed.day][i][f]=v;};
-window.planAct=(i,v)=>{const r=ed.draft.days[ed.day][i];r.custom=v==='__custom';r.a=v==='__custom'?'':v;render();
-  if(v==='__custom'){const inp=document.querySelectorAll('#planCard .pl-row')[i].querySelector('input.pl-input');if(inp)inp.focus();}};
+window.planName=v=>{ed.draft.name=v;touch();};
+window.planDay=i=>{ed.draft.days[ed.day]=sortRows(ed.draft.days[ed.day]);ed.day=i;ed.sel=null;ed.insertAt=null;copyOpen=false;copyTo=[];render();};
+window.planSel=k=>{ed.sel=ed.sel===k?null:k;render();};
+window.planGap=m=>{ed.insertAt=m;render();};
+window.planStep=(k,f,dm)=>{const r=rowK(k);if(!r)return;let s=mins(r.s);if(s==null){s=420;r.s=hm(s);}let e=mins(r.e);if(e!=null&&e<=s)e=null;
+  if(f==='s'){const ns=Math.max(0,Math.min(1439,s+dm)),sh=ns-s;r.s=hm(ns);if(e!=null)r.e=hm(Math.max(ns+1,Math.min(1439,e+sh)));}
+  else{if(e==null){if(dm<0)return;e=s+30;}else e=e+dm;e=Math.max(s+15,Math.min(1439,e));r.e=hm(e);}
+  touch();render();};
+window.planTime=(k,v)=>{const r=rowK(k);if(!r||mins(v)==null)return;const s=mins(r.s),e=mins(r.e),ns=mins(v);r.s=v;if(s!=null&&e!=null&&e>s)r.e=hm(Math.min(1439,ns+(e-s)));touch();render();};
+window.planText=(k,v)=>{const r=rowK(k);if(r){r.a=v;touch();}};
+window.planAct=(k,v)=>{const r=rowK(k);if(!r)return;r.a=v;touch();render();};
+window.planNameDone=k=>{const r=rowK(k),el=document.querySelector('#planCard .pw-open');if(!r||!el)return;
+  el.className='pw-b pw-open pw-'+cls(r.a).c;
+  const b=el.querySelector('.pw-xh b');if(b)b.textContent=r.a||'Новое занятие';
+  el.querySelectorAll('.pw-sc').forEach((x,i)=>x.classList.toggle('on',ACT[i]===r.a));};
+window.planPick=(k,i)=>{const r=rowK(k);if(!r)return;r.a=ACT[i];touch();render();};
+window.planDelRow=k=>{const rs=ed.draft.days[ed.day],i=rs.findIndex(r=>r._k===k);if(i>=0)rs.splice(i,1);ed.sel=null;touch();render();};
+window.planAdd=c=>{
+  const rows=sortRows(ed.draft.days[ed.day]),chip=CHIPS.find(x=>x[0]===c),dur=c in DUR?DUR[c]:60;
+  let start;
+  if(ed.insertAt!=null)start=ed.insertAt;
+  else{const ends=rows.filter(r=>cls(r.a).c!=='s').map(r=>mins(r.e)!=null?mins(r.e):mins(r.s)).filter(x=>x!=null);start=ends.length?Math.max.apply(null,ends):420;}
+  start=Math.min(start,1380);
+  let end=dur?start+dur:null;
+  if(ed.insertAt!=null&&end!=null){const nx=rows.find(r=>mins(r.s)>=start);if(nx&&mins(nx.s)<end)end=mins(nx.s);}
+  if(end!=null)end=Math.min(end,1439);
+  const r={_k:nk(),s:hm(start),e:end!=null&&end>start?hm(end):'',a:chip[2]};
+  if(c==='q')r.custom=true;
+  ed.draft.days[ed.day].push(r);ed.sel=r._k;ed.insertAt=null;touch();render();
+  if(c==='q'){const inp=document.querySelector('#planCard .pw-name');if(inp)inp.focus();}
+};
 window.planToggleCopy=()=>{copyOpen=!copyOpen;copyTo=[];render();};
 window.planCopyTog=i=>{copyTo=copyTo.includes(i)?copyTo.filter(x=>x!==i):copyTo.concat(i);render();};
 window.planCopyWeek=()=>{copyTo=[0,1,2,3,4].filter(i=>i!==ed.day);render();};
 window.planCopyAll=()=>{copyTo=[0,1,2,3,4,5,6].filter(i=>i!==ed.day);render();};
-window.planCopyGo=()=>{if(!copyTo.length){toast('Выбери дни для копирования');return;}const src=clone(ed.draft.days[ed.day]);copyTo.forEach(i=>ed.draft.days[i]=clone(src));copyOpen=false;const n=copyTo.length;copyTo=[];render();toast('Скопировано на дней: '+n);};
+window.planCopyGo=()=>{if(!copyTo.length){toast('Выбери дни для копирования');return;}const src=clone(ed.draft.days[ed.day]);copyTo.forEach(i=>ed.draft.days[i]=clone(src).map(r=>{r._k=nk();return r;}));copyOpen=false;const n=copyTo.length;copyTo=[];touch();render();toast('Скопировано на дней: '+n);};
 window.planCancel=()=>{ed=null;render();};
+window.planBack=()=>{if(ed&&ed.dirty&&!confirm('Выйти без сохранения изменений?'))return;ed=null;render();};
 window.planSave=asNew=>{
   const dr=clone(ed.draft);
   dr.days=dr.days.map(rows=>sortRows(rows.filter(r=>mins(r.s)!=null&&String(r.a||'').trim()).map(r=>({s:r.s,e:(mins(r.e)!=null&&mins(r.e)>mins(r.s))?r.e:'',a:String(r.a).trim()}))));
