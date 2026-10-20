@@ -2222,6 +2222,34 @@ body[data-age="7-9"] .exc[data-hard]{display:none}
 .lvl .ava{width:58px;height:66px;border-radius:0;background:none;font-size:34px}.lvl .ava .club{font-size:16px}
 .drawer-avatar{width:44px;height:50px;border-radius:0;background:none;font-size:22px}.drawer-avatar .club{font-size:11px}
 .club{position:relative;overflow:hidden}.club img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:var(--bg-card);padding:3px}
+
+.ex-btn{margin-left:8px;border:1px solid var(--accent);background:transparent;color:var(--accent);border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600;cursor:pointer;vertical-align:middle}
+textarea.form-input{min-height:72px;resize:vertical;font-family:inherit;line-height:1.4}
+#exSheet{position:fixed;inset:0;z-index:4000;display:none;background:rgba(0,0,0,.65)}
+#exSheet.open{display:flex;align-items:flex-end;justify-content:center}
+.ex-panel{width:100%;max-width:640px;max-height:88vh;overflow:auto;background:var(--bg);border-radius:20px 20px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px))}
+.ex-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-weight:700;color:var(--accent)}
+.ex-head button{background:none;border:0;color:var(--text);font-size:22px;cursor:pointer}
+.ex-card{background:var(--bg-card);border:1px solid var(--bg-elevated);border-radius:14px;padding:14px;margin-bottom:12px}
+.ex-card h4{margin:0 0 2px;font-size:16px;color:var(--text)}
+.ex-card .d{font-size:12px;color:var(--text-secondary);margin:0 0 10px}
+.ex-pills{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.ex-pills span{background:var(--bg-elevated);color:var(--info);border-radius:10px;padding:4px 10px;font-size:13px}
+.ex-blk{border-radius:10px;padding:9px 11px;margin-top:8px;font-size:14px;background:rgba(0,230,118,.10)}
+.ex-blk.w{background:rgba(255,215,64,.10)}
+.ex-blk i{display:block;font-style:normal;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);margin-bottom:2px}
+.ex-blk.w i{color:var(--warning)}
+.ex-blk ol{margin:4px 0 0;padding-left:20px}.ex-blk li{margin-bottom:4px}
+.ex-use{width:100%;margin-top:12px;padding:10px;border:0;border-radius:10px;background:var(--accent);color:#06240f;font-weight:700;font-size:14px;cursor:pointer}
+.ex-tip p{margin:4px 0;font-size:14px}.ex-tip .bad{color:var(--warning)}.ex-tip .ok{color:var(--accent)}
+.ex-h{font-size:16px;font-weight:700;color:var(--accent);margin:18px 0 10px}
+.ex-sel{cursor:pointer}.ex-sel:active{opacity:.65}
+li.ex-sel::after{content:' ＋';color:var(--accent);font-weight:700}li.ex-sel.added::after{content:' ✓'}
+.ex-blk.ex-sel>i::after{content:' ＋ добавить';color:var(--info);text-transform:none;letter-spacing:0}.ex-blk.ex-sel.added>i::after{content:' ✓ добавлено';color:var(--accent)}
+.ex-blk.added,li.ex-sel.added{outline:1px solid var(--accent);outline-offset:2px;border-radius:6px}
+.ex-pills span.ex-sel{border:1px dashed var(--accent)}.ex-pills span.ex-sel::after{content:' ＋'}.ex-pills span.ex-sel.added{background:var(--accent);color:#06240f}.ex-pills span.ex-sel.added::after{content:' ✓'}
+.ex-use.alt{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+.ex-head{position:sticky;top:-16px;background:var(--bg);padding:10px 0;margin-top:-16px;z-index:2}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
@@ -2248,6 +2276,7 @@ body[data-age="7-9"] .exc[data-hard]{display:none}
     <a class="drawer-item" onclick="showSection('charge'); toggleDrawer();"><i>🌅</i><span>Зарядка</span></a>
     <a class="drawer-item" onclick="showSection('ofp'); toggleDrawer();"><i>💪</i><span>ОФП</span></a>
     <a class="drawer-item" onclick="showSection('tips'); toggleDrawer();"><i>💡</i><span>Советы чемпиона</span></a>
+    <a class="drawer-item" onclick="showSection('howto'); toggleDrawer();"><i>📘</i><span>Как заполнять дневник</span></a>
     <a class="drawer-item" data-nf="training" onclick="openNF('training'); toggleDrawer();"><i class="fas fa-futbol"></i><span>Тренировки</span></a>
     <a class="drawer-item" data-nf="games" onclick="openNF('games'); toggleDrawer();"><i class="fas fa-trophy"></i><span>Игры</span></a>
     <a class="drawer-item" data-nf="habits" onclick="openNF('habits'); toggleDrawer();"><i class="fas fa-list-check"></i><span>Привычки</span></a>
@@ -3220,6 +3249,12 @@ body[data-age="7-9"] .exc[data-hard]{display:none}
     </div>
   </div>
 </section>
+<section class="section" id="sec-howto">
+  <div style="height:12px;"></div>
+  <div class="card"><div class="card-title">📘 Как заполнять дневник</div>
+  <div class="hint">Примеры для тренировок и игр. В самой форме нажми «💡 Примеры» → «Взять за основу», и текст подставится в поля.</div></div>
+  <div id="howtoBody"></div>
+</section>
 <section class="section" id="sec-profile">
   <div style="height:12px;"></div>
   <div class="card">
@@ -3368,7 +3403,7 @@ body[data-age="7-9"] .exc[data-hard]{display:none}
             </div>
 
             <div class="nf-card">
-                <h3 class="nf-card-title yellow">🎯 Задачи на тренировку <span style="color: #ff5252;">*</span></h3>
+                <h3 class="nf-card-title yellow">🎯 Задачи на тренировку <span style="color: #ff5252;">*</span></h3><button type="button" class="ex-btn" onclick="exOpen('tt')">💡 Примеры</button>
                 <div class="task-list">
                     <div class="task-item"><div class="task-number">1</div><input type="text" class="task-input task-required" placeholder="Задача 1..." id="task1" oninput="validateTraining()"></div>
                     <div class="task-item"><div class="task-number">2</div><input type="text" class="task-input" placeholder="Задача 2..." id="task2"></div>
@@ -3431,7 +3466,7 @@ body[data-age="7-9"] .exc[data-hard]{display:none}
             </div>
 
             <div class="nf-card">
-                <h3 class="nf-card-title green">📊 Итоги тренировки <span style="color: #ff5252;">*</span></h3>
+                <h3 class="nf-card-title green">📊 Итоги тренировки <span style="color: #ff5252;">*</span></h3><button type="button" class="ex-btn" onclick="exOpen('tr')">💡 Примеры</button>
 
                 <div class="nf-form-group">
                     <label class="form-label">Состояние после (1-10)</label>
@@ -3451,12 +3486,12 @@ body[data-age="7-9"] .exc[data-hard]{display:none}
 
                 <div class="nf-form-group">
                     <label class="form-label required">Сильные стороны</label>
-                    <input type="text" class="form-input result-required" id="strengths" placeholder="Что получилось..." oninput="validateTraining()">
+                    <textarea rows="3" class="form-input result-required" id="strengths" placeholder="Что получилось..." oninput="validateTraining()"></textarea>
                 </div>
 
                 <div class="nf-form-group">
                     <label class="form-label required">Над чем работать</label>
-                    <input type="text" class="form-input result-required" id="weaknesses" placeholder="Над чем работать..." oninput="validateTraining()">
+                    <textarea rows="3" class="form-input result-required" id="weaknesses" placeholder="Над чем работать..." oninput="validateTraining()"></textarea>
                 </div>
 
                 <div class="nf-form-group">
@@ -3542,7 +3577,7 @@ body[data-age="7-9"] .exc[data-hard]{display:none}
             </div>
 
             <div class="nf-card">
-                <h3 class="nf-card-title green">🎯 Задачи на игру <span style="color: #ff5252;">*</span></h3>
+                <h3 class="nf-card-title green">🎯 Задачи на игру <span style="color: #ff5252;">*</span></h3><button type="button" class="ex-btn" onclick="exOpen('gt')">💡 Примеры</button>
                 <div class="task-list">
                     <div class="task-item" style="border-left-color: #00e676;"><div class="task-number" style="background: #00e676;">1</div><input type="text" class="task-input game-task-required" placeholder="Задача 1..." id="gameTask1" oninput="validateGame()"></div>
                     <div class="task-item" style="border-left-color: #00e676;"><div class="task-number" style="background: #00e676;">2</div><input type="text" class="task-input" placeholder="Задача 2..." id="gameTask2"></div>
@@ -3554,16 +3589,16 @@ body[data-age="7-9"] .exc[data-hard]{display:none}
             </div>
 
             <div class="nf-card">
-                <h3 class="nf-card-title yellow">📊 Анализ игры <span style="color: #ff5252;">*</span></h3>
+                <h3 class="nf-card-title yellow">📊 Анализ игры <span style="color: #ff5252;">*</span></h3><button type="button" class="ex-btn" onclick="exOpen('gr')">💡 Примеры</button>
 
                 <div class="nf-form-group">
                     <label class="form-label required">Что получилось?</label>
-                    <input type="text" class="form-input game-result-required" id="gameSuccess" placeholder="Успехи..." oninput="validateGame()">
+                    <textarea rows="3" class="form-input game-result-required" id="gameSuccess" placeholder="Успехи..." oninput="validateGame()"></textarea>
                 </div>
 
                 <div class="nf-form-group">
                     <label class="form-label required">Что улучшить?</label>
-                    <input type="text" class="form-input game-result-required" id="gameImprove" placeholder="Ошибки..." oninput="validateGame()">
+                    <textarea rows="3" class="form-input game-result-required" id="gameImprove" placeholder="Ошибки..." oninput="validateGame()"></textarea>
                 </div>
 
                 <div class="nf-form-group">
@@ -7363,6 +7398,84 @@ const lb=+localStorage.getItem('fp_lastbackup')||0;if(xp()>0&&Date.now()-lb>14*8
   window.showSection=function(n){if(n==='tips')tipsHome();return prev.apply(this,arguments);};
   tipsHome();
 })();
+</script>
+<div id="exSheet" onclick="if(event.target===this)exClose()"><div class="ex-panel"><div class="ex-head"><span id="exTitle"></span><button type="button" onclick="exClose()">✕</button></div><div id="exBody"></div></div></div>
+<script>
+(function(){
+var TT=[
+["Техника и контроль мяча","Индивидуальное мастерство. Если тренер просил меньше терять мяч.",8,"Бодр, но немного волнуюсь",["Первое касание должно готовить мяч к следующему действию (удару или пасу), а не просто останавливать его.","Выполнять все обманные движения корпусом и головой, чтобы запутать защитника, даже когда никто не смотрит.","Работать слабой ногой: минимум 5 точных передач именно ей во время двусторонней игры.","Не опускать голову при приёме мяча — сразу сканировать поле («проверка плечом»).","Сохранять концентрацию в упражнениях на жонглирование и ведение — ни одной потери контроля."]],
+["Игровое мышление и взаимодействие","Тактика. Для полузащитника или нападающего.",9,"Отличное настроение, хочется играть красиво",["Перед получением мяча всегда знать, куда буду делать передачу дальше (план А и план Б).","Чаще открываться в свободные зоны, а не стоять напротив своего игрока.","Голосом подсказывать партнёрам: называть их имена и говорить «давай», «слева», «сзади».","При потере мяча мгновенно включаться в прессинг (правило 5 секунд), не ждать, пока соперник обработает мяч.","Следить за позицией центрального защитника соперника, чтобы не залезть в офсайд."]],
+["Физическая готовность и характер","Для форвардов и опорников. Тяжёлая тренировка или нужно проявить лидерство.",7,"Немного устал после школы, но настроен поработать",["Выигрывать каждое силовое единоборство — использовать плечи и спину правильно.","Бежать на помощь партнёру быстрее всех, даже если эпизод почти закончился (страховка).","Держать высокий темп движений без мяча (перемещения, рывки) всю тренировку.","После ошибки не раскисать, а сразу показывать язык тела: «Я готов исправить, дайте мне ещё шанс».","Пить воду строго по графику, чтобы мышцы не «забились» к концу занятия."]]];
+var TR=[
+["Интенсивная тренировка на технику","После занятия на технику",6,7,"Хорошо получались передачи в одно касание, уверенно контролировал мяч под давлением, точно бил с правой ноги.","Слабая левая нога — неточные длинные передачи, терял позицию при прессинге, нужно работать над первым касанием."],
+["Тактическая тренировка","После занятия по тактике",7,7,"Правильно читал игру, вовремя открывался, хорошо взаимодействовал с партнёрами в комбинациях.","Запаздывал с возвратом в оборону, терял мяч в центральной зоне, нужно улучшать скорость принятия решений."],
+["Тяжёлая физическая тренировка","После силовой работы",4,6,"Выдержал весь объём нагрузки, не сбавлял темп в финальной части, дисциплинированно выполнил все упражнения.","Быстро устал к концу, потеря координации на фоне утомления, нужно развивать выносливость и восстановление."],
+["Тренировка с акцентом на удар","После работы над ударом",8,8,"7 из 10 ударов в створ, хорошо бил штрафные, уверенно завершал атаки с левой и правой.","Не хватало вариативности — мало ударов с разворота, нужно тренировать удары в прыжке и после ведения."],
+["Слабая тренировка","Когда не задалось",5,5,"Сохранял концентрацию, не бросил тренировку, работал над ошибками до конца.","Плохое первое касание, много технических браков, низкая интенсивность, слабая работа без мяча."],
+["Игровая тренировка (двусторонка)","После игры в формате двусторонки",8,7,"Отдал 2 голевые передачи, выиграл большинство единоборств, хорошо прессинговал.","Допустил ошибку в обороне, которая привела к голу, нужно улучшать позиционную дисциплину."]];
+var G=[
+["Матч выигран, игра удалась","Цель: закрепить успех и понять, что именно сработало.",["Не терять мяч в центре поля под прессингом — использовать корпус для защиты.","Искать открытого партнёра пасом, если меня плотно опекают (не держать мяч «эгоистично»).","Сразу после потери мяча вступать в отбор (прессинг) в первые 5 секунд.","Коммуницировать с защитниками: кричать имена, подсказывать зону («слева!», «сзади!»).","Реализовать момент один на один или удар из-за пределов штрафной, если появится возможность."],"Чувствовал себя уверенно с мячом, сделал 3 точные обостряющие передачи. Ни разу не потерял мяч глупо в своей зоне. Успел вернуться в оборону два раза.","Иногда слишком медленно принимал решение при получении мяча (нужно было раньше сканировать поле). Один раз ошибся в передаче назад, потому что не посмотрел через плечо.",9,""],
+["Тяжёлый матч / проигрыш / мало сил","Цель: найти позитив даже в плохой игре и честно разобрать ошибки.",["Сохранять концентрацию все 60+ минут, даже когда команда пропускает или устает.","Выигрывать верховые мячи и борьбу спиной к воротам.","Подбадривать партнёров голосом, не опускать руки.","Строго соблюдать игровую дисциплину (стоять на своей позиции, не убегать без разрешения).","Минимизировать риск брака: играть проще, надёжнее (пас вперёд, а не через центр)."],"Несмотря на поражение, я старался бежать до свистка. Хорошо сыграл в защите, заблокировал пару ударов. Держал позицию, не выпадал из схемы.","Физически немного не хватило во втором тайме — начал терять скорость. Слишком много нервничал после пропущенного гола, из-за чего допустил две технические ошибки подряд. Нужно больше спокойствия.",5,"Но это нормально, такие матчи закаляют характер"],
+["Тактическая роль (вингер или опорник)","Цель: выполнить специфическую установку тренера.",["(Для вингера): смещаться в центр, чтобы освободить фланг для подключения крайнего защитника.","(Для опорника): всегда давать вариант для паса центральному защитнику, не прятаться за спинами соперников.","Отрабатывать стандарты: быть готовым добить мяч после углового или навеса.","Контролировать дистанцию между собой и соседним игроком (линия обороны/полузащиты должна быть ровной).","Использовать слабую ногу хотя бы 2 раза за матч осознанно."],"Точно выполнял установку тренера по смещениям в центр. Партнёры нашли меня передачами дважды. Получилось создать остроту у чужих ворот благодаря движению без мяча.","Забыл вовремя вернуться в оборону после атаки (тренер ругался). Слабая нога пока ещё «деревянная» под давлением — боялся ею бить, хотя момент был хороший.",8,""]];
+var TIPS={
+tr:[["Сильные стороны","Заполняй конкретикой: что именно получилось и в каких упражнениях."],["Зоны роста","Это не критика, а план: что требует работы на следующей тренировке."],["Состояние после","Самочувствие: 1 — полностью разбит, 10 — полон энергии."],["Общая оценка","Интегральная оценка всей тренировки с учётом всех факторов."]],
+tt:[["Конкретика вместо общих слов","❌ Плохо: «Стараться хорошо играть».\n✅ Хорошо: «Выполнить 3 удачных дриблинга один в один»."],["Фокус на процессе, а не результате","Важно не столько забить гол, сколько правильно принять решение. Пиши задачи про решения: куда пасовать, как открыться."],["Честность","Если состояние было 4 из 10, напиши честно. Тренер оценит это выше, чем «10» и плохая игра."],["Термины тренеров","Вставляй слова вашего тренера: «агрессия в атаке», «структура обороны», «скорость принятия решений»."]],
+g:[["Пиши глаголами действий","❌ Плохо: «Хорошо играл».\n✅ Хорошо: «Открылся, получил, отдал пас пяткой»."],["Разделяй физику и голову","Спроси себя: «Я физически не успел?» или «Я просто не увидел ситуацию?». Физика: «Не хватило скорости». Голова: «Просмотрел свободного игрока»."],["Честность важнее красивых отчётов","Если ты сегодня был «невидимкой», напиши это. Тренер оценит самокритику выше придуманных заслуг."],["Связь с тренировками","На тренировке учил: «Первое касание от ноги». В игре пишешь: «Получилось 4 раза, но 2 раза забыл»."]]};
+var TTL={tt:"Примеры: задачи на тренировку",tr:"Примеры: итоги тренировки",gt:"Примеры: задачи на игру",gr:"Примеры: анализ игры"};
+var F=false;
+function li(a,k,i){return '<ol>'+a.map(function(x,j){return '<li'+(F?' class="ex-sel" onclick="exAdd(\''+k+'\','+i+',\'t\','+j+',this)"':'')+'>'+x+'</li>'}).join('')+'</ol>'}
+function blk(t,b,w,k,i,f){var on=F&&f;return '<div class="ex-blk'+(w?' w':'')+(on?' ex-sel':'')+'"'+(on?' onclick="exAdd(\''+k+'\','+i+',\''+f+'\',0,this)"':'')+'><i>'+t+'</i>'+b+'</div>'}
+function pill(t,k,i,f){return '<span'+(F?' data-g="'+(GM[k+f]||'')+'" class="ex-sel" onclick="exAdd(\''+k+'\','+i+',\''+f+'\',0,this)"':'')+'>'+t+'</span>'}
+function head(t,d){return '<h4>'+t+'</h4><p class="d">'+d+'</p>'}
+function card(k,i,fill){
+  F=fill;var h='<div class="ex-card">',x;
+  if(k=='tt'){x=TT[i];h+=head(i+1+'. '+x[0],x[1])+'<div class="ex-pills">'+pill('Состояние перед: '+x[2]+'/10 — '+x[3],'tt',i,'s')+'</div>'+blk('Задачи на тренировку',li(x[4],'tt',i))}
+  else if(k=='tr'){x=TR[i];h+=head(i+1+'. '+x[0],x[1])+'<div class="ex-pills">'+pill('Состояние после: '+x[2]+'/10','tr',i,'p')+pill('Общая оценка: '+x[3]+'/10','tr',i,'o')+'</div>'+blk('Сильные стороны',x[4],0,'tr',i,'s')+blk('Зоны роста',x[5],1,'tr',i,'w')}
+  else if(k=='gt'){x=G[i];h+=head(i+1+'. '+x[0],x[1])+blk('Задачи на игру',li(x[2],'gt',i))}
+  else if(k=='gr'){x=G[i];h+=head(i+1+'. '+x[0],x[1])+blk('Что получилось?',x[3],0,'gr',i,'s')+blk('Что улучшить?',x[4],1,'gr',i,'w')+'<div class="ex-pills">'+pill('Удовольствие: '+x[5]+'/10'+(x[6]?' ('+x[6]+')':''),'gr',i,'e')+'</div>'}
+  if(fill)h+='<button type="button" class="ex-use alt" onclick="exFill(\''+k+'\','+i+')">Добавить всё из этого примера</button>';
+  return h+'</div>'}
+function tips(a){return a.map(function(t){return '<div class="ex-card ex-tip"><h4>'+t[0]+'</h4>'+t[1].split('\n').map(function(l){return '<p class="'+(l.indexOf('❌')==0?'bad':l.indexOf('✅')==0?'ok':'')+'">'+l+'</p>'}).join('')+'</div>'}).join('')}
+function list(k,fill){var n={tt:TT,tr:TR,gt:G,gr:G}[k].length,s='';for(var i=0;i<n;i++)s+=card(k,i,fill);return s}
+window.exOpen=function(k){document.getElementById('exTitle').textContent=TTL[k];document.getElementById('exBody').innerHTML='<p class="d" style="margin:0 0 12px;color:var(--text-secondary);font-size:13px">Нажимай на строки, блоки и оценки, чтобы добавить их в форму. Можно брать из разных примеров.</p>'+list(k,true)+'<div class="ex-h">💡 Советы</div>'+tips(TIPS[k=='gt'||k=='gr'?'g':k]);mark();document.getElementById('exSheet').classList.add('open')};
+window.exClose=function(){document.getElementById('exSheet').classList.remove('open')};
+function set(id,v){var e=document.getElementById(id);if(e){e.value=v;e.dispatchEvent(new Event('input',{bubbles:true}))}}
+function addTxt(id,t){var e=document.getElementById(id);if(!e||e.value.indexOf(t)>-1)return;set(id,e.value.trim()?e.value.trim()+' '+t:t)}
+function msg(t){var e=document.getElementById('exTitle'),o=e.getAttribute('data-t')||e.textContent;e.setAttribute('data-t',o);e.textContent=t;setTimeout(function(){e.textContent=o},2200)}
+var GM={tts:'preState',trp:'postState',tro:'totalRate',gre:'gameEnjoy'};
+function val(id){var e=document.getElementById(id);return e?e.value:''}
+function txtOf(k,i,f,j){return k=='tt'?TT[i][4][j]:k=='gt'?G[i][2][j]:k=='tr'?TR[i][f=='s'?4:5]:G[i][f=='s'?3:4]}
+function fid(k,f){return k=='tr'?(f=='s'?'strengths':'weaknesses'):(f=='s'?'gameSuccess':'gameImprove')}
+function isTask(k,f){return f=='t'}function isText(k,f){return (k=='tr'||k=='gr')&&(f=='s'||f=='w')}
+function isOn(k,i,f,j){var t=txtOf(k,i,f,j);if(isTask(k,f)){var pre=k=='tt'?'task':'gameTask';for(var n=1;n<=5;n++)if(val(pre+n)===t)return true;return false}return val(fid(k,f)).indexOf(t)>-1}
+function mark(){document.querySelectorAll('#exBody .ex-sel[onclick]').forEach(function(el){var m=/exAdd\('(\w+)',(\d+),'(\w)',(\d+)/.exec(el.getAttribute('onclick'));if(!m)return;var k=m[1],f=m[3];if(isTask(k,f)||isText(k,f))el.classList.toggle('added',isOn(k,+m[2],f,+m[4]))})}
+function after(k){if(k[0]=='t'&&window.validateTraining)validateTraining();if(k[0]=='g'&&window.validateGame)validateGame()}
+window.exAdd=function(k,i,f,j,el){try{
+  var on=el.classList.contains('added'),t,e,n;
+  if(isTask(k,f)){t=txtOf(k,i,f,j);var pre=k=='tt'?'task':'gameTask',at=0;
+    for(n=1;n<=5;n++)if(val(pre+n)===t)at=n;
+    if(on){if(at)set(pre+at,'')}
+    else if(!at){for(n=1;n<=5;n++)if(!val(pre+n).trim()){at=n;break}
+      if(!at){msg('Все 5 полей заняты — нажми ✓ на ненужной задаче');return}set(pre+at,t)}}
+  else if(isText(k,f)){t=txtOf(k,i,f,j);var id=fid(k,f),v=val(id);
+    if(on)set(id,v.replace(t,'').replace(/\s{2,}/g,' ').trim());
+    else if(v.indexOf(t)<0)set(id,v.trim()?v.trim()+' '+t:t)}
+  else{var g=GM[k+f],num=k=='tt'?TT[i][2]:k=='tr'?TR[i][f=='p'?2:3]:G[i][5];
+    if(on){var pv=el.getAttribute('data-prev');if(pv)setRating(g,+pv);else{delete currentRatings[g];document.querySelectorAll('#'+g+' .rating-btn').forEach(function(b){b.classList.remove('active')})}}
+    else{var cur=currentRatings[g];document.querySelectorAll('[data-g="'+g+'"]').forEach(function(o){o.classList.remove('added')});el.setAttribute('data-prev',cur||'');setRating(g,num)}}
+  el.classList.toggle('added',!on);after(k);
+}catch(e){console.error(e)}};
+window.exFill=function(k,i){try{
+  var x;
+  if(k=='tt'){x=TT[i];for(var j=1;j<=5;j++)set('task'+j,x[4][j-1]||'');setRating('preState',x[2]);if(window.validateTraining)validateTraining()}
+  if(k=='tr'){x=TR[i];set('strengths',x[4]);set('weaknesses',x[5]);setRating('postState',x[2]);setRating('totalRate',x[3]);if(window.validateTraining)validateTraining()}
+  if(k=='gt'){x=G[i];for(var j=1;j<=5;j++)set('gameTask'+j,x[2][j-1]||'');if(window.validateGame)validateGame()}
+  if(k=='gr'){x=G[i];set('gameSuccess',x[3]);set('gameImprove',x[4]);setRating('gameEnjoy',x[5]);if(window.validateGame)validateGame()}
+}catch(e){console.error(e)}exClose()};
+var b=document.getElementById('howtoBody');
+b.innerHTML=[['tt','🎯 Задачи на тренировку'],['tr','📊 Итоги тренировки'],['gt','🎯 Задачи на игру'],['gr','📊 Анализ игры']].map(function(p){return '<div class="ex-h">'+p[1]+'</div>'+list(p[0],false)}).join('')+'<div class="ex-h">💡 Советы: тренировка</div>'+tips(TIPS.tr.concat(TIPS.tt))+'<div class="ex-h">💡 Советы: анализ игры</div>'+tips(TIPS.g);
+})();
+
 </script>
 </body>
 </html>
