@@ -1621,6 +1621,9 @@ body { font-family:'Montserrat',sans-serif; background:var(--bg); color:var(--te
 #nf-app .max-link svg{
             flex-shrink: 0;
         }
+.today-donate{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;box-sizing:border-box;padding:14px 24px;border-radius:10px;background:linear-gradient(135deg,#00e676 0%,#00c853 100%);color:#fff;font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;border:none;transition:all .3s}
+#nf-app button.today-donate{padding:14px 24px;font-size:15px;line-height:1.2;min-height:48px;margin:0}
+.today-donate:hover{transform:translateY(-2px);box-shadow:0 4px 15px rgba(0,230,118,.4)}
 #nf-app .donate-btn{
             background: linear-gradient(135deg, #00e676 0%, #00c853 100%);
             color: white;
@@ -2336,7 +2339,7 @@ var D={
 'Техника передвижения':'Movement technique','Сохранить игру':'Save game','История игр':'Game history',
 'Каналов':'Channels','Развитие':'Development','Техника':'Technique','Финты':'Skills & feints','Удары':'Shooting',
 'Психология':'Psychology','Литература':'Literature','Здоровье':'Health','Общение':'Community','Канал в Max':'Channel on Max',
-'Чат для игроков':'Players chat','Поддержать проект':'Support the project','Донат через МИР':'Donate via MIR',
+'Чат для игроков':'Players chat','Поддержать проект':'Support the project','Донат':'Donate','Все средства идут на развитие приложения.':'All funds go to the app’s development.',
 'Новая':'New','Футболист':'Footballer','Твоя команда':'Your team','Профиль':'Profile','Имя':'Name','Команда':'Team','Номер':'Number',
 'Рост навыков':'Skill growth','Тактика':'Tactics','Физика':'Physical','Регулярность':'Consistency',
 'Состояние и эмоции':'Condition & emotions','Статистика':'Statistics','Награды':'Awards','Общая статистика':'Overall statistics',
@@ -4183,17 +4186,17 @@ window.addEventListener('load',function(){ walk(document.body); });
                 <h3 class="nf-card-title yellow">💳 Поддержать проект</h3>
                 <p style="color: #81c784; font-size: 13px; margin-bottom: 12px;">Поддержите развитие приложения и помогите добавлять новые функции</p>
                 
-                <a href="https://pay.mironline.ru/pay/football-diary" target="_blank" class="donate-btn">
+                <a href="https://max.ru/channel_FootballProApp/AaHKq5gIK0E" target="_blank" rel="noopener" class="donate-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2" y="6" width="20" height="12" rx="2" fill="white" fill-opacity="0.2"/>
                         <rect x="4" y="8" width="16" height="8" rx="1" fill="white"/>
                         <circle cx="8" cy="12" r="2" fill="#00e676"/>
                         <path d="M14 10H18M14 12H17M14 14H16" stroke="#00e676" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
-                    Донат через МИР
+                    Донат
                 </a>
                 <p style="color: #66a06d; font-size: 11px; margin-top: 10px; text-align: center;">
-                    Безопасная оплата через систему МИР. Все средства идут на развитие приложения.
+                    Все средства идут на развитие приложения.
                 </p>
             </div>
         </section>
@@ -7387,7 +7390,7 @@ try{const s=JSON.parse(localStorage.getItem('fp_rem')||'null');if(s)document.que
   const cards=[...document.querySelectorAll('#nf-app .nf-card')].filter(c=>/Поддержать проект/.test(c.textContent.slice(0,90)));
   if(!cards.length)return;
   const g=document.createElement('div');g.className='nf-card';
-  g.innerHTML='<h3 class="nf-card-title purple">🔒 Для родителей</h3><p style="color:#81c784;font-size:14px;margin-bottom:12px">Оплата и донаты доступны только взрослым.</p><button class="btn btn-secondary">Открыть для родителей</button>';
+  g.innerHTML='<h3 class="nf-card-title purple">🔒 Для родителей</h3><p style="color:#81c784;font-size:14px;margin-bottom:12px">Оплата и донаты доступны только взрослым.</p><button type="button" class="today-donate">Открыть для родителей</button>';
   cards[0].before(g);cards.forEach(c=>c.style.display='none');
   g.querySelector('button').onclick=()=>{const a=13+Math.floor(Math.random()*7),b=3+Math.floor(Math.random()*7);const r=prompt('Только для взрослых. Сколько будет '+a+' × '+b+'?');
     if(r!==null&&+r===a*b){cards.forEach(c=>c.style.display='');g.remove();}else if(r!==null)toast('Неверно. Попроси родителей 🙂');};
@@ -7433,6 +7436,10 @@ const lvl=x=>Math.floor(Math.sqrt(x/25))+1,best=()=>+($('atBest')||{}).textConte
 const BD=[['📓','Первая запись о тренировке или игре',()=>J('trainings','[]').length+J('games','[]').length>=1],['🏆','Первый рекорд',()=>J('fp_records','[]').length>=1],['🌱','Первая отметка привычки',()=>{try{return habits.some(x=>hbCount(x)>0)}catch(e){return false}}],['✅','Идеальный день: все привычки (от 3)',()=>{try{if(habits.length<3)return false;const ks=new Set();habits.forEach(x=>Object.keys(x.log||{}).forEach(k=>ks.add(k)));return [...ks].some(k=>habits.every(x=>hbHas(x,k)))}catch(e){return false}}],['⚽','5 тренировок или игр',()=>J('trainings','[]').length+J('games','[]').length>=5],['💯','Оценка 10/10',()=>[...J('trainings','[]'),...J('games','[]')].some(x=>x.totalRate===10)],['🚀','Уровень 3',()=>lvl(xp())>=3],['🔥','7 дней подряд по привычке',()=>{try{return habits.some(x=>hbBest(x)>=7)}catch(e){return false}}],['✍️','5 записей в дневнике',()=>J('fp_diary','[]').length>=5],['☀️','Полный комплекс зарядки или ОФП',()=>J('fp_exfull','[]').length>=1]];
 const lc=document.createElement('div');lc.className='card';lc.id='lvlCard';$('ageNote').before(lc);
 const bc=document.createElement('div');bc.className='card';bc.innerHTML='<div class="wins-head"><div class="card-title">🏅 Мои победы</div><div class="wins-count" id="winsCount"></div></div><div class="wins-grid" id="bdRow"></div><div id="winsMore"></div>';$('todayTasks').after(bc);
+const dn=document.createElement('div');dn.className='card';dn.id='todayDonate';
+dn.innerHTML='<a class="today-donate" href="https://max.ru/channel_FootballProApp/AaHKq5gIK0E" target="_blank" rel="noopener">💚 Донат</a>';
+dn.querySelector('a').onclick=e=>{e.preventDefault();if(askParent())window.open(e.currentTarget.href,'_blank','noopener');};
+bc.after(dn);
 function refresh(){
   const x=xp(),L=lvl(x),lo=25*(L-1)**2,hi=25*L*L,a=prof().avatar||'';
   lc.innerHTML='<div class="lvl"><div class="ava">'+bdg(a)+'</div><div class="info"><div class="nm">Уровень '+L+' · '+LV[Math.min(L-1,LV.length-1)]+'</div><div class="xpbar"><i style="width:'+Math.round((x-lo)/(hi-lo)*100)+'%"></i></div><div class="hint" style="margin:0">'+x+' из '+hi+' очков до уровня '+(L+1)+'</div></div></div>';
