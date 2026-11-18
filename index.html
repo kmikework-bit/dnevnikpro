@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0f2818">
 <title>Football PRO</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -6839,7 +6839,9 @@ function openHabitNoteModal(habitId, dateKey) {
     hbE('habitsNoteDate').textContent = d.getDate() + ' ' + hbMonthsG[d.getMonth()] + ' ' + d.getFullYear();
     hbE('habitsNoteInput').value = h.notes[currentEditingCell] || '';
     hbE('habitsNoteModal').classList.add('active');
-    setTimeout(() => hbE('habitsNoteInput').focus(), 100);
+    /* iOS Safari: do not summon the keyboard automatically; it can cover the Save action. */
+    const hbIsTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    if (!hbIsTouch) setTimeout(() => hbE('habitsNoteInput').focus(), 100);
 }
 function saveHabitNote() {
     const h = hbFind(currentHabitId);
@@ -8180,6 +8182,151 @@ b.innerHTML=[['tt','🎯 Задачи на тренировку'],['tr','📊 И
   .bottom-nav .nav-item { font-size:8.5px !important; }
   .bottom-nav .nav-item .ni { width:48px !important; height:48px !important; min-width:48px !important; flex-basis:48px !important; }
   .bottom-nav .nav-item .ni .fp-nav-icon { width:46px !important; height:46px !important; max-width:46px !important; max-height:46px !important; }
+}
+</style>
+
+
+
+<style id="fp-iphone-safari-compat-v10">
+/* iPhone Safari compatibility: safe-area aware, scrollable modals and reachable actions. */
+#nf-app .habits-modal{
+  position:fixed !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100vh !important;
+  height:100dvh !important;
+  box-sizing:border-box !important;
+  padding: max(12px, env(safe-area-inset-top, 0px)) 12px max(12px, env(safe-area-inset-bottom, 0px)) !important;
+  overflow-y:auto !important;
+  -webkit-overflow-scrolling:touch !important;
+  overscroll-behavior:contain !important;
+  z-index:6000 !important;
+}
+#nf-app .habits-modal-content,
+#nf-app .hb-sheet{
+  box-sizing:border-box !important;
+  max-height:calc(100vh - 24px) !important;
+  max-height:calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 24px) !important;
+  overflow-y:auto !important;
+  -webkit-overflow-scrolling:touch !important;
+  overscroll-behavior:contain !important;
+  touch-action:pan-y !important;
+}
+#nf-app .habits-note-modal-content > div:last-child{
+  position:sticky !important;
+  bottom:-25px !important;
+  z-index:5 !important;
+  display:flex !important;
+  gap:10px !important;
+  justify-content:flex-end !important;
+  flex-wrap:wrap !important;
+  background:#fff !important;
+  padding:10px 0 max(10px, env(safe-area-inset-bottom, 0px)) !important;
+  margin-top:8px !important;
+}
+#nf-app .habits-modal button,
+#nf-app .hb-sheet button,
+#nf-app .habits-note-modal-content button{
+  touch-action:manipulation !important;
+  -webkit-tap-highlight-color:rgba(0,230,118,.18);
+  cursor:pointer;
+  position:relative;
+  z-index:2;
+}
+#nf-app .habits-note-modal-content .habits-btn{
+  min-height:44px !important;
+  padding:10px 16px !important;
+}
+#nf-app .habits-note-input,
+#nf-app #hbAddName{
+  box-sizing:border-box !important;
+  min-height:44px !important;
+  font-size:16px !important;
+  -webkit-appearance:none;
+  appearance:none;
+}
+#nf-app .habits-close-modal,
+#nf-app .hb-sheet .hb-x{
+  min-width:44px !important;
+  min-height:44px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  z-index:10 !important;
+  touch-action:manipulation !important;
+}
+
+/* Training examples: keep the title and close control visible while the list scrolls. */
+#exSheet{
+  position:fixed !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100vh !important;
+  height:100dvh !important;
+  box-sizing:border-box !important;
+  padding:env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px) !important;
+  overflow:hidden !important;
+  z-index:10000 !important;
+  overscroll-behavior:contain !important;
+}
+#exSheet.open{
+  display:flex !important;
+  align-items:flex-end !important;
+  justify-content:center !important;
+}
+#exSheet .ex-panel{
+  width:100% !important;
+  max-width:640px !important;
+  max-height:88vh !important;
+  max-height:calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 8px) !important;
+  box-sizing:border-box !important;
+  overflow-x:hidden !important;
+  overflow-y:auto !important;
+  -webkit-overflow-scrolling:touch !important;
+  overscroll-behavior:contain !important;
+  padding:0 16px calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+  scroll-padding-top:58px !important;
+}
+#exSheet .ex-head{
+  position:sticky !important;
+  top:0 !important;
+  z-index:30 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:12px !important;
+  min-height:56px !important;
+  margin:0 -2px 12px !important;
+  padding:8px 2px !important;
+  background:var(--bg, #0a1f12) !important;
+  border-bottom:1px solid rgba(0,230,118,.16) !important;
+}
+#exSheet .ex-head button{
+  flex:0 0 44px !important;
+  width:44px !important;
+  min-width:44px !important;
+  height:44px !important;
+  min-height:44px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border-radius:50% !important;
+  touch-action:manipulation !important;
+  -webkit-tap-highlight-color:rgba(0,230,118,.2) !important;
+  position:relative !important;
+  z-index:31 !important;
+}
+#exSheet .ex-body,
+#exSheet #exBody{min-width:0 !important;overflow-wrap:anywhere !important}
+@supports not (height:100dvh){
+  #nf-app .habits-modal,#exSheet{height:100vh !important}
+}
+@media(max-width:600px){
+  #nf-app .habits-modal{align-items:flex-end !important}
+  #nf-app .habits-modal-content,
+  #nf-app .hb-sheet{width:100% !important;max-width:520px !important;border-radius:20px 20px 14px 14px !important}
+  #nf-app .habits-note-modal-content{padding:20px 16px 12px !important}
+  #exSheet .ex-panel{border-radius:20px 20px 0 0 !important}
 }
 </style>
 
